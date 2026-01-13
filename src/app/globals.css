@@ -1,0 +1,192 @@
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Geist:wght@100..900&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  /*  */
+  --color-red: #ed0000;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-bordergray: #0000001a;
+  --color-stone700: #5f5c53;
+  --color-stone900: #222222;
+
+  --color-hoverBorderGray: #f5f5f4;
+
+  --font-heading: 'Geist', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* custom color */
+  --color-red: var(--color-red);
+  --color-background: var(--color-white);
+  --color-black: var(--color-black);
+  --color-bordergray: var(--color-bordergray);
+  --color-stone700: var(--color-stone700);
+  --color-stone900: var(--color-stone900);
+
+  /* custom font  */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+
+  /* custom spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* custom border */
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: var(--color-bordergray);
+
+  /* custom breakpoints */
+  --breakpoint-2xs: 320px;
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1600px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+/* 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-black);
+} */
+
+.backgroundGradient {
+  background: radial-gradient(
+      circle at 50% 50%,
+      rgba(6, 182, 212, 0.1) 0%,
+      transparent 15%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(59, 130, 246, 0.08) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(14, 165, 233, 0.05) 0%,
+      transparent 45%
+    ),
+    linear-gradient(135deg, #f8fcff 0%, #fafcff 100%);
+    
+}
+
+.backgroundGradientTwo {
+  background: radial-gradient(
+      circle at 50% 50%,
+      rgba(6, 212, 205, 0.08) 0%,
+      transparent 15%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(59, 230, 246, 0.09) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(233, 14, 197, 0.1) 0%,
+      transparent 45%
+    ),
+    linear-gradient(135deg, #f8fcff 0%, #fdfffa 100%);
+}
+
+
+.backgroundGradientAnimation {
+  background: radial-gradient(
+      circle at 50% 50%,
+      rgba(6, 182, 212, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(59, 130, 246, 0.08) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(14, 165, 233, 0.05) 0%,
+      transparent 70%
+    ),
+    linear-gradient(135deg, #f8fcff 0%, #fafcff 100%);
+}
+
+.backgroundGradientAnimation::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgb(255, 227, 219) 0%,
+    rgb(201, 201, 255) 47.2973%,
+    rgb(189, 241, 255) 100%
+  );
+  filter: blur(1000px);
+  opacity: 0.1;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: rotateGradient 20s linear infinite;
+}
+
+@keyframes rotateGradient {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Card text clamping for consistent heights
+   - .card-title: clamp to 2 lines
+   - .card-desc: clamp to 3 lines on small screens, 5 on md+ screens
+*/
+.card-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.card-desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3; /* default for small screens */
+  line-clamp: 3;
+}
+
+@media (min-width: 768px) {
+  .card-desc {
+    -webkit-line-clamp: 5; /* allow up to 5 lines on md+ */
+    line-clamp: 5;
+  }
+}
