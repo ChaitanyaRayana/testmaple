@@ -119,10 +119,9 @@ function page({ headingStart = false }) {
           </div>
         </VerticalBorderPattern>
 
-        <ScheduleBanner/>
+        <ScheduleBanner />
       </main>
       <Fotter />
-
     </div>
   );
 }

@@ -2,13 +2,19 @@
 import { useState } from 'react';
 import ZigZagContent from './ZigZagContent';
 
-function ZigZagHomeSection({ mapData, padding = {top:'pt-20', around: 'p-10'}, leftAlign=false }) {
+function ZigZagHomeSection({
+  mapData,
+  padding = { top: 'pt-20', around: 'p-10' },
+  leftAlign = false,
+}) {
   const [selectedMRBtn, setSelectedMRBtn] = useState(0);
   return mapData?.map((item, index) => (
     <div className={`max-w-7xl  w-full  ${padding?.top}`} key={index}>
-      <div className={`flex  max-w-300 mx-auto  flex-row gap-10  max-md:flex-col ${padding?.around} `}>
+      <div
+        className={`flex  max-w-300 mx-auto  flex-row gap-10  max-md:flex-col ${padding?.around} `}
+      >
         <ZigZagContent
-          mapData={{...item, leftAlign}}
+          mapData={{ ...item, leftAlign }}
           key={index}
           zigZagClassName={`flex   ${
             index % 2 === 0

@@ -33,6 +33,7 @@ import {
   DollarIcon,
   FactoryIcon,
   FileIcon,
+  FileRightIcon,
   FileSearchIcon,
   FinanceIcon,
   FolderIcon,
@@ -70,7 +71,8 @@ export const neverMissDeadLine = [
       'Role-based access',
     ],
     image: MRRecordImage,
-    icon: <FileIcon width={16} height={16} color='text-[#226fb7]'/>,
+    icon: <FileIcon width={16} height={16} color="text-[#226fb7]" />,
+    href: '/platform/mr-records',
   },
   {
     label: 'MR Requests',
@@ -78,7 +80,8 @@ export const neverMissDeadLine = [
       'Streamlined system for managing public and internal information requests.',
     featureHighlight: ['Auto intake', 'Secure redaction', 'Public portal'],
     image: MRRequestImage,
-    icon: <MessagerIcon width={16} height={16} color='text-[#226fb7]'/>,
+    icon: <MessagerIcon width={16} height={16} color="text-[#226fb7]" />,
+    href: '/platform/mr-request',
   },
   {
     label: 'MR Workflows',
@@ -89,7 +92,21 @@ export const neverMissDeadLine = [
       'Live monitoring',
     ],
     image: MRWorkFlowImage,
-    icon: <WorkflowIcon width={16} height={16} color='text-[#226fb7]'/>,
+    icon: <WorkflowIcon width={16} height={16} color="text-[#226fb7]" />,
+    href: '/platform/mr-workflows',
+  },
+  {
+    label: 'MR Forms',
+    description:
+      'Create professional forms in seconds with AI-powered automation and seamless integration.',
+    featureHighlight: [
+      'AI form generation',
+      'Mobile-responsive design',
+      'Direct record integration',
+    ],
+    image: MRWorkFlowImage,
+    icon: <FileRightIcon width={16} height={16} color="text-[#226fb7]" />,
+    href: '/platform/mr-forms',
   },
 ];
 
@@ -802,7 +819,7 @@ export const mrRecordsPlatformContent = {
           label: 'Intelligent Routing and Triggers',
           description:
             '<ul><li>• &nbsp; Conditional logic and dynamic routing</li><li>• &nbsp; Cross app triggers across systems and platforms</li><li>• &nbsp; Parallel paths and exception handling</li></ul>',
-          icon: 'FunnelIcon'
+          icon: 'FunnelIcon',
         },
         {
           label: 'Real-Time Monitoring and Insights',
@@ -872,6 +889,201 @@ export const mrRecordsPlatformContent = {
       label: 'Ready to Automate Your Processes?',
       description:
         'Streamline your enterprise with AI-enabled workflows, secure governance, and real-time process visibility.',
+      buttonsText: ['Contact Sales'],
+    },
+  },
+  'mr-forms': {
+    sectionOne: {
+      buttonsText: ['See the Platform in Action', 'Explore Templates'],
+      label: 'Build Smart Forms with AI',
+      description:
+        "Create professional forms in seconds with MapleRecord's AI-powered form builder. Seamlessly integrate data collection with your records management system.",
+      image: MRWorkIndustryImage,
+      bottomText:
+        'AI-Powered &nbsp; • &nbsp; Secure &nbsp; • &nbsp; Mobile-Ready',
+    },
+    sectionTwo: {
+      label: 'Why MR Forms?',
+      description:
+        'Manual form creation. Disconnected data. Slow deployment cycles.',
+      cardSection: [
+        {
+          label: 'Slow Form Development',
+          description:
+            'Building forms manually takes hours or days, delaying data collection initiatives',
+          icon: 'ClockIcon',
+        },
+        {
+          label: 'Disconnected Data Systems',
+          description:
+            'Form data scattered across platforms creates integration challenges',
+          icon: 'UnlimitedIcon',
+        },
+        {
+          label: 'Compliance Complexity',
+          description:
+            'Ensuring forms meet regulatory requirements requires expertise and oversight',
+          icon: 'SheldCardIcon',
+        },
+      ],
+    },
+    sectionThree: {
+      chipText: 'How It Operates',
+      chipIcon: 'LightingIcon',
+      label: 'How MR Forms Works',
+      image: MRWorkflowWorkingImage,
+      cardSection: [
+        {
+          label: 'AI Form Generation',
+          description:
+            'Describe your needs in plain English and watch AI build a complete form with appropriate fields, validations, and logic.',
+          icon: 'AIIcon',
+        },
+        {
+          label: 'Customize & Brand',
+          description:
+            "Use drag-and-drop editor to refine layouts, add conditional logic, and apply your brand's colors and styling.",
+          icon: 'PaintHolderIcon',
+        },
+        {
+          label: 'Deploy Anywhere',
+          description:
+            'Publish forms via web link, embed on websites, or integrate into mobile apps—all responsive and optimized.',
+          icon: 'GlobeIcon',
+        },
+        {
+          label: 'Collect & Integrate',
+          description:
+            "Form submissions automatically flow into MapleRecord's system with full audit trails and secure storage.",
+          icon: 'UnlimitedIcon',
+        },
+      ],
+    },
+
+    sectionFour: {
+      chipText: 'Measurable Impact',
+      chipIcon: 'LightingIcon',
+      label: 'Benefits You Can Measure',
+      stats: [
+        {
+          value: '90%',
+          title: 'Faster Form Creation',
+          description:
+            'Up to 90% faster form creation with AI-powered generation',
+        },
+        {
+          value: '80%',
+          title: 'Reduction in Development Time',
+          description:
+            '80% reduction in form development and deployment cycles',
+        },
+        {
+          value: '100%',
+          title: 'Mobile Responsive',
+          description:
+            '100% mobile-responsive forms that work perfectly on any device',
+        },
+        {
+          value: '65%',
+          title: 'Improvement in Completion Rates',
+          description:
+            '65% improvement in form completion rates with smart design',
+        },
+        {
+          value: 'UnlimitedIcon',
+          title: 'Seamless Data Integration',
+          description:
+            "Direct integration with MapleRecord's records management system",
+          isIcon: true,
+        },
+      ],
+    },
+
+    sectionFive: {
+      chipText: 'Features',
+      chipIcon: 'LightingIcon',
+      label: 'Key Capabilities',
+      cardSection: [
+        {
+          label: 'Drag & Drop Builder',
+          description:
+            '<ul><li>• &nbsp; 100+ field types and widgets</li><li>• &nbsp; Real-time preview and editing</li><li>• &nbsp; Custom themes and branding</li></ul>',
+          icon: 'PaintHolderIcon',
+        },
+        {
+          label: 'Conditional Logic',
+          description:
+            '<ul><li>• &nbsp; Show/hide field rules</li><li>• &nbsp; Skip logic and branching</li><li>• &nbsp; Dynamic calculated fields</li></ul>',
+          icon: 'LightingIcon',
+        },
+        {
+          label: 'Analytics & Insights',
+          description:
+            '<ul><li>• &nbsp; Real-time submission dashboards</li><li>• &nbsp; Completion rate tracking</li><li>• &nbsp; Export to Excel/PDF</li></ul>',
+          icon: 'BarChatIcon',
+        },
+        {
+          label: 'Security & Compliance',
+          description:
+            '<ul><li>• &nbsp; End-to-end encryption</li><li>• &nbsp; HIPAA and GDPR compliance</li><li>• &nbsp; Role-based access control</li></ul>',
+          icon: 'SheldCardIcon',
+        },
+        // {
+        //   label: 'Scalable and Versioned Orchestration',
+        //   description:
+        //     '<ul><li>• &nbsp;Designed for enterprise scale and reliability</li><li>• &nbsp; Versioned workflow history with rollback support</li><li>• &nbsp; Consistent performance under high volume</li></ul>',
+        //   icon: 'SettingIcon',
+        // },
+      ],
+    },
+    sectionSix: {
+      chipText: 'Use Cases',
+      chipIcon: 'HumanResourcesIcon',
+      label: 'Who It Helps',
+      description: 'MR Forms empowers a wide range of operational teams:',
+      cardSection: [
+        {
+          label: 'Human Resources',
+          description:
+            'Streamline employee onboarding, time-off requests, and performance reviews with digital forms.',
+          icon: 'HumanResourcesCardIcon',
+        },
+        {
+          label: 'Healthcare Administration',
+          description:
+            'HIPAA-compliant patient intake, consent forms, and satisfaction surveys.',
+          icon: 'HealthIcon',
+        },
+        {
+          label: 'Legal & Compliance',
+          description:
+            'Create intake forms, document requests, and compliance attestation workflows.',
+          icon: 'LegalIcon',
+        },
+        {
+          label: 'Operations',
+          description:
+            'Automate service requests, facility bookings, and vendor management forms.',
+          icon: 'SettingIcon',
+        },
+        {
+          label: 'Research & Development',
+          description:
+            'Collect research data, project submissions, and experimental protocols securely.',
+          icon: 'ResearchDeploymentIcon',
+        },
+        {
+          label: 'Finance & Accounting',
+          description:
+            'Create expense reports, purchase orders, and budget request forms.',
+          icon: 'FinanceIcon',
+        },
+      ],
+    },
+    scheduleSection: {
+      label: 'Ready to build smarter forms?',
+      description:
+        'Transform data collection with AI-powered form building, seamless integrations, and enterprise-grade security.',
       buttonsText: ['Contact Sales'],
     },
   },
@@ -2945,12 +3157,12 @@ export const departmentalSolutions = {
       ],
     },
   },
-   scheduleSection: {
-      label: 'Ready to Transform Your Customer Service?',
-      description:
-        'Join customer service teams using MapleRecord to deliver faster resolutions, improve satisfaction scores, and ensure service compliance.',
-      buttonsText: ['Schedule a Demo'],
-    },
+  scheduleSection: {
+    label: 'Ready to Transform Your Customer Service?',
+    description:
+      'Join customer service teams using MapleRecord to deliver faster resolutions, improve satisfaction scores, and ensure service compliance.',
+    buttonsText: ['Schedule a Demo'],
+  },
 };
 
 /* MapleRecord Blogs Resources Place */
@@ -2964,14 +3176,16 @@ export const dummyBlogsPosts = [
       'Navigate the complex landscape of regulatory compliance with our comprehensive guide to essential requirements.',
     author: 'Michael Chen',
     date: 'December 20, 2024',
-    authorDateWrap: (<div className='w-auto flex flex-wrap gap-2'>
-        <span className='flex flex-row gap-2'>
+    authorDateWrap: (
+      <div className="w-auto flex flex-wrap gap-2">
+        <span className="flex flex-row gap-2">
           <UserIcon /> <span> Michael Chen</span>
         </span>
-        <span className='flex flex-row gap-2'>
+        <span className="flex flex-row gap-2">
           <CalendarIcon /> <span>December 20, 2024</span>
         </span>
-      </div>),
+      </div>
+    ),
     href: '/blogs/5-key-compliance-requirements',
     image: MRRecordImage,
   },
@@ -2983,14 +3197,16 @@ export const dummyBlogsPosts = [
       'Learn how to implement effective retention policies that balance compliance, storage costs, and operational efficiency.',
     author: 'Emily Parker',
     date: 'December 15, 2024',
-     authorDateWrap: (<div className='w-auto flex flex-wrap gap-2'>
-        <span className='flex flex-row gap-2'>
+    authorDateWrap: (
+      <div className="w-auto flex flex-wrap gap-2">
+        <span className="flex flex-row gap-2">
           <UserIcon /> <span> Emily Parker</span>
         </span>
-        <span className='flex flex-row gap-2'>
+        <span className="flex flex-row gap-2">
           <CalendarIcon /> <span>December 15, 2024</span>
         </span>
-      </div>),
+      </div>
+    ),
     href: '/blogs/digital-record-retention-best-practices',
     image: MRRecordImage,
   },
@@ -3002,14 +3218,16 @@ export const dummyBlogsPosts = [
       'Transform manual processes into efficient automated workflows with our practical implementation roadmap.',
     author: 'David Martinez',
     date: 'December 5, 2024',
-     authorDateWrap: (<div className='w-auto flex flex-wrap gap-2'>
-        <span className='flex flex-row gap-2'>
+    authorDateWrap: (
+      <div className="w-auto flex flex-wrap gap-2">
+        <span className="flex flex-row gap-2">
           <UserIcon /> <span> David Martinez</span>
         </span>
-        <span className='flex flex-row gap-2'>
+        <span className="flex flex-row gap-2">
           <CalendarIcon /> <span>December 5, 2024</span>
         </span>
-      </div>),
+      </div>
+    ),
     href: '/blogs/automating-workflows-guide',
     image: MRRecordImage,
   },
@@ -3021,14 +3239,16 @@ export const dummyBlogsPosts = [
       'Quantifying the business value of investing in intelligent records management platforms.',
     author: 'John Anderson',
     date: 'November 20, 2024',
-     authorDateWrap: (<div className='w-auto flex flex-wrap gap-2'>
-        <span className='flex flex-row gap-2'>
+    authorDateWrap: (
+      <div className="w-auto flex flex-wrap gap-2">
+        <span className="flex flex-row gap-2">
           <UserIcon /> <span> John Anderson</span>
         </span>
-        <span className='flex flex-row gap-2'>
+        <span className="flex flex-row gap-2">
           <CalendarIcon /> <span>December 20, 2024</span>
         </span>
-      </div>),
+      </div>
+    ),
     href: '/blogs/roi-modern-records-management',
     image: MRRecordImage,
   },
@@ -3525,6 +3745,6 @@ export const contactUsContent = {
   label: 'Connect with our sales team to transform your records management',
   description:
     'Ready to elevate your records management? Contact us today to explore how our solutions can transform your organization. Our sales team is here to help you get the answers to all your queries!',
-  buttonsText: [{ label: 'Get started', href: '' }],
+  buttonsText: [{ label: 'Get started', href: '/contact-us#schedule-demo' }],
   image: MRRecordImage,
 };

@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 
 async function Page({ params }) {
   console.log({ params });
-  
+
   const { id } = await params;
   console.log('ID:', id);
   // const parseValue = JSON.parse(JSON.stringify(value));
@@ -25,7 +25,6 @@ async function Page({ params }) {
   if (!contentToDisplay) {
     return null;
   }
-
 
   return (
     <div className="flex min-h-screen w-full pt-30 flex-col bg-white">

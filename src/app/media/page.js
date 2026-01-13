@@ -41,9 +41,7 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >
               {/* {mapData?.chipText && ( */}
-              <div
-                className={`flex w-full justify-center`}
-              >
+              <div className={`flex w-full justify-center`}>
                 <ChipText text={'Media & Press'} />
               </div>
               {/* )} */}
@@ -106,24 +104,24 @@ export default function page() {
           </section>
         </VerticalBorderPattern>
 
-{/* Awards Section*/}
+        {/* Awards Section*/}
 
- {/* Section  Five*/}
-         <VerticalBorderPattern>
+        {/* Section  Five*/}
+        <VerticalBorderPattern>
           <section className="flex max-w-300 mx-auto p-10   flex-row gap-10">
             <CenterTextCardsSection
               mapData={awardsSection}
               cardGroup={true}
               headingStart={false}
               centerCardContent={false}
-              gridGroup = 'md:grid-cols-2'
+              gridGroup="md:grid-cols-2"
             />
           </section>
-          </VerticalBorderPattern>
+        </VerticalBorderPattern>
 
         <ScheduleBanner/>
       </main>
-      <Fotter/>
+      <Fotter />
     </div>
   );
 }

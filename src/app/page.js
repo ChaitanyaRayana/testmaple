@@ -19,11 +19,13 @@ import {
 } from './constants/constants';
 import { useState } from 'react';
 import { CircleThickIcon } from './components/common/svgImage';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const [selectedMRBtn, setSelectedMRBtn] = useState(0);
   const [selectedHelpMeBtn, setSelectedHelpMeBtn] = useState(0);
   console.log({ selectedMRBtn });
+  const router = useRouter();
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
@@ -37,7 +39,8 @@ export default function Home() {
               <div className="flex flex-col h-full items-start lg:w-full justify-center gap-8 ">
                 <ChipText text="Manage your information ecosystem" />
                 <div className=" font-heading text-black text-[48px] leading-16 line-height-[0.5] font-bold text-start">
-                 An AI-First Hybrid Records Management System for Electronic and Physical Records
+                  An AI-First Hybrid Records Management System for Electronic
+                  and Physical Records
                 </div>
                 <div className="font-body text-[28px] leading-8 text-stone700 text-start">
                   Secure records. Automate requests. Streamline operations.
@@ -78,7 +81,7 @@ export default function Home() {
                   One Platform. Three Integrated Modules.
                 </div>
               </div>
-              <div className="w-full h-max flex flex-col gap-8 justify-start">
+              <div className="w-full h-max pb-20 flex flex-col gap-8 justify-start">
                 <div className=" flex flex-row gap-3 justify-center w-full">
                   {neverMissDeadLine?.map((item, i) => (
                     <Button
@@ -119,7 +122,9 @@ export default function Home() {
                             </div>
                           ))}
                         </div>
-                        <Button>Learn more</Button>
+                        <Button onClickButton={() => router.push(item?.href)}>
+                          Learn more
+                        </Button>
                       </div>
                     ))}
 
@@ -165,9 +170,9 @@ export default function Home() {
                     } p-5`}
                     key={i}
                     onClickButton={() => setSelectedHelpMeBtn(i)}
-                  > 
-                  <span>{item?.icon}</span>
-                  <span>{item?.label}</span>
+                  >
+                    <span>{item?.icon}</span>
+                    <span>{item?.label}</span>
                   </Button>
                 ))}
               </div>
@@ -183,10 +188,10 @@ export default function Home() {
                       <div className="flex flex-col gap-3">
                         {item?.featureHighlight?.map((hightLightItem) => (
                           <div className="font-body flex flex-row gap-4 items-start text-stone700 text-start text-[14px]">
-                              <span>
-                                <CircleThickIcon />{' '}
-                              </span>{' '}
-                              <span>{hightLightItem}</span>
+                            <span>
+                              <CircleThickIcon />{' '}
+                            </span>{' '}
+                            <span>{hightLightItem}</span>
                           </div>
                         ))}
                       </div>

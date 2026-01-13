@@ -12,7 +12,13 @@ import { useState } from 'react';
 import { videoCardContent } from '../constants/constants';
 import CenterTextCardsSection from '../components/common/CenterTextCardsSection';
 import ScheduleBanner from '../components/common/ScheduleBanner';
-import { ClockIcon, EyeIcon, LikeIcon, VideoPlayIcon, VideoRecorderIcon } from '../components/common/svgImage';
+import {
+  ClockIcon,
+  EyeIcon,
+  LikeIcon,
+  VideoPlayIcon,
+  VideoRecorderIcon,
+} from '../components/common/svgImage';
 
 function page({ headingStart = false }) {
   const statContent = [
@@ -37,17 +43,19 @@ function page({ headingStart = false }) {
       'Get a comprehensive tour of the MapleRecord platform and discover how our AI-powered solution revolutionizes records management for modern organizations.',
     buttonsText: ['Watch Now'],
     bottomText: 'Sarah Johnson December 28, 2024 8 min read',
-    authorDateWrap: (<div className='w-auto flex flex-wrap gap-2'>
-            <span className='flex flex-row gap-2'>
-              <EyeIcon /> <span> 15,420 views</span>
-            </span>
-            <span className='flex flex-row gap-2'>
-              <LikeIcon /> <span> 892 likes</span>
-            </span>
-            <span className='flex flex-row gap-2'>
-              <ClockIcon /> <span>12:45</span>
-            </span>
-          </div>),
+    authorDateWrap: (
+      <div className="w-auto flex flex-wrap gap-2">
+        <span className="flex flex-row gap-2">
+          <EyeIcon /> <span> 15,420 views</span>
+        </span>
+        <span className="flex flex-row gap-2">
+          <LikeIcon /> <span> 892 likes</span>
+        </span>
+        <span className="flex flex-row gap-2">
+          <ClockIcon /> <span>12:45</span>
+        </span>
+      </div>
+    ),
     image: MRRecordImage,
   };
 
@@ -104,7 +112,7 @@ function page({ headingStart = false }) {
                   headingStart ? 'justify-start' : 'justify-center'
                 }`}
               >
-                <ChipText text={'Resources'} chipIcon={'VideoRecorderIcon'}/>
+                <ChipText text={'Resources'} chipIcon={'VideoRecorderIcon'} />
               </div>
               {/* )} */}
               <div
@@ -216,7 +224,8 @@ function page({ headingStart = false }) {
                 Subscribe for Video Updates
               </div>
               <div className="font-body text-[28px] leading-8 text-stone700 text-center w-full">
-                Get notified when we release new videos, tutorials, and product updates.{' '}
+                Get notified when we release new videos, tutorials, and product
+                updates.{' '}
               </div>
             </div>
             <div className="flex flex-row gap-8 w-1/2 mx-auto">

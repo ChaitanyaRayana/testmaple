@@ -11,7 +11,11 @@ import BlogCard from '../components/common/BlogCard';
 import Input from '../components/common/Input';
 import ScheduleBanner from '../components/common/ScheduleBanner';
 import Fotter from '../components/common/Fotter';
-import { BookIcon, UserIcon, CalendarIcon } from '../components/common/svgImage';
+import {
+  BookIcon,
+  UserIcon,
+  CalendarIcon,
+} from '../components/common/svgImage';
 
 function page({ headingStart = false }) {
   const topicsText = [
@@ -32,11 +36,11 @@ function page({ headingStart = false }) {
       'Discover how artificial intelligence is transforming the way organizations manage, classify, and retrieve critical records in 2024 and beyond.',
     buttonsText: ['Request a Demo'],
     bottomText: (
-      <div className='w-auto flex flex-wrap gap-2'>
-        <span className='flex flex-row gap-1'>
+      <div className="w-auto flex flex-wrap gap-2">
+        <span className="flex flex-row gap-1">
           <UserIcon /> <span> Sarah Johnson</span>
         </span>
-        <span className='flex flex-row gap-1'>
+        <span className="flex flex-row gap-1">
           <CalendarIcon /> <span>December 28, 2024</span>
         </span>
         8 min read
@@ -108,61 +112,62 @@ function page({ headingStart = false }) {
           </section>
         </VerticalBorderPattern>
 
-      <section className="flex w-full overflow-hidden  max-w-7xl mx-auto  flex-row gap-10 items-start justify-center min-h-screen text-center">
-        <VerticalBorderPattern>
-          <div className="flex  max-w-300 mx-auto p-10 flex-row gap-10">
-            <div className="flex flex-col gap-4">
-              <div className="font-heading text-3xl text-black text-start">
-                Featured Article
+        <section className="flex w-full overflow-hidden  max-w-7xl mx-auto  flex-row gap-10 items-start justify-center min-h-screen text-center">
+          <VerticalBorderPattern>
+            <div className="flex  max-w-300 mx-auto p-10 flex-row gap-10">
+              <div className="flex flex-col gap-4">
+                <div className="font-heading text-3xl text-black text-start">
+                  Featured Article
+                </div>
+                <ZigZagContent
+                  mapData={blogArticle}
+                  zigZagClassName="flex g:flex-row max-lg:flex-col  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
+                />
               </div>
-              <ZigZagContent
-                mapData={blogArticle}
-                zigZagClassName="flex g:flex-row max-lg:flex-col  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
-              />
             </div>
-          </div>
-        </VerticalBorderPattern>
-      </section>
-
-      {/* Blogs list */}
-      <section className="flex w-full overflow-hidden  max-w-7xl mx-auto  flex-row gap-10 items-start justify-center min-h-screen">
-      <VerticalBorderPattern>
-        <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
-          <div className="flex flex-col gap-4">
-            <div className="font-heading text-3xl text-black text-start">
-              Latest Articles
-            </div>
-            <div className="grid md:grid-cols-2 w-full lg:grid-cols-3 gap-8 ">
-              {dummyBlogsPosts?.map((item, i) => (
-                <BlogCard mapData={item} key={i} />
-              ))}
-            </div>
-          </div>
+          </VerticalBorderPattern>
         </section>
-      </VerticalBorderPattern>
+
+        {/* Blogs list */}
+        <section className="flex w-full overflow-hidden  max-w-7xl mx-auto  flex-row gap-10 items-start justify-center min-h-screen">
+          <VerticalBorderPattern>
+            <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
+              <div className="flex flex-col gap-4">
+                <div className="font-heading text-3xl text-black text-start">
+                  Latest Articles
+                </div>
+                <div className="grid md:grid-cols-2 w-full lg:grid-cols-3 gap-8 ">
+                  {dummyBlogsPosts?.map((item, i) => (
+                    <BlogCard mapData={item} key={i} />
+                  ))}
+                </div>
+              </div>
+            </section>
+          </VerticalBorderPattern>
         </section>
 
         {/* Stay Updated */}
-      <VerticalBorderPattern>
-        <div className="flex flex-col gap-8 max-w-300 mx-auto p-10">
-         <div className="flex flex-col w-full h-full items-center lg:w-full justify-center gap-4 ">
-          <div className=" font-heading  text-black text-[48px] w-full leading-16 line-height-[0.5] font-bold text-center">
-           Subscribe for Video Updates
-          </div>
-          <div className="font-body text-[28px] leading-8 text-stone700 text-center w-full">
-            Get notified when we release new videos, tutorials, and product updates.          </div>
-        </div>
+        <VerticalBorderPattern>
+          <div className="flex flex-col gap-8 max-w-300 mx-auto p-10">
+            <div className="flex flex-col w-full h-full items-center lg:w-full justify-center gap-4 ">
+              <div className=" font-heading  text-black text-[48px] w-full leading-16 line-height-[0.5] font-bold text-center">
+                Subscribe for Video Updates
+              </div>
+              <div className="font-body text-[28px] leading-8 text-stone700 text-center w-full">
+                Get notified when we release new videos, tutorials, and product
+                updates.{' '}
+              </div>
+            </div>
             <div className="flex flex-row gap-8 w-1/2 mx-auto">
-              <Input placeholder='Enter your email'/>
+              <Input placeholder="Enter your email" />
               <Button>Subscribe</Button>
             </div>
           </div>
-      </VerticalBorderPattern>
+        </VerticalBorderPattern>
 
         <ScheduleBanner content={scheduleBannerData} />
       </main>
       <Fotter />
-
     </div>
   );
 }
