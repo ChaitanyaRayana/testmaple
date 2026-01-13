@@ -15,7 +15,7 @@ function ScheduleBanner({ content }) {
         </div>
         <div className="flex flex-col h-full items-start lg:w-full justify-center gap-4 ">
           <div className="  w-full text-center">
-            <Button>{content?.buttonsText[0] || 'Schedule Demo'}</Button>
+            <Button>{content?.buttonsText?.[0] || 'Schedule Demo'}</Button>
           </div>
           {!content?.buttonsText && (
             <div className="font-body text-[16px] text-stone700 text-center w-full">
