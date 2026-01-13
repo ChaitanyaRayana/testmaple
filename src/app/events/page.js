@@ -100,7 +100,7 @@ export default function page() {
           </section>
         </VerticalBorderPattern>
 
-        <ScheduleBanner/>
+        <ScheduleBanner />
       </main>
 
       <Fotter />

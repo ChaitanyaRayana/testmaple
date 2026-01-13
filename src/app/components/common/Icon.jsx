@@ -1,5 +1,5 @@
-"use client";
-import { useEffect, useRef, useState } from "react";
+'use client';
+import { useEffect, useRef, useState } from 'react';
 
 export const MapleLogo = () => {
   return (
@@ -99,11 +99,11 @@ export function VerticalBorderPattern({ children, gradientName }) {
 
     return () => observer.disconnect();
   }, []);
-  
+
   console.log({ contentHeight });
 
   return (
-    <div className={`relative w-full pb-10 bg-white overflow-hidden ${gradientName}`}>
+    <div className={`relative w-full bg-white overflow-hidden ${gradientName}`}>
       {/* LEFT BORDER */}
       <div
         className="absolute left-0 top-0 w-3 flex flex-col items-center py-8 pointer-events-none"

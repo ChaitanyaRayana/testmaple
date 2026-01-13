@@ -1,16 +1,16 @@
-import { useMemo } from "react";
+import { useMemo } from 'react';
 
 const PUBLIC_EMAIL_DOMAINS = [
-  "gmail.com",
-  "yahoo.com",
-  "yahoo.co.in",
-  "yahoo.co.uk",
-  "hotmail.com",
-  "outlook.com",
-  "aol.com",
-  "icloud.com",
-  "mail.com",
-].join("|");
+  'gmail.com',
+  'yahoo.com',
+  'yahoo.co.in',
+  'yahoo.co.uk',
+  'hotmail.com',
+  'outlook.com',
+  'aol.com',
+  'icloud.com',
+  'mail.com',
+].join('|');
 
 // Regex pattern for corporate email validation
 
@@ -28,18 +28,18 @@ export const useUTMParams = (id) => {
     const decoded = decodeURIComponent(id);
 
     // Find and parse query params
-    const queryIndex = decoded.indexOf("&");
+    const queryIndex = decoded.indexOf('&');
     if (queryIndex === -1) return {};
 
     const queryParams = decoded.slice(queryIndex + 1);
     const params = new URLSearchParams(queryParams);
 
     return {
-      utm_source: params.get("utm_source"),
-      utm_medium: params.get("utm_medium"),
-      utm_campaign: params.get("utm_campaign"),
-      location: params.get("location"),
-      kwd: params.get("kwd"),
+      utm_source: params.get('utm_source'),
+      utm_medium: params.get('utm_medium'),
+      utm_campaign: params.get('utm_campaign'),
+      location: params.get('location'),
+      kwd: params.get('kwd'),
     };
   }, [id]);
 };

@@ -79,7 +79,8 @@ h1, h2, h3, h4, h5, h6 {
 } */
 
 .backgroundGradient {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 50% 50%,
       rgba(6, 182, 212, 0.1) 0%,
       transparent 15%
@@ -95,11 +96,11 @@ h1, h2, h3, h4, h5, h6 {
       transparent 45%
     ),
     linear-gradient(135deg, #f8fcff 0%, #fafcff 100%);
-    
 }
 
 .backgroundGradientTwo {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 50% 50%,
       rgba(6, 212, 205, 0.08) 0%,
       transparent 15%
@@ -117,9 +118,9 @@ h1, h2, h3, h4, h5, h6 {
     linear-gradient(135deg, #f8fcff 0%, #fdfffa 100%);
 }
 
-
 .backgroundGradientAnimation {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 50% 50%,
       rgba(6, 182, 212, 0.1) 0%,
       transparent 50%
@@ -138,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .backgroundGradientAnimation::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;

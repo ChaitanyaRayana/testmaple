@@ -19,7 +19,10 @@ function FAQSection() {
       <div className="flex max-w-300 mx-auto flex-col gap-8 px-10">
         <div className="flex flex-col h-full items-start lg:w-full justify-center gap-2 ">
           <div className="flex justify-center w-full">
-            <ChipText text="Frequently Asked Questions" chipIcon={'CircleQuestionMarkIcon'} />
+            <ChipText
+              text="Frequently Asked Questions"
+              chipIcon={'CircleQuestionMarkIcon'}
+            />
           </div>
           <div className=" font-heading text-black text-[48px] w-full leading-16 line-height-[0.5] font-bold text-center">
             Got Questions? We've Got Answers

@@ -7,8 +7,10 @@ import ChipText from './ChipText';
 import Cards from './Cards';
 import Table from './Table';
 import { CircleThickIcon } from './svgImage';
+import { useRouter } from 'next/navigation';
 
 function ZigZagContent({ mapData, zigZagClassName }) {
+  const router = useRouter();
   return (
     <div className={zigZagClassName}>
       <div
@@ -64,6 +66,12 @@ function ZigZagContent({ mapData, zigZagClassName }) {
                       ? 'bg-linear-to-br from-[#EBF3FA] to-[#DFEDFA] rounded  hover:text-white'
                       : 'bg-white rounded  hover:text-white'
                   }
+                  onClickButton={(e) => {
+                    if (item?.href) {
+                      router.push(item?.href);
+                    }
+                    return;
+                  }}
                 >
                   {item?.label || item}
                 </Button>

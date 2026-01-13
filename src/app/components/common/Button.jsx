@@ -10,17 +10,24 @@ function Button({
   type = 'submit',
   disabled = false,
 }) {
-  const childrenName = children === 'Schedule Demo' || children === 'Get Started Today' || children === 'Contact Us' ? true : false;
+  const childrenName =
+    children === 'Schedule Demo' ||
+    children === 'Get Started Today' ||
+    children === 'Contact Us' ||
+    children === 'Contact Sales' ||
+    children === 'Contact'
+      ? true
+      : false;
   const router = useRouter();
   return (
     <button
       href={''}
-      onClick={() => {
+      onClick={(e) => {
         if (childrenName) {
-          router.push('/contact-us');
+          router.push('/contact-us#schedule-demo');
           return;
         }
-        onClickButton && onClickButton();
+        onClickButton && onClickButton(e);
       }}
       type={type}
       disabled={disabled}

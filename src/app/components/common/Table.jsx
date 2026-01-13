@@ -1,4 +1,4 @@
-import { ICONS } from "./icons/AllIcons";
+import { ICONS } from './icons/AllIcons';
 
 function Table({ stats = [] }) {
   if (!stats || stats.length === 0) {

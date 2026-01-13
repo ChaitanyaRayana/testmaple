@@ -26,8 +26,8 @@ function Fotter() {
 
   return (
     <footer className="  flex max-h-max w-full max-w-7xl  mx-auto flex-col flex-wrap items-center justify-between bg-white font-body h-full">
-        <div className="flex  flex-row flex-wrap items-center w-full text-center">
-      <VerticalBorderPattern>
+      <div className="flex  flex-row flex-wrap items-center w-full text-center">
+        <VerticalBorderPattern>
           <div className="flex w-full max-w-300 mx-auto flex-row flex-wrap flex-1 h-full items-start justify-between px-10 gap-8">
             <div className="w-full flex lg:flex-row max-lg:flex-col justify-start gap-8 items-start pt-16">
               <div className="w-fit h-8">
@@ -76,8 +76,8 @@ function Fotter() {
               </div>
             </div>
           </div>
-      </VerticalBorderPattern>
-        </div>
+        </VerticalBorderPattern>
+      </div>
     </footer>
   );
 }

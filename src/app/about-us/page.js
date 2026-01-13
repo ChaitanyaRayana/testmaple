@@ -15,7 +15,7 @@ export default function page() {
 
       {/* Top Section */}
       <main className="flex w-full relative z-1 max-w-7xl mx-auto pt-30 flex-col items-center bg-white">
-        <VerticalBorderPattern>
+        <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
           <section className="flex w-full overflow-hidden  max-w-7xl  flex-row items-center min-h-screen text-center pt-6.5">
             <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
               <div className="flex flex-col h-full items-center lg:w-full  justify-center gap-3 ">
@@ -33,7 +33,7 @@ export default function page() {
               </div>
               <ZigZagHomeSection
                 mapData={aboutUS?.sectionOne}
-                padding={{ top: 'pt-10' }}
+                padding={{ top: 'pt-10 pb-20' }}
                 leftAlign={true}
               />
             </div>
@@ -41,8 +41,8 @@ export default function page() {
         </VerticalBorderPattern>
 
         {/* Section  Two*/}
-        <VerticalBorderPattern>
-          <section className="flex max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
+          <section className="flex max-w-300 mx-auto   flex-row gap-10">
             <CenterTextCardsSection
               mapData={aboutUS?.sectionTwo}
               cardGroup={true}
@@ -51,8 +51,8 @@ export default function page() {
             />
           </section>
         </VerticalBorderPattern>
-        <VerticalBorderPattern>
-          <section className="flex max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName={'backgroundGradient'}>
+          <section className="flex max-w-300 mx-auto   flex-row gap-10">
             <CenterTextCardsSection
               mapData={aboutUS?.sectionTwo}
               cardGroup={true}
@@ -63,7 +63,7 @@ export default function page() {
         </VerticalBorderPattern>
 
         <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 py-20 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >
@@ -88,7 +88,7 @@ export default function page() {
         </VerticalBorderPattern>
 
         {/* Section  four*/}
-        <VerticalBorderPattern>
+        <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
           <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
             <CenterTextCardsSection
               mapData={aboutUS?.sectionFour}
