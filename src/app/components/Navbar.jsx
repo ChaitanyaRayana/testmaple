@@ -177,6 +177,13 @@ function Navbar() {
                       >
                         MR Workflows
                       </Link>
+                      <Link
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex text-[#000] text-sm p-[2px_15px] w-full text-start cursor-pointer font-normal gap-3  hover:bg-(--color-hoverBorderGray) hover:text-stone-900 transition-colors"
+                        href={'/platform/mr-forms'}
+                      >
+                        MR Forms
+                      </Link>
                     </div>
                   )}
                 </li>
