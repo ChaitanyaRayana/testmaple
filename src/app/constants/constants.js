@@ -2,7 +2,25 @@
 import MRRecordImage from '@/public/assets/images/png/mr-records-one.png';
 import MRRequestImage from '@/public/assets/images/png/mr-request-one.png';
 import MRWorkFlowImage from '@/public/assets/images/png/mr-workflow-one.png';
+import MRFormBuilderImage from '@/public/assets/images/png/mr-form-builder.png';
 
+// Blog Image
+import BlogOneImage from '@/public/assets/images/png/blogImages/blogOne.png';
+import BlogTwoImage from '@/public/assets/images/png/blogImages/blogTwo.png';
+import BlogThreeImage from '@/public/assets/images/png/blogImages/blogThree.png';
+import BlogFourImage from '@/public/assets/images/png/blogImages/blogFour.png';
+import VideoImage from '@/public/assets/images/png/videoImages/videoImage.png';
+import BlogAIImage from '@/public/assets/images/png/BlogAIImage.png';
+import WebinarImage from '@/public/assets/images/png/webinarImages/mainImage.png';
+import WebinarImageTwo from '@/public/assets/images/png/webinarImages/webinarTwo.png';
+
+import EventOneImage from '@/public/assets/images/png/events/eventOneImage.png';
+import EventTwoImage from '@/public/assets/images/png/events/eventTwoImage.png';
+
+import MediaImage from '@/public/assets/images/png/blogImages/mediaImage.png';
+
+import AboutUsImage from '@/public/assets/images/png/meetingImage.png';
+import AboutUsImageOne from '@/public/assets/images/png/aboutUsOne.png';
 // zikzag
 import StateGovernImage from '@/public/assets/images/png/datagovernance.png';
 import RetentionPoliciesImage from '@/public/assets/images/png/Zerofriction.png';
@@ -104,7 +122,7 @@ export const neverMissDeadLine = [
       'Mobile-responsive design',
       'Direct record integration',
     ],
-    image: MRWorkFlowImage,
+    image: MRFormBuilderImage,
     icon: <FileRightIcon width={16} height={16} color="text-[#226fb7]" />,
     href: '/platform/mr-forms',
   },
@@ -192,7 +210,7 @@ export const homeZipZapContent = [
     featureHighlight: [
       'Find records <strong>up to 10x faster</strong> with metadata-driven search',
       'Organize everything with secure, custom workspaces',
-      'Gain actionable process insights through built-in Analytics Get started today',
+      'Gain actionable process insights through built-in Analytics',
     ],
     image: StateGovernImage,
   },
@@ -277,7 +295,7 @@ export const powerfulCardSectionData = {
 
 export const homePageFaq = [
   {
-    Qes: 'Why do organizations close MapleRecord?',
+    Qes: 'Why do organizations choose MapleRecord?',
     ans: 'Organizations choose MapleRecord to securely manage records, automate information requests, and streamline workflows in one integrated platform.',
   },
   {
@@ -306,8 +324,9 @@ export const mrRecordsPlatformContent = {
       buttonsText: ['See the Platform in Action', 'Explore Capailities'],
       label: 'An Intelligent, Secure, and Scalable Records Management Core',
       description:
-        'Securely manage, govern, and retrieve your most important records across the enterprise.',
+        'Seamlessly manage both electronic documents and physical records in one unified, AI-powered platform with intelligent automation and complete lifecycle control.',
       image: MRRecordIndustryImage,
+      buttonsText: ['See the Platform in Action', 'Explore Capabilities'],
       bottomText:
         'Secure &nbsp; • &nbsp; Compliant &nbsp; • &nbsp; Enterprise-Ready',
     },
@@ -317,7 +336,7 @@ export const mrRecordsPlatformContent = {
         'Fragmented records. Manual handling. Compliance & audit risk.',
       cardSection: [
         {
-          label: 'Fragmented Record Systems',
+          label: 'Disconnected Electronic & Physical Records',
           description:
             'Records scattered across multiple platforms create inefficiencies',
           icon: 'FolderIcon',
@@ -410,27 +429,27 @@ export const mrRecordsPlatformContent = {
       label: 'Key Capabilities',
       cardSection: [
         {
-          label: 'Intelligent Search & Insights',
+          label: 'AI-Powered Hybrid Search',
           description:
-            '<ul><li>• &nbsp;Metadata-powered search</li><li>• &nbsp;Rapid record retrieval</li><li>• &nbsp;Analytics dashboards for optimization</li></ul>',
+            '<ul><li>• &nbsp;Unified search across electronic and physical records</li><li>• &nbsp; Real-time location tracking for physical files</li><li>• &nbsp;Intelligent metadata extraction with AI</li></ul>',
           icon: 'MagnifyingIcon',
         },
         {
-          label: 'Workflow Automation',
+          label: 'Physical Records Management',
           description:
-            '<ul><li>• &nbsp;Low-code workflow builder</li><li>• &nbsp;Preconfigured templates</li><li>• &nbsp;Automated invoice handling</li></ul>',
+            '<ul><li>• &nbsp;Barcode/RFID tracking integration</li><li>• &nbsp;Check-in/check-out workflows</li><li>• &nbsp;Location management and tracking</li></ul>',
           icon: 'LightingIcon',
         },
         {
-          label: 'Governance & Compliance',
+          label: 'Unified Governance & Compliance',
           description:
-            '<ul><li>• &nbsp;Retention enforcement</li><li>• &nbsp;Versioning & audit trails</li><li>• &nbsp;Secure, compliant archiving</li></ul>',
+            '<ul><li>• &nbsp; Hybrid retention policy management</li><li>• &nbsp;Automated disposition workflows</li><li>• &nbsp;Complete audit trails for both formats</li></ul>',
           icon: 'SheldCardIcon',
         },
         {
-          label: 'Integration & Deployment',
+          label: 'Intelligent Automation',
           description:
-            '<ul><li>• &nbsp;Multi-platform access</li><li>• &nbsp;ERP/CRM connectivity</li><li>• &nbsp;Cloud and on-premise support</li></ul>',
+            '<ul><li>• &nbsp;AI-driven classification and indexing</li><li>• &nbsp;Automated workflow triggers</li><li>• &nbsp;Smart recommendations for lifecycle actions</li></ul>',
           icon: 'PuzzleIcon',
         },
       ],
@@ -486,10 +505,10 @@ export const mrRecordsPlatformContent = {
       ],
     },
     scheduleSection: {
-      label: 'Ready to modernize your records?',
+      label: 'Ready to unify your electronic and physical records?',
       description:
-        'Automate your record management with AI-driven workflows, secure governance, and enterprise-grade compliance.',
-      buttonsText: ['Contact Sales'],
+        'Experience the power of an AI-first hybrid platform that brings all your records together with intelligent automation, unified governance, and seamless lifecycle management.',
+      buttonsText: ['Schedule a Demo', 'Contact Sales'],
     },
   },
   'mr-request': {
@@ -1159,7 +1178,7 @@ export const industriesSolutions = {
             'Complete audit trail of all requests',
           ],
           buttonsText: ['Learn More About MR Requests'],
-          image: StateGovernImage,
+          image: MRRequestImage,
         },
         {
           label: 'MR Workflows',
@@ -1173,7 +1192,7 @@ export const industriesSolutions = {
             'Integration with core banking systems',
           ],
           buttonsText: ['Learn More About MR Workflows'],
-          image: StateGovernImage,
+          image: MRWorkFlowImage,
         },
       ],
     },
@@ -1262,6 +1281,7 @@ export const industriesSolutions = {
             'Complete audit logging',
             'Data residency options',
           ],
+          featureMarkDownIcon: 'CircleThickIcon',
         },
       ],
     },
@@ -1284,7 +1304,7 @@ export const industriesSolutions = {
         'Accelerate claims processing, streamline policy administration, and ensure compliance with intelligent document management and automated workflows built for insurance carriers, brokers, and MGAs.',
       buttonsText: ['Request a Demo'],
       bottomText: 'Secure, Compliant Information Management',
-      image: MRRecordImage,
+      image: FinanceImage,
     },
     sectionTwo: {
       label: 'Insurance Industry Challenges',
@@ -1341,7 +1361,7 @@ export const industriesSolutions = {
             'Complete request tracking and audit trails',
           ],
           buttonsText: ['Learn More About MR Requests'],
-          image: StateGovernImage,
+          image: MRRequestImage,
           icon: 'FileIcon',
         },
         {
@@ -1355,7 +1375,7 @@ export const industriesSolutions = {
             'Real-time workflow analytics and reporting',
           ],
           buttonsText: ['Learn More About MR Workflows'],
-          image: StateGovernImage,
+          image: MRWorkFlowImage,
           icon: 'LightingIcon',
         },
       ],
@@ -1444,6 +1464,7 @@ export const industriesSolutions = {
             'Seamless integration across records, requests, and workflows',
             'Designed for reliability and operational continuity',
           ],
+          featureMarkDownIcon: 'CircleThickIcon',
         },
       ],
     },
@@ -1523,7 +1544,7 @@ export const industriesSolutions = {
             'Complete request tracking and audit trails',
           ],
           buttonsText: ['Learn More About MR Requests'],
-          image: StateGovernImage,
+          image: MRRequestImage,
           icon: 'FileIcon',
         },
         {
@@ -1537,7 +1558,7 @@ export const industriesSolutions = {
             'Real-time workflow analytics and reporting',
           ],
           buttonsText: ['Learn More About MR Workflows'],
-          image: StateGovernImage,
+          image: MRWorkFlowImage,
           icon: 'LightingIcon',
         },
       ],
@@ -1625,6 +1646,7 @@ export const industriesSolutions = {
             'Seamless integration across records, requests, and workflows',
             'Designed for reliability and operational continuity',
           ],
+          featureMarkDownIcon: 'CircleThickIcon',
         },
       ],
     },
@@ -1645,7 +1667,7 @@ export const industriesSolutions = {
         'Transform academic administration with secure, compliant student record management and automated workflows for K–12 schools, colleges, and universities.',
       buttonsText: ['Request a Demo'],
       bottomText: 'Secure, Compliant Information Management',
-      image: MRRecordImage,
+      image: RDImage,
     },
     sectionTwo: {
       label: 'Education Industry Challenges',
@@ -1702,7 +1724,7 @@ export const industriesSolutions = {
             'Complete request tracking and audit trails',
           ],
           buttonsText: ['Learn More About MR Requests'],
-          image: StateGovernImage,
+          image: MRRequestImage,
           icon: 'FileIcon',
         },
         {
@@ -1716,7 +1738,7 @@ export const industriesSolutions = {
             'Real-time workflow analytics and reporting',
           ],
           buttonsText: ['Learn More About MR Workflows'],
-          image: StateGovernImage,
+          image: MRWorkFlowImage,
           icon: 'LightingIcon',
         },
       ],
@@ -1804,6 +1826,7 @@ export const industriesSolutions = {
             'Seamless integration across records, requests, and workflows',
             'Designed for reliability and operational continuity',
           ],
+          featureMarkDownIcon: 'CircleThickIcon',
         },
       ],
     },
@@ -1826,7 +1849,7 @@ export const industriesSolutions = {
         'Streamline quality documentation, manage compliance records, and automate manufacturing workflows with intelligent document management built for production excellence and regulatory compliance.',
       buttonsText: ['Request a Demo'],
       bottomText: 'Secure, Compliant Information Management',
-      image: MRRecordImage,
+      image: OperationsImage,
     },
     sectionTwo: {
       label: 'Manufacturing Industry Challenges',
@@ -1883,7 +1906,7 @@ export const industriesSolutions = {
             'Complete request tracking and audit trails',
           ],
           buttonsText: ['Learn More About MR Requests'],
-          image: StateGovernImage,
+          image: MRRequestImage,
           icon: 'FileIcon',
         },
         {
@@ -1897,7 +1920,7 @@ export const industriesSolutions = {
             'Real-time workflow analytics and reporting',
           ],
           buttonsText: ['Learn More About MR Workflows'],
-          image: StateGovernImage,
+          image: MRWorkFlowImage,
           icon: 'LightingIcon',
         },
       ],
@@ -1985,6 +2008,7 @@ export const industriesSolutions = {
             'Seamless integration across records, requests, and workflows',
             'Designed for reliability and operational continuity',
           ],
+          featureMarkDownIcon: 'CircleThickIcon',
         },
       ],
     },
@@ -2006,7 +2030,7 @@ export const industriesSolutions = {
         'Transform public records management with secure document handling, automated FOIA processing, and compliant workflows built for municipal governments, state agencies, counties, and public institutions.',
       buttonsText: ['Request a Demo'],
       bottomText: 'Secure, Compliant Information Management',
-      image: MRRecordImage,
+      image: LegalImage,
     },
     sectionTwo: {
       label: 'Government Sector Challenges',
@@ -2062,7 +2086,7 @@ export const industriesSolutions = {
             'Complete request tracking and audit trails',
           ],
           buttonsText: ['Learn More About MR Requests'],
-          image: StateGovernImage,
+          image: MRRequestImage,
           icon: 'FileIcon',
         },
         {
@@ -2077,7 +2101,7 @@ export const industriesSolutions = {
             'Real-time workflow analytics and reporting',
           ],
           buttonsText: ['Learn More About MR Workflows'],
-          image: StateGovernImage,
+          image: MRWorkFlowImage,
           icon: 'LightingIcon',
         },
       ],
@@ -2167,15 +2191,16 @@ export const industriesSolutions = {
             'Seamless integration across records, requests, and workflows',
             'Designed for transparency and public accountability',
           ],
+          featureMarkDownIcon: 'CircleThickIcon',
         },
       ],
     },
-  },
-  scheduleSection: {
-    label: 'Ready to Transform Your Public Sector Operations?',
-    description:
-      'Join state and local governments using MapleRecord to modernize public records management, automate FOIA processing, and ensure transparency and compliance.',
-    buttonsText: ['Schedule a Demo'],
+    scheduleSection: {
+      label: 'Ready to Transform Your Public Sector Operations?',
+      description:
+        'Join state and local governments using MapleRecord to modernize public records management, automate FOIA processing, and ensure transparency and compliance.',
+      buttonsText: ['Schedule a Demo'],
+    },
   },
 };
 
@@ -2353,7 +2378,7 @@ export const departmentalSolutions = {
         'Centralize legal document management, automate compliance workflows, and mitigate risk with intelligent solutions designed for legal and compliance departments.',
       buttonsText: ['Request a Demo'],
       bottomText: 'Audit-Ready | Secure',
-      image: MRRecordImage,
+      image: LegalImage,
     },
     sectionTwo: {
       label: 'Legal & Compliance Challenges',
@@ -2517,7 +2542,7 @@ export const departmentalSolutions = {
         'Streamline employee records management, automate HR workflows, and ensure compliance with comprehensive document management solutions built for modern HR departments.',
       buttonsText: ['Request a Demo'],
       bottomText: 'Simplify HR operations',
-      image: MRRecordImage,
+      image: HumanResource,
     },
     sectionTwo: {
       label: 'Human Resource Challenges',
@@ -3010,7 +3035,7 @@ export const departmentalSolutions = {
         'Deliver exceptional customer experiences, streamline case resolution, centralize customer documentation, and ensure service compliance with intelligent document management built for customer service teams.',
       buttonsText: ['Request a Demo'],
       bottomText: 'Faster | Transparent service',
-      image: MRRecordImage,
+      image: CustomerServiceImage,
     },
     sectionTwo: {
       label: 'Customer Service Challenges',
@@ -3156,12 +3181,12 @@ export const departmentalSolutions = {
         },
       ],
     },
-  },
-  scheduleSection: {
-    label: 'Ready to Transform Your Customer Service?',
-    description:
-      'Join customer service teams using MapleRecord to deliver faster resolutions, improve satisfaction scores, and ensure service compliance.',
-    buttonsText: ['Schedule a Demo'],
+    scheduleSection: {
+      label: 'Ready to Transform Your Customer Service?',
+      description:
+        'Join customer service teams using MapleRecord to deliver faster resolutions, improve satisfaction scores, and ensure service compliance.',
+      buttonsText: ['Schedule a Demo'],
+    },
   },
 };
 
@@ -3179,15 +3204,15 @@ export const dummyBlogsPosts = [
     authorDateWrap: (
       <div className="w-auto flex flex-wrap gap-2">
         <span className="flex flex-row gap-2">
-          <UserIcon /> <span> Michael Chen</span>
+          <UserIcon width={16} height={16} /> <span> Michael Chen</span>
         </span>
         <span className="flex flex-row gap-2">
-          <CalendarIcon /> <span>December 20, 2024</span>
+          <CalendarIcon width={16} height={16} /> <span>December 20, 2024</span>
         </span>
       </div>
     ),
     href: '/blogs/5-key-compliance-requirements',
-    image: MRRecordImage,
+    image: BlogOneImage,
   },
   {
     id: 'digital-record-retention-best-practices',
@@ -3200,15 +3225,15 @@ export const dummyBlogsPosts = [
     authorDateWrap: (
       <div className="w-auto flex flex-wrap gap-2">
         <span className="flex flex-row gap-2">
-          <UserIcon /> <span> Emily Parker</span>
+          <UserIcon width={16} height={16} /> <span> Emily Parker</span>
         </span>
         <span className="flex flex-row gap-2">
-          <CalendarIcon /> <span>December 15, 2024</span>
+          <CalendarIcon width={16} height={16} /> <span>December 15, 2024</span>
         </span>
       </div>
     ),
     href: '/blogs/digital-record-retention-best-practices',
-    image: MRRecordImage,
+    image: BlogTwoImage,
   },
   {
     id: 'automating-workflows-guide',
@@ -3221,15 +3246,15 @@ export const dummyBlogsPosts = [
     authorDateWrap: (
       <div className="w-auto flex flex-wrap gap-2">
         <span className="flex flex-row gap-2">
-          <UserIcon /> <span> David Martinez</span>
+          <UserIcon width={16} height={16} /> <span> David Martinez</span>
         </span>
         <span className="flex flex-row gap-2">
-          <CalendarIcon /> <span>December 5, 2024</span>
+          <CalendarIcon width={16} height={16} /> <span>December 5, 2024</span>
         </span>
       </div>
     ),
     href: '/blogs/automating-workflows-guide',
-    image: MRRecordImage,
+    image: BlogThreeImage,
   },
   {
     id: 'roi-modern-records-management',
@@ -3242,22 +3267,22 @@ export const dummyBlogsPosts = [
     authorDateWrap: (
       <div className="w-auto flex flex-wrap gap-2">
         <span className="flex flex-row gap-2">
-          <UserIcon /> <span> John Anderson</span>
+          <UserIcon width={16} height={16} /> <span> John Anderson</span>
         </span>
         <span className="flex flex-row gap-2">
-          <CalendarIcon /> <span>December 20, 2024</span>
+          <CalendarIcon width={16} height={16} /> <span>December 20, 2024</span>
         </span>
       </div>
     ),
     href: '/blogs/roi-modern-records-management',
-    image: MRRecordImage,
+    image: BlogFourImage,
   },
 ];
 
 export const aboutUS = {
   sectionOne: [
     {
-      image: MRRecordImage,
+      image: AboutUsImageOne,
       cardSection: [
         {
           label: 'Our Mission',
@@ -3274,7 +3299,7 @@ export const aboutUS = {
       ],
     },
     {
-      image: MRRecordImage,
+      image: AboutUsImage,
       cardSection: [
         {
           label: 'Our Story',
@@ -3297,28 +3322,28 @@ export const aboutUS = {
         title: 'Security First',
         description:
           'Enterprise-grade security, role-based access, and end-to-end data protection are built into the platform.',
-        icon: '',
+        icon: 'SheldCardIcon',
       },
       {
         id: 'compliance-ready',
         title: 'Compliance Ready',
         description:
           'Designed to support regulatory, retention, and audit requirements without adding operational burden.',
-        icon: '',
+        icon: 'AwardIcon',
       },
       {
         id: 'designed-for-scale',
         title: 'Designed for Scale',
         description:
           'Built to handle high volumes of records, requests, and workflows across large, distributed organizations.',
-        icon: '',
+        icon: 'GraphImproveIcon',
       },
       {
         id: 'practical-ai',
         title: 'Practical AI',
         description:
           'AI is applied where it delivers real value—classification, discovery, routing, and insights—without unnecessary complexity.',
-        icon: '',
+        icon: 'LightingIcon',
       },
     ],
   },
@@ -3330,7 +3355,7 @@ export const aboutUS = {
     cardSection: [
       {
         id: 'organizations',
-        value: '500+',
+        value: '50+',
         label: 'Organizations',
         description: 'Trust MapleRecord for their records management',
       },
@@ -3364,37 +3389,37 @@ export const aboutUS = {
         id: 'financial-services',
         label: 'Financial Services',
         description: 'Banking, investment, and financial compliance solutions',
-        icon: '',
+        icon: 'GraphImproveIcon',
       },
       {
         id: 'healthcare',
         label: 'Healthcare',
         description: 'HIPAA-compliant patient records management',
+        icon: 'SheldCardIcon',
       },
       {
         id: 'education',
         label: 'Education',
         description: 'Student records and academic document management',
-        icon: '',
+        icon: 'AwardIcon',
       },
       {
         id: 'insurance',
         label: 'Insurance',
         description: 'Policy and claims document management',
-        icon: '',
+        icon: 'SheldCardIcon',
       },
       {
         id: 'manufacturing',
         label: 'Manufacturing',
         description: 'Quality, compliance, and supply chain records',
-        icon: '',
+        icon: 'LightingIcon',
       },
       {
         id: 'government',
         label: 'Government',
         description: 'Public sector document and records management',
-        icon: '',
-        icon: '',
+        icon: 'HumanResourceIcon',
       },
     ],
   },
@@ -3463,10 +3488,10 @@ export const eventsContent = {
           label: 'Register Now',
           icon: '',
         },
-        image: MRRecordImage,
+        image: EventOneImage,
       },
       {
-        image: MRRecordImage,
+        image: EventTwoImage,
 
         chipText: ['Summit', 'Virtual', 'Healthcare'],
         label: 'Healthcare Records Management Summit',
@@ -3497,7 +3522,7 @@ export const eventsContent = {
       {
         chipText: ['Product Launch', 'Virtual'],
         label: 'Product Launch: MR Analytics Platform',
-        image: MRRecordImage,
+        image: BlogThreeImage,
         description:
           'Be the first to see our new analytics platform that provides deep insights into your records management operations.',
 
@@ -3571,7 +3596,7 @@ export const videoCardContent = [
     views: '6.7K',
     date: 'December 28, 2024',
     // href: '/blogs/5-key-compliance-requirements',
-    image: MRRecordImage,
+    image: BlogAIImage,
     readMore: false,
   },
   {
@@ -3584,7 +3609,7 @@ export const videoCardContent = [
     views: '6.7K',
     date: 'December 08, 2024',
     href: '/blogs/digital-record-retention-best-practices',
-    image: MRRecordImage,
+    image: VideoImage,
     readMore: false,
   },
   {
@@ -3597,14 +3622,14 @@ export const videoCardContent = [
     views: '6.7K',
     date: 'November 12, 2024',
     href: '/blogs/automating-workflows-guide',
-    image: MRRecordImage,
+    image: BlogTwoImage,
     readMore: false,
   },
 ];
 
 export const webinarsContent = [
   {
-    image: MRRecordImage,
+    image: WebinarImage,
     chipText: [
       'AI & Automation',
       'Intelligent Classification',
@@ -3632,7 +3657,7 @@ export const webinarsContent = [
     },
   },
   {
-    image: MRRecordImage,
+    image: WebinarImageTwo,
 
     featured: false,
     chipText: [
@@ -3661,7 +3686,7 @@ export const webinarsContent = [
     },
   },
   {
-    image: MRRecordImage,
+    image: VideoImage,
     featured: true,
     chipText: [
       'Digital Transformation',
@@ -3670,7 +3695,6 @@ export const webinarsContent = [
       'Best Practices',
     ],
     label: 'Digital Transformation: From Paper to Platform',
-    image: MRRecordImage,
     description:
       'Step-by-step guide to successfully transitioning from paper-based to digital records management systems.',
     eventMeta: {
@@ -3698,7 +3722,7 @@ export const mediaPageContent = [
       "TechCrunch profiles MapleRecord's innovative approach to intelligent document management and automation.",
     location: 'TechCrunch',
     date: 'December 15, 2025',
-    image: MRRecordImage,
+    image: BlogAIImage,
     buttonText: { label: 'Read Article', icon: '', href: '' },
   },
   {
@@ -3707,7 +3731,7 @@ export const mediaPageContent = [
       'How leading banks and financial institutions are using MapleRecord to meet regulatory requirements.',
     location: 'Financial Times',
     date: 'November 20, 2025',
-    image: MRRecordImage,
+    image: MediaImage,
     buttonText: { label: 'Read Article', icon: '', href: '' },
   },
   {
@@ -3716,7 +3740,7 @@ export const mediaPageContent = [
       'VentureBeat explores the migration trend from legacy ECM systems to modern cloud platforms.',
     location: 'VentureBeat',
     date: 'October 18, 2025',
-    image: MRRecordImage,
+    image: VideoImage,
     buttonText: { label: 'Read Article', icon: '', href: '' },
   },
 ];
@@ -3730,12 +3754,14 @@ export const awardsSection = {
       description: 'SaaS Awards',
       subdescrp: 'Enterprise Technology',
       iconText: '2025',
+      icon: 'AwardIcon',
     },
     {
       label: 'Innovation Award',
       description: 'TechCrunch Disrupt',
       subdescrp: 'AI & Machine Learning',
       iconText: '2025',
+      icon: 'AwardIcon',
     },
   ],
 };

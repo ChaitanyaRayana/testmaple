@@ -27,7 +27,7 @@ export default function StatCard({ mapData }) {
       </div>
       <div className="text-sm w-full text-center text-gray-600">{label}</div>
       {description && (
-        <div className="text-sm w-full text-center text-gray-300">
+        <div className="text-sm w-full text-center text-gray-400">
           {description}
         </div>
       )}

@@ -132,6 +132,17 @@ export function VerticalBorderPattern({ children, gradientName }) {
         ))}
       </div>
 
+      {/* BOTTOM HORIZONTAL LINE */}
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full mx-10 flex justify-center">
+        {/* <div className="h-0.5 w-[95%] bg-linear-to-r from-gray-200 via-gray-300 to-gray-200 rounded-full" /> */}
+        {Array.from({ length: 9 }).map((_, i) => (
+          <div key={i} className="flex flex-row items-center gap-2 w-full">
+            <div className="w-7 h-0.5 bg-gray-200 rounded-b-full" />
+            <div className="w-1 h-1 rounded-full bg-linear-to-br from-gray-200 to-gray-300 shadow-sm" />
+            <div className="w-7 h-0.5 bg-linear-to-b from-gray-100 to-gray-200 rounded-t-full" />
+          </div>
+        ))}
+      </div>
       {/* MAIN CONTENT */}
       <div ref={contentRef} className=" relative z-10 w-full">
         {children}

@@ -6,16 +6,22 @@ function ZigZagHomeSection({
   mapData,
   padding = { top: 'pt-20', around: 'p-10' },
   leftAlign = false,
+  mustHaveBottomPadding = 'pb-15',
+  mustHaveLeftRightPadding = 'px-10',
+  imageHeight = '',
 }) {
   const [selectedMRBtn, setSelectedMRBtn] = useState(0);
   return mapData?.map((item, index) => (
     <div className={`max-w-7xl  w-full  ${padding?.top}`} key={index}>
       <div
-        className={`flex  max-w-300 mx-auto  flex-row gap-10  max-md:flex-col ${padding?.around} `}
+        className={`flex  max-w-300 mx-auto w-full flex-row gap-10  max-md:flex-col ${padding?.around} `}
       >
         <ZigZagContent
           mapData={{ ...item, leftAlign }}
           key={index}
+          imageHeight={imageHeight}
+          mustHaveBottomPadding={mustHaveBottomPadding}
+          mustHaveLeftRightPadding={mustHaveLeftRightPadding}
           zigZagClassName={`flex   ${
             index % 2 === 0
               ? 'lg:flex-row max-lg:flex-col '

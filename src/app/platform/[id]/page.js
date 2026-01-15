@@ -27,66 +27,77 @@ async function Page({ params }) {
   }
 
   return (
-    <div className="flex min-h-screen w-full pt-30 flex-col bg-white">
+    <div className="flex min-h-screen w-full  flex-col bg-white">
       <Navbar />
-
       <main className="flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
         {/* // Section one */}
-        <VerticalBorderPattern>
-          <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName="backgroundGlow">
+          <section className="flex  max-w-300 mx-auto px-10 pt-50 pb-15 flex-row gap-10">
             <ZigZagContent
               mapData={contentToDisplay?.sectionOne}
+              mustHaveBottomPadding={''}
+              mustHaveLeftRightPadding={''}
+              imageHeight="items-center h-120"
               zigZagClassName="flex g:flex-row max-lg:flex-col  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
             />
           </section>
         </VerticalBorderPattern>
         {/* Section  Two*/}
-        <VerticalBorderPattern>
-          <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName="backgroundGradient">
+          <section className="flex  max-w-300 mx-auto pt-15 h-fit flex-row items-start gap-10">
             <CenterTextCardsSection
               mapData={contentToDisplay?.sectionTwo}
               headingStart={true}
+              mustHaveBottomPadding={'pb-15'}
+              mustHaveLeftRightPadding={'px-10'}
             />
           </section>
         </VerticalBorderPattern>
         {/* Section  Three*/}
-        <VerticalBorderPattern>
-          <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName="backgroundGradientAnimation">
+          <section className="flex max-w-300 mx-auto pt-15 flex-row gap-10">
             <ZigZagContent
               mapData={contentToDisplay?.sectionThree}
               cardGroup={true}
               headingStart={true}
+              mustHaveBottomPadding={'pb-15'}
+              mustHaveLeftRightPadding={'px-10'}
               zigZagClassName="flex g:flex-row max-lg:flex-col items-center  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
             />
           </section>
         </VerticalBorderPattern>
         {/* Section  Four*/}
-        <VerticalBorderPattern>
-          <section className="flex max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName="backgroundGradientAnimation">
+          <section className="flex max-w-300 mx-auto pt-15 flex-row gap-10">
             <ZigZagContent
               mapData={contentToDisplay?.sectionFour}
               cardGroup={true}
               headingStart={true}
+              mustHaveBottomPadding={'pb-15'}
+              mustHaveLeftRightPadding={'px-10'}
+              imageHeight={'h-max'}
               zigZagClassName="flex g:flex-row max-lg:flex-col items-center  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
             />
           </section>
         </VerticalBorderPattern>
         {/* Section  Five*/}
-        <VerticalBorderPattern>
-          <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName="backgroundGradient">
+          <section className="flex  max-w-300 mx-auto pt-15  flex-row gap-10">
             <CenterTextCardsSection
               mapData={contentToDisplay?.sectionFive}
               gridTwoGroup={true}
               //   headingStart={true}
               gridGroup={'md:grid-cols-2 lg:grid-cols-2'}
+              mustHaveBottomPadding={'pb-15'}
+              mustHaveLeftRightPadding={'px-10'}
               zigZagClassName="flex g:flex-row max-lg:flex-col items-center  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
             />
           </section>
         </VerticalBorderPattern>
 
         {/* Section  Six*/}
-        <VerticalBorderPattern>
-          <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName="backgroundGradientTwo">
+          <section className="flex  max-w-300 mx-auto pt-15   flex-row gap-10">
             <CenterTextCardsSection
               mapData={contentToDisplay?.sectionSix}
               gridTwoGroup={true}
@@ -94,6 +105,8 @@ async function Page({ params }) {
               centerCardContent={true}
               // groupCss={'flex-row gap-4'}
               gridGroup={'md:grid-cols-2 lg:grid-cols-2'}
+              mustHaveBottomPadding={'pb-15'}
+              mustHaveLeftRightPadding={'px-10'}
               zigZagClassName="flex g:flex-row max-lg:flex-col items-center  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
             />
           </section>

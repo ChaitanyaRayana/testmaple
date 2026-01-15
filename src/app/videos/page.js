@@ -7,7 +7,7 @@ import Input from '../components/common/Input';
 import StatCard from '../components/common/StatCard';
 import ZigZagContent from '../components/common/ZigZagContent';
 import Navbar from '../components/Navbar';
-import MRRecordImage from '@/public/assets/images/png/mr-records-one.png';
+import MainArticeVideoImage from '@/public/assets/images/png/videoImages/mainImage.png';
 import { useState } from 'react';
 import { videoCardContent } from '../constants/constants';
 import CenterTextCardsSection from '../components/common/CenterTextCardsSection';
@@ -16,9 +16,11 @@ import {
   ClockIcon,
   EyeIcon,
   LikeIcon,
+  MagnifyingIcon,
   VideoPlayIcon,
   VideoRecorderIcon,
 } from '../components/common/svgImage';
+import Fotter from '../components/common/Fotter';
 
 function page({ headingStart = false }) {
   const statContent = [
@@ -56,7 +58,7 @@ function page({ headingStart = false }) {
         </span>
       </div>
     ),
-    image: MRRecordImage,
+    image: MainArticeVideoImage,
   };
 
   const exploreByCategory = {
@@ -93,14 +95,21 @@ function page({ headingStart = false }) {
 
   const [selectedHelpMeBtn, setSelectedHelpMeBtn] = useState(0);
 
+  const scheduleBannerData = {
+    label: 'Ready to See MapleRecord in Action?',
+    description:
+      'Schedule a personalized demo with our team and discover how MapleRecord can transform your records management.',
+    buttonsText: ['Request a Demo'],
+  };
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
       <Navbar />
 
       {/* Top Section */}
-      <main className="flex w-full relative z-1 max-w-7xl mx-auto pt-30 flex-col items-center bg-white">
-        <VerticalBorderPattern>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
+      <main className="flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
+        <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center pt-50 px-10 pb-15 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 ${
                 headingStart ? 'justify-start' : 'justify-center'
@@ -116,14 +125,14 @@ function page({ headingStart = false }) {
               </div>
               {/* )} */}
               <div
-                className={`font-heading text-black w-full text-[48px] leading-16 line-height-[0.5] font-bold text-center ${
+                className={`font-heading text-black w-full text-3xl leading-16 line-height-[0.5] font-bold text-center ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
               >
                 Explore MapleRecord Through Video
               </div>
               <div
-                className={`font-body text-[28px] leading-8 text-stone700 text-center w-full ${
+                className={`font-body text-[24px] leading-8 text-stone700 text-center w-full ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
               >
@@ -132,7 +141,10 @@ function page({ headingStart = false }) {
               </div>
             </div>
             <div className="w-1/2 mx-auto">
-              <Input placeholder="Search videos..." iconLeft="sr" />
+              <Input
+                placeholder="Search videos..."
+                iconLeft={<MagnifyingIcon width={16} height={16} />}
+              />
             </div>
 
             <div className=" flex flex-wrap justify-center w-full mx-auto pt-3 gap-4">
@@ -143,8 +155,8 @@ function page({ headingStart = false }) {
           </section>
         </VerticalBorderPattern>
 
-        <VerticalBorderPattern>
-          <div className="flex  max-w-300 mx-auto p-10 flex-row gap-10">
+        <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
+          <div className="flex  max-w-300 mx-auto px-10 py-15 flex-row gap-10">
             <div className="flex flex-col gap-4">
               <ChipText text={'Featured Video'} styling="w-fit" />
               <div className="font-heading text-3xl text-black text-start">
@@ -152,41 +164,43 @@ function page({ headingStart = false }) {
               </div>
               <ZigZagContent
                 mapData={videoArticle}
+                mustHaveBottomPadding=""
+                mustHaveLeftRightPadding=""
+                imageHeight="h-120 items-center"
                 zigZagClassName="flex lg:flex-row-reverse max-lg:flex-col  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
               />
             </div>
           </div>
         </VerticalBorderPattern>
 
-        <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
-          <div className="flex flex-col gap-4">
-            <div
-              className={`font-body text-[16px] leading-8 text-black w-full text-start`}
-            >
-              Filter by Category:
-            </div>
-            <div className=" flex flex-wrap justify-center overflow-x-scroll w-max mx-auto bg-white rounded-3xl gap-4">
-              {topicsText?.map((item, i) => (
-                <Button
-                  gradientColor={`${
-                    i === selectedHelpMeBtn
-                      ? 'bg-black text-white text-center rounded-2xl'
-                      : 'bg-stone-300 rounded-2xl hover:text-white text-center'
-                  } p-5`}
-                  key={i}
-                  onClickButton={() => setSelectedHelpMeBtn(i)}
-                >
-                  {item}
-                </Button>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Videos list */}
-        <section className="flex w-full overflow-hidden  max-w-7xl mx-auto  flex-row gap-10 items-start justify-center min-h-screen">
-          <VerticalBorderPattern>
-            <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
+          <section className="flex w-full overflow-hidden  max-w-7xl mx-auto py-15 flex-col gap-10 items-start justify-center min-h-screen">
+            <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
+              <div className="flex flex-col gap-4">
+                <div
+                  className={`font-body text-[16px] leading-8 text-black w-full text-start`}
+                >
+                  Filter by Category:
+                </div>
+                <div className=" flex flex-wrap justify-center overflow-x-auto w-max mx-auto rounded-3xl gap-4">
+                  {topicsText?.map((item, i) => (
+                    <Button
+                      gradientColor={`${
+                        i === selectedHelpMeBtn
+                          ? 'bg-black text-white text-center rounded-2xl'
+                          : 'bg-stone-300 rounded-2xl hover:text-white text-center'
+                      } p-5`}
+                      key={i}
+                      onClickButton={() => setSelectedHelpMeBtn(i)}
+                    >
+                      {item}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+            </section>
+            <section className="flex  max-w-300 mx-auto px-10 flex-row gap-10">
               <div className="flex flex-col gap-4">
                 <div className="text-start">
                   <h2 className="font-heading text-3xl text-black">
@@ -203,27 +217,29 @@ function page({ headingStart = false }) {
                 </div>
               </div>
             </section>
-          </VerticalBorderPattern>
-        </section>
+          </section>
+        </VerticalBorderPattern>
 
-        <VerticalBorderPattern>
-          <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName={'backgroundGradient'}>
+          <section className="flex  max-w-300 mx-auto pt-15  flex-row gap-10">
             <CenterTextCardsSection
               mapData={exploreByCategory}
               headingStart={false}
               centerCardContent={false}
+              mustHaveLeftRightPadding="px-10"
+              mustHaveBottomPadding="pb-15"
             />
           </section>
         </VerticalBorderPattern>
 
         {/* Stay Updated */}
-        <VerticalBorderPattern>
+        <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
           <div className="flex flex-col gap-8 max-w-300 mx-auto p-10">
             <div className="flex flex-col w-full h-full items-center lg:w-full justify-center gap-4 ">
-              <div className=" font-heading  text-black text-[48px] w-full leading-16 line-height-[0.5] font-bold text-center">
+              <div className=" font-heading  text-black text-3xl w-full leading-16 line-height-[0.5] font-bold text-center">
                 Subscribe for Video Updates
               </div>
-              <div className="font-body text-[28px] leading-8 text-stone700 text-center w-full">
+              <div className="font-body text-[24px] leading-8 text-stone700 text-center w-full">
                 Get notified when we release new videos, tutorials, and product
                 updates.{' '}
               </div>
@@ -235,8 +251,9 @@ function page({ headingStart = false }) {
           </div>
         </VerticalBorderPattern>
 
-        <ScheduleBanner />
+        <ScheduleBanner content={scheduleBannerData} />
       </main>
+      <Fotter />
     </div>
   );
 }

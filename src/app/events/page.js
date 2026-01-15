@@ -17,6 +17,12 @@ export default function page() {
     { value: '200+', label: 'Expert Speakers' },
     { value: '35+', label: 'Cities Worldwide' },
   ];
+  const scheduleBannerData = {
+    label: 'Want to Host a Private Event?',
+    description:
+      "We can organize custom events, workshops, and training sessions tailored to your organization's needs.",
+    buttonsText: ['Contact Us'],
+  };
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
       <Navbar />
@@ -24,9 +30,9 @@ export default function page() {
       {/* Top Section */}
       <main className="flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
         <VerticalBorderPattern
-          gradientName={'backgroundGradientAnimation backgroundGradient'}
+          gradientName={'backgroundGlow backgroundGradient'}
         >
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 pt-30 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 pt-50 pb-15 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4  justify-center
               `}
@@ -37,12 +43,12 @@ export default function page() {
               </div>
               {/* )} */}
               <div
-                className={`font-heading text-black w-full text-[48px] leading-16 line-height-[0.5] font-bold text-center`}
+                className={`font-heading text-black w-full text-3xl leading-16 line-height-[0.5] font-bold text-center`}
               >
                 Connect, Learn, and Grow Together
               </div>
               <div
-                className={`font-body text-[28px] leading-8 text-stone700 text-center w-full`}
+                className={`font-body text-[24px] leading-8 text-stone700 text-center w-full`}
               >
                 Join MapleRecord at industry conferences, workshops, webinars,
                 and exclusive events designed to help you master records
@@ -64,18 +70,18 @@ export default function page() {
 
         {/* Events list */}
 
-        <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 pt-30 gap-8">
+        <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 py-15 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify start`}
             >
               <div
-                className={`font-heading text-black w-full text-[48px] leading-16 line-height-[0.5] font-bold text-start`}
+                className={`font-heading text-black w-full text-3xl leading-16 line-height-[0.5] font-bold text-start`}
               >
                 {eventsContent?.sectionTwo?.label}
               </div>
               <div
-                className={`font-body text-[28px] leading-8 text-stone700 w-full text-start`}
+                className={`font-body text-[24px] leading-8 text-stone700 w-full text-start`}
               >
                 {eventsContent?.sectionTwo?.description}
               </div>
@@ -89,18 +95,20 @@ export default function page() {
           </section>
         </VerticalBorderPattern>
 
-        <VerticalBorderPattern>
-          <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName={'backgroundGradient'}>
+          <section className="flex  max-w-300 mx-auto pt-15   flex-row gap-10">
             <CenterTextCardsSection
               mapData={eventsContent?.sectionThree}
               headingStart={false}
               centerCardContent={false}
               gridGroup={'md:grid-cols-2 lg:grid-cols-4'}
+              mustHaveLeftRightPadding="px-10"
+              mustHaveBottomPadding="pb-15"
             />
           </section>
         </VerticalBorderPattern>
 
-        <ScheduleBanner />
+        <ScheduleBanner content={scheduleBannerData} />
       </main>
 
       <Fotter />

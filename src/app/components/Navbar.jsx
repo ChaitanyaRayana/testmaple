@@ -153,21 +153,21 @@ function Navbar() {
                       onMouseEnter={() => setPlatformPop(true)}
                       onMouseLeave={() => setPlatformPop(false)}
                       onClick={() => setPlatformPop(false)}
-                      className="flex flex-col  bg-white p-[10px_0px] border border-solid border-bordergray shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-2xl w-50 absolute box_shadow gap-2.5 -left-1 top-full z-30"
+                      className="flex flex-col  bg-white p-[10px_0px] border border-solid border-bordergray shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-2xl w-max absolute box_shadow gap-2.5 -left-1 top-full z-30"
                     >
                       <Link
                         onClick={() => setIsMenuOpen(false)}
                         className="flex text-[#000] text-sm p-[2px_15px] w-full text-start cursor-pointer font-normal gap-3  hover:bg-(--color-hoverBorderGray) hover:text-stone-900 transition-colors"
                         href={'/platform/mr-records'}
                       >
-                        MR Records
+                        Hybrid Records Management
                       </Link>
                       <Link
                         onClick={() => setIsMenuOpen(false)}
                         className="flex text-[#000] text-sm p-[2px_15px] w-full text-start cursor-pointer font-normal gap-3  hover:bg-(--color-hoverBorderGray) hover:text-stone-900 transition-colors"
                         href={'/platform/mr-request'}
                       >
-                        MR Requests
+                        Request Management
                       </Link>
 
                       <Link
@@ -175,7 +175,7 @@ function Navbar() {
                         className="flex text-[#000] text-sm p-[2px_15px] w-full text-start cursor-pointer font-normal gap-3  hover:bg-(--color-hoverBorderGray) hover:text-stone-900 transition-colors"
                         href={'/platform/mr-workflow'}
                       >
-                        MR Workflows
+                        Workflow Automation
                       </Link>
                       <Link
                         onClick={() => setIsMenuOpen(false)}

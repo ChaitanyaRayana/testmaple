@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Button from './Button';
 import ChipText from './ChipText';
+import { toSentenceCase } from '../../utils/utils';
 
 export default function FeaturedWebinar({ mapData }) {
   console.log({ mapData });
@@ -21,9 +22,9 @@ export default function FeaturedWebinar({ mapData }) {
       )}
 
       <div className="p-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div className="grid grid-cols-1  lg:grid-cols-12 gap-6 items-start">
           {/* image left */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-4 h-full">
             <div className="rounded-xl h-full overflow-hidden">
               <Image
                 src={mapData?.image}
@@ -38,7 +39,7 @@ export default function FeaturedWebinar({ mapData }) {
           {/* content right */}
           <div className="lg:col-span-8">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
-              {mapData?.label}
+              {toSentenceCase(mapData?.label)}
             </h2>
             <p className="mt-4 text-gray-600 text-lg max-w-3xl">
               {mapData?.description}
