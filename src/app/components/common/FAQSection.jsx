@@ -15,7 +15,7 @@ function FAQSection() {
     setActiveIndex(index);
   }
   return (
-    <div className="w-full max-w-7xl pt-30 pb-30">
+    <div className="w-full max-w-7xl pt-15 pb-30">
       <div className="flex max-w-300 mx-auto flex-col gap-8 px-10">
         <div className="flex flex-col h-full items-start lg:w-full justify-center gap-2 ">
           <div className="flex justify-center w-full">
@@ -24,7 +24,7 @@ function FAQSection() {
               chipIcon={'CircleQuestionMarkIcon'}
             />
           </div>
-          <div className=" font-heading text-black text-[48px] w-full leading-16 line-height-[0.5] font-bold text-center">
+          <div className=" font-heading text-black text-3xl w-full leading-16 line-height-[0.5] font-bold text-center">
             Got Questions? We've Got Answers
           </div>
           <div className="font-body text-[16px] text-stone700 text-center w-full">
@@ -68,7 +68,7 @@ function FAQSection() {
           ))}
         </div>
         <div className="flex flex-col h-full items-start lg:w-full justify-center gap-4 ">
-          <div className=" font-body text-[28px] leading-8 text-stone700 text-center flex justify-center w-full">
+          <div className=" font-body text-[24px] leading-8 text-stone700 text-center flex justify-center w-full">
             Still have questions? Our team is here to help.
           </div>
           <div className="w-full flex justify-center">

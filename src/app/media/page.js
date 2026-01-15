@@ -6,6 +6,7 @@ import { VerticalBorderPattern } from '../components/common/Icon';
 import ReleaseCard from '../components/common/ReleaseCard';
 import ScheduleBanner from '../components/common/ScheduleBanner';
 import StatCard from '../components/common/StatCard';
+import { FileIcon } from '../components/common/svgImage';
 import Navbar from '../components/Navbar';
 import { awardsSection, mediaPageContent } from '../constants/constants';
 
@@ -26,7 +27,14 @@ export default function page() {
       'MapleRecord introduces advanced AI classification technology that automatically categorizes documents with 99.9% accuracy, reducing manual processing time by up to 80%.',
     primaryCta: { text: 'Read Full Release', href: '#' },
     secondaryCta: { text: 'Download PDF', href: '#' },
-    icon: null,
+    icon: <FileIcon color="text-[#226fb7]" />,
+  };
+
+  const scheduleBannerData = {
+    label: 'Interested in Partnering with MapleRecord?',
+    description:
+      "We're always looking for opportunities to collaborate with media partners, industry analysts, and content creators.",
+    buttonsText: ['Contact Our Team'],
   };
 
   return (
@@ -34,9 +42,11 @@ export default function page() {
       <Navbar />
 
       {/* Top Section */}
-      <main className="flex w-full relative z-1 max-w-7xl mx-auto pt-30 flex-col items-center bg-white">
-        <VerticalBorderPattern>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
+      <main className="flex w-full relative z-1 max-w-7xl mx-auto  flex-col items-center bg-white">
+        <VerticalBorderPattern
+          gradientName={'backgroundGlow backgroundGradient'}
+        >
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 pt-30 pb-15 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >
@@ -46,12 +56,12 @@ export default function page() {
               </div>
               {/* )} */}
               <div
-                className={`font-heading text-black w-full text-[48px] leading-16 line-height-[0.5] font-bold text-center`}
+                className={`font-heading text-black w-full text-3xl leading-16 line-height-[0.5] font-bold text-center`}
               >
                 MapleRecord in the News
               </div>
               <div
-                className={`font-body text-[28px] leading-8 text-stone700 text-center w-full`}
+                className={`font-body text-[24px] leading-8 text-stone700 text-center w-full`}
               >
                 The latest news, press releases, and media resources about
                 MapleRecord and our mission to transform records management.
@@ -67,8 +77,8 @@ export default function page() {
         </VerticalBorderPattern>
 
         {/* Section two */}
-        <VerticalBorderPattern>
-          <section className="flex  max-w-300 mx-auto p-10 w-full  flex-row gap-10">
+        <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
+          <section className="flex  max-w-300 mx-auto px-10 py-15 w-full  flex-row gap-10">
             <div className="flex flex-col w-full gap-4">
               <div className="text-start">
                 <h2 className="font-heading text-3xl text-black">
@@ -86,8 +96,8 @@ export default function page() {
         </VerticalBorderPattern>
 
         {/* News Coverage  */}
-        <VerticalBorderPattern>
-          <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName={' backgroundGradient'}>
+          <section className="flex  max-w-300 mx-auto px-10 py-15   flex-row gap-10">
             <div className="flex flex-col gap-4">
               <div className="font-heading text-3xl text-black text-start">
                 News Coverage
@@ -107,19 +117,21 @@ export default function page() {
         {/* Awards Section*/}
 
         {/* Section  Five*/}
-        <VerticalBorderPattern>
-          <section className="flex max-w-300 mx-auto p-10   flex-row gap-10">
+        <VerticalBorderPattern gradientName={' backgroundGradientTwo'}>
+          <section className="flex max-w-300 mx-auto pt-15   flex-row gap-10">
             <CenterTextCardsSection
               mapData={awardsSection}
               cardGroup={true}
               headingStart={false}
               centerCardContent={false}
-              gridGroup="md:grid-cols-2"
+              gridGroup="md:grid-cols-4"
+              mustHaveLeftRightPadding="px-10"
+              mustHaveBottomPadding="pb-15"
             />
           </section>
         </VerticalBorderPattern>
 
-        <ScheduleBanner/>
+        <ScheduleBanner content={scheduleBannerData} />
       </main>
       <Fotter />
     </div>

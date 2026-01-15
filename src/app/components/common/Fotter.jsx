@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation';
 import { MapleLogo, VerticalBorderPattern } from './Icon';
 import Link from 'next/link';
+import Button from './Button';
 
 function Fotter() {
   const footerContent = {
@@ -14,7 +15,7 @@ function Fotter() {
       // { label: 'Sign in', href: '/sign-in' },
       // { label: 'Start now', href: '/start' },
     ],
-    'Social media': [
+    'Social Media': [
       { label: 'Facebook', href: '/facebook' },
       { label: 'Instagram', href: '/instagram' },
       { label: 'Twitter', href: '/twitter' },
@@ -25,13 +26,24 @@ function Fotter() {
   };
 
   return (
-    <footer className="  flex max-h-max w-full max-w-7xl  mx-auto flex-col flex-wrap items-center justify-between bg-white font-body h-full">
-      <div className="flex  flex-row flex-wrap items-center w-full text-center">
+    <footer className="  flex max-h-max w-full max-w-7xl  mx-auto flex-col flex-wrap items-center justify-between  bg-white font-body h-full">
+      <div className="flex  flex-row flex-wrap items-center w-full text-center pb-5">
         <VerticalBorderPattern>
           <div className="flex w-full max-w-300 mx-auto flex-row flex-wrap flex-1 h-full items-start justify-between px-10 gap-8">
             <div className="w-full flex lg:flex-row max-lg:flex-col justify-start gap-8 items-start pt-16">
-              <div className="w-fit h-8">
-                <MapleLogo />
+              <div className="flex flex-col gap-6">
+                <div className="w-60 h-8">
+                  <MapleLogo />
+                </div>
+                <div className="flex flex-col gap-4 w-40">
+                  <Button padding="w-full">Start Now</Button>
+                  <Button
+                    padding="w-full"
+                    gradientColor="rounded bg-linear-to-br from-[#faf6eb] to-[#f9adad] hover:text-white hover:from-[#faf6eb] hover:to-[#ff5b5b]"
+                  >
+                    Simple Pricing
+                  </Button>
+                </div>
               </div>
               <div className="flex flex-wrap gap-8">
                 {Object.keys(footerContent).map((section, i) => (
@@ -56,7 +68,7 @@ function Fotter() {
               <div></div>
               <div></div>
             </div>
-            <div className="w-full font-body flex px-5 flex-wrap gap-8 justify-between items-center">
+            <div className="w-full font-body flex px-5 flex-wrap gap-8 justify-between items-center pb-8">
               <p className="text-stone700 h-5 font-normal">
                 &#169; 2026 MapleRecord Inc. All rights reserved.
               </p>

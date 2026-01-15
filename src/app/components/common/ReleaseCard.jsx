@@ -1,5 +1,7 @@
 import React from 'react';
 import Button from './Button';
+import { toSentenceCase } from '../../utils/utils';
+import ChipText from './ChipText';
 
 export default function ReleaseCard({ mapData }) {
   return (
@@ -7,13 +9,11 @@ export default function ReleaseCard({ mapData }) {
       <div className="flex-1">
         <div className="flex items-center gap-4">
           <div className="text-sm text-gray-500">{mapData?.date}</div>
-          <div className="inline-block bg-pink-50 text-pink-600 text-sm font-medium px-3 py-1 rounded-full">
-            {mapData?.chipText}
-          </div>
+          <ChipText text={mapData?.chipText} />
         </div>
 
         <h3 className="mt-4 text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight">
-          {mapData?.label}
+          {toSentenceCase(mapData?.label)}
         </h3>
 
         <p className="mt-4 text-gray-600 text-lg max-w-3xl">
@@ -30,7 +30,7 @@ export default function ReleaseCard({ mapData }) {
       </div>
 
       <div className="shrink-0">
-        <div className="w-20 h-20 rounded-lg bg-pink-50 flex items-center justify-center">
+        <div className="w-20 h-20 rounded-lg bg-blue-50 flex items-center justify-center">
           {mapData?.icon ? (
             mapData?.icon
           ) : (

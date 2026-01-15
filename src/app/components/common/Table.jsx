@@ -43,7 +43,7 @@ function Table({ stats = [] }) {
                     <Icon width={24} height={24} className="text-[#0f5291]" />
                   </div>
                 ) : (
-                  <span className="text-red text-2xl">{item?.value}</span>
+                  <span className="text-[#0f5291] text-2xl">{item?.value}</span>
                 )}
               </td>
 

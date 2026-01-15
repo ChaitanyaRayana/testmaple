@@ -16,6 +16,7 @@ import {
   UserIcon,
   CalendarIcon,
 } from '../components/common/svgImage';
+import BlogAIImage from '../../../public/assets/images/png/BlogAIImage.png';
 
 function page({ headingStart = false }) {
   const topicsText = [
@@ -38,15 +39,15 @@ function page({ headingStart = false }) {
     bottomText: (
       <div className="w-auto flex flex-wrap gap-2">
         <span className="flex flex-row gap-1">
-          <UserIcon /> <span> Sarah Johnson</span>
+          <UserIcon width={16} height={16} /> <span> Sarah Johnson</span>
         </span>
         <span className="flex flex-row gap-1">
-          <CalendarIcon /> <span>December 28, 2024</span>
+          <CalendarIcon width={16} height={16} /> <span>December 28, 2024</span>
         </span>
         8 min read
       </div>
     ),
-    image: MRRecordImage,
+    image: BlogAIImage,
   };
 
   const scheduleBannerData = {
@@ -61,9 +62,9 @@ function page({ headingStart = false }) {
       <Navbar />
 
       {/* Top Section */}
-      <main className="flex w-full relative z-1 max-w-7xl mx-auto pt-30 flex-col items-center bg-white">
-        <VerticalBorderPattern>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
+      <main className="flex w-full relative z-1 max-w-7xl mx-auto  flex-col items-center bg-white">
+        <VerticalBorderPattern gradientName="backgroundGlow">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center pt-50 pb-15 px-10 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 ${
                 headingStart ? 'justify-start' : 'justify-center'
@@ -79,14 +80,14 @@ function page({ headingStart = false }) {
               </div>
               {/* )} */}
               <div
-                className={`font-heading text-black w-full text-[48px] leading-16 line-height-[0.5] font-bold text-center ${
+                className={`font-heading text-black w-full text-3xl leading-16 line-height-[0.5] font-bold text-center ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
               >
                 MapleRecord Blog
               </div>
               <div
-                className={`font-body text-[28px] leading-8 text-stone700 text-center w-full ${
+                className={`font-body text-[24px] leading-8 text-stone700 text-center w-full ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
               >
@@ -113,14 +114,17 @@ function page({ headingStart = false }) {
         </VerticalBorderPattern>
 
         <section className="flex w-full overflow-hidden  max-w-7xl mx-auto  flex-row gap-10 items-start justify-center min-h-screen text-center">
-          <VerticalBorderPattern>
-            <div className="flex  max-w-300 mx-auto p-10 flex-row gap-10">
+          <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
+            <div className="flex  max-w-300 mx-auto pt-15 px-10 flex-row gap-10">
               <div className="flex flex-col gap-4">
                 <div className="font-heading text-3xl text-black text-start">
                   Featured Article
                 </div>
                 <ZigZagContent
                   mapData={blogArticle}
+                  mustHaveLeftRightPadding={''}
+                  mustHaveBottomPadding={'pb-15'}
+                  imageHeight={'h-120 items-center'}
                   zigZagClassName="flex g:flex-row max-lg:flex-col  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
                 />
               </div>
@@ -130,8 +134,8 @@ function page({ headingStart = false }) {
 
         {/* Blogs list */}
         <section className="flex w-full overflow-hidden  max-w-7xl mx-auto  flex-row gap-10 items-start justify-center min-h-screen">
-          <VerticalBorderPattern>
-            <section className="flex  max-w-300 mx-auto p-10   flex-row gap-10">
+          <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
+            <section className="flex  max-w-300 mx-auto py-15 px-10   flex-row gap-10">
               <div className="flex flex-col gap-4">
                 <div className="font-heading text-3xl text-black text-start">
                   Latest Articles
@@ -147,15 +151,16 @@ function page({ headingStart = false }) {
         </section>
 
         {/* Stay Updated */}
-        <VerticalBorderPattern>
-          <div className="flex flex-col gap-8 max-w-300 mx-auto p-10">
+        <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
+          <div className="flex flex-col gap-8 max-w-300 mx-auto py-15 px-10">
             <div className="flex flex-col w-full h-full items-center lg:w-full justify-center gap-4 ">
-              <div className=" font-heading  text-black text-[48px] w-full leading-16 line-height-[0.5] font-bold text-center">
-                Subscribe for Video Updates
+              <div className=" font-heading  text-black text-3xl w-full leading-16 line-height-[0.5] font-bold text-center">
+                Stay Updated
               </div>
-              <div className="font-body text-[28px] leading-8 text-stone700 text-center w-full">
-                Get notified when we release new videos, tutorials, and product
-                updates.{' '}
+              <div className="font-body text-[24px] leading-8 text-stone700 text-center w-full">
+                Subscribe to our newsletter and get the latest insights on
+                records management, compliance, and automation delivered to your
+                inbox.{' '}
               </div>
             </div>
             <div className="flex flex-row gap-8 w-1/2 mx-auto">
