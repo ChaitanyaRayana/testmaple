@@ -34,7 +34,7 @@ function CenterTextCardsSection({
             </div>
           )}
           <div
-            className={`font-heading text-black w-full text-3xl leading-16 line-height-[0.5] font-bold text-center ${
+            className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-center ${
               headingStart ? 'text-start' : 'text-center'
             }`}
           >

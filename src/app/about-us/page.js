@@ -28,7 +28,7 @@ export default function page() {
                 <div className="flex justify-center w-full">
                   <ChipText text={'Company'} />
                 </div>
-                <div className=" font-heading text-black  text-3xl leading-16 line-height-[0.5] font-bold text-center">
+                <div className=" font-heading text-black  text-3xl  line-height-[0.5] font-bold text-center">
                   About MapleRecord
                 </div>
                 <div className="font-body text-[24px] leading-8 text-stone700 text-center w-full">
@@ -68,7 +68,7 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >
               <div
-                className={`font-heading text-black w-full text-3xl leading-16 line-height-[0.5] font-bold text-center `}
+                className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-center `}
               >
                 {aboutUS?.sectionThree?.label}
               </div>

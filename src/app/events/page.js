@@ -43,7 +43,7 @@ export default function page() {
               </div>
               {/* )} */}
               <div
-                className={`font-heading text-black w-full text-3xl leading-16 line-height-[0.5] font-bold text-center`}
+                className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-center`}
               >
                 Connect, Learn, and Grow Together
               </div>
@@ -76,7 +76,7 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify start`}
             >
               <div
-                className={`font-heading text-black w-full text-3xl leading-16 line-height-[0.5] font-bold text-start`}
+                className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-start`}
               >
                 {eventsContent?.sectionTwo?.label}
               </div>

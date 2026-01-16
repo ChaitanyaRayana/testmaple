@@ -24,7 +24,7 @@ function FAQSection() {
               chipIcon={'CircleQuestionMarkIcon'}
             />
           </div>
-          <div className=" font-heading text-black text-3xl w-full leading-16 line-height-[0.5] font-bold text-center">
+          <div className=" font-heading text-black text-3xl w-full  line-height-[0.5] font-bold text-center">
             Got Questions? We've Got Answers
           </div>
           <div className="font-body text-[16px] text-stone700 text-center w-full">
