@@ -125,7 +125,7 @@ function page({ headingStart = false }) {
               </div>
               {/* )} */}
               <div
-                className={`font-heading text-black w-full text-3xl leading-16 line-height-[0.5] font-bold text-center ${
+                className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-center ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
               >
@@ -236,7 +236,7 @@ function page({ headingStart = false }) {
         <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
           <div className="flex flex-col gap-8 max-w-300 mx-auto p-10">
             <div className="flex flex-col w-full h-full items-center lg:w-full justify-center gap-4 ">
-              <div className=" font-heading  text-black text-3xl w-full leading-16 line-height-[0.5] font-bold text-center">
+              <div className=" font-heading  text-black text-3xl w-full  line-height-[0.5] font-bold text-center">
                 Subscribe for Video Updates
               </div>
               <div className="font-body text-[24px] leading-8 text-stone700 text-center w-full">

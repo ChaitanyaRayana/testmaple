@@ -40,7 +40,7 @@ export default function Home() {
                   text="Manage your information ecosystem"
                   dotCircle={true}
                 />
-                <div className=" font-heading text-black text-3xl leading-16 line-height-[0.5] font-bold text-start">
+                <div className=" font-heading text-black text-3xl  line-height-[0.5] font-bold text-start">
                   An AI-First Hybrid Records Management System for Electronic
                   and Physical Records
                 </div>
@@ -74,7 +74,7 @@ export default function Home() {
                 <div className="flex justify-center w-full">
                   <ChipText text="Never miss a deadline." />
                 </div>
-                <div className=" font-heading text-black text-3xl leading-16 line-height-[0.5] font-bold text-center">
+                <div className=" font-heading text-black text-3xl  line-height-[0.5] font-bold text-center">
                   Eliminate legacy system risk by automating record handling
                   into secure, compliant, audit-ready workflows.
                 </div>
@@ -165,7 +165,7 @@ export default function Home() {
                 <div className="flex justify-center w-full">
                   <ChipText text="How we help." />
                 </div>
-                <div className=" font-heading text-black text-3xl leading-16 line-height-[0.5] font-bold text-center">
+                <div className=" font-heading text-black text-3xl  line-height-[0.5] font-bold text-center">
                   How our records management system delivers impact across every
                   department?
                 </div>
