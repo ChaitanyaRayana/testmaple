@@ -65,6 +65,7 @@ export function toSentenceCase(text) {
     'CI/CD',
     'Low-Code',
     'AI-Powered',
+    'AI-Driven',
     'Machine Learning',
     'Natural Language Processing',
     'Data Science',

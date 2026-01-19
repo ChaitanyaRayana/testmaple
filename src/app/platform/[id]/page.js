@@ -63,6 +63,7 @@ async function Page({ params }) {
               mustHaveBottomPadding={'pb-15'}
               mustHaveLeftRightPadding={'px-10'}
               cardHeight="h-130 overflow-y-scroll"
+              hasCardWithAnimation={true}
               zigZagClassName="flex g:flex-row max-lg:flex-col items-center  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
             />
           </section>

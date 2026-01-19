@@ -44,6 +44,7 @@ export default function page() {
                 mustHaveBottomPadding=""
                 mustHaveLeftRightPadding=""
                 cardHeight="h-max"
+                hasCardWithAnimation={false}
               />
             </div>
           </section>

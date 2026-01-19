@@ -36,6 +36,7 @@ import HumanResource from '@/public/assets/images/png/department/Humanresources.
 import MRRecordIndustryImage from '@/public/assets/images/png/mrProducts/MRecords.png';
 import MRReqeustIndustryImage from '@/public/assets/images/png/mrProducts/MRequests.png';
 import MRWorkIndustryImage from '@/public/assets/images/png/mrProducts/Worflows.png';
+import MRWorkFlowIndustryImage from '@/public/assets/images/png/mrProducts/MRWordFlow.png';
 import MRRecordWorkingImage from '@/public/assets/images/png/platform/Recordsworking.png';
 import MRRequestWorkingImage from '@/public/assets/images/png/platform/Requestworking.png';
 import MRWorkflowWorkingImage from '@/public/assets/images/png/platform/workfolwworking.png';
@@ -750,7 +751,7 @@ export const mrRecordsPlatformContent = {
       chipText: 'How It Operates',
       chipIcon: 'LightingIcon',
       label: 'How MR Workflows Works',
-      image: MRWorkflowWorkingImage,
+      image: MRWorkFlowIndustryImage,
       cardSection: [
         {
           label: '1. Build Without Code',
@@ -3783,7 +3784,7 @@ export const contactUsContent = {
 
 export const termsOfService = {
   termsIntro: `
-**Last Updated:** [Date]
+**Last Updated:** [Date] <br/><br/>
 Welcome to **MapleRecord**. These Terms of Service (“Terms”) govern your access to and use of the MapleRecord website, platform, products, and services (collectively, the “Services”).
 
 By accessing or using the Services, you agree to be bound by these Terms.  
@@ -3902,7 +3903,7 @@ Address: [Company Address]
 
 export const privacyPolicy = {
   privacyIntro: `
-**Last Updated:** [Date]
+**Last Updated:** [Date] <br/><br/>
 
 **MapleRecord** (“we,” “our,” or “us”) is committed to protecting the privacy and security of information entrusted to us. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you access or use the MapleRecord website, platform, and services (collectively, the “Services”).
 

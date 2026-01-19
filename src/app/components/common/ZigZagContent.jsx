@@ -20,10 +20,11 @@ function ZigZagContent({
   mustHaveLeftRightPadding = 'px-10',
   cardHeight = 'h-130 overflow-hidden',
   heroSection = false,
+  hasCardWithAnimation = false,
 }) {
   const Icon = mapData?.icon ? ICONS[mapData?.icon] : null;
   const router = useRouter();
-  const hasCardSection = mapData?.cardSection && mapData.cardSection.length > 0;
+
   const cardScrollRef = useRef(null);
 
   useEffect(() => {
@@ -62,18 +63,18 @@ function ZigZagContent({
         cancelAnimationFrame(animationId);
       }
     };
-  }, [hasCardSection, mapData?.cardSection]);
+  }, [hasCardWithAnimation, mapData?.cardSection]);
 
   return (
     <div
-      className={`flex flex-col w-full ${mustHaveBottomPadding} ${mustHaveLeftRightPadding} ${hasCardSection ? 'min-h-screen lg:h-screen' : ''}`}
+      className={`flex flex-col w-full ${mustHaveBottomPadding} ${mustHaveLeftRightPadding} ${hasCardWithAnimation ? 'min-h-screen lg:h-screen' : ''}`}
     >
       <div
-        className={`${zigZagClassName} ${hasCardSection ? 'h-full overflow-hidden' : 'lg:h-130 overflow-hidden'}  max-lg:flex-col items-start gap-10`}
+        className={`${zigZagClassName} ${hasCardWithAnimation ? 'h-full overflow-hidden' : 'lg:h-130 overflow-hidden'}  max-lg:flex-col items-start gap-10`}
       >
         {/* Left Content Section */}
         <div
-          className={`flex w-full flex-col gap-6 justify-start  ${hasCardSection ? 'h-full md:h-fit' : mapData?.stats ? '' : 'pt-12'}`}
+          className={`flex w-full flex-col gap-6 justify-start  ${hasCardWithAnimation ? 'h-full max-md:h-fit' : mapData?.stats ? '' : 'pt-12'}`}
         >
           <div className="flex flex-col gap-5">
             {mapData?.chipText && (
@@ -161,7 +162,7 @@ function ZigZagContent({
           )}
 
           {/* Scrollable Card Section */}
-          {hasCardSection && (
+          {hasCardWithAnimation && (
             <div className="flex-col gap-4 relative w-full pr-2 hidden lg:flex overflow-hidden">
               {/* First set of cards - animating */}
               <motion.div
@@ -216,10 +217,10 @@ function ZigZagContent({
               </motion.div>
             </div>
           )}
-          {!hasCardSection && (
+          {hasCardWithAnimation && (
             <div
               ref={cardScrollRef}
-              className={` flex-col relative h-fit w-full pr-2 hidden md:flex gap-4 overflow-hidden`}
+              className={` flex-col relative h-fit w-full pr-2 hidden max-md:flex gap-4 overflow-hidden`}
             >
               {mapData?.cardSection?.map((item, i) => (
                 <Cards
@@ -243,7 +244,7 @@ function ZigZagContent({
         {/* Sticky Image Section */}
         {mapData?.image && (
           <div
-            className={`w-full flex justify-center  ${hasCardSection ? '  items-start sticky top-12 overflow-hidden' : 'h-full max-h-120 items-center'}`}
+            className={`w-full flex justify-center  ${hasCardWithAnimation ? '  items-start  sticky top-12 overflow-hidden' : 'h-full max-h-120 items-center'}`}
           >
             {/* <div className="w-full  flex justify-center items-center p-4"> */}
             <Image
@@ -251,7 +252,7 @@ function ZigZagContent({
               alt={toSentenceCase(mapData?.label)}
               width={500}
               height={300}
-              className="object-contain rounded-xl max-h-full w-auto"
+              className={`${hasCardWithAnimation ? 'max-md:h-120 w-fit max-md:object-contain items-start lg:min-h-130 lg:object-top' : 'object-contain'} rounded-xl max-h-full w-auto`}
             />
             {/* </div> */}
           </div>

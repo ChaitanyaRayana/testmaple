@@ -448,7 +448,7 @@ function page() {
                       id="acceptance-of-terms"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Acceptance of Terms
+                      1. Acceptance of Terms
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -470,7 +470,7 @@ function page() {
                       id="description-of-serivces"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Description of Services
+                      2. Description of Services
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -488,7 +488,7 @@ function page() {
                       id="account-registration"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Account Registration
+                      3. Account Registration
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -506,7 +506,7 @@ function page() {
                       id="subscription-and-billing"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Subscription and Billing
+                      4. Subscription and Billing
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -523,7 +523,7 @@ function page() {
                       id="user-responsibilities"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      User Responsibilities
+                      5. User Responsibilities
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -540,7 +540,7 @@ function page() {
                       id="acceptable-use"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Acceptable Use
+                      6. Acceptable Use
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -557,7 +557,7 @@ function page() {
                       id="data-privacy"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Data Privacy
+                      7. Data Privacy
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -574,7 +574,7 @@ function page() {
                       id="interllectual-property-rights"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Intellectual Property Rights
+                      8. Intellectual Property Rights
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -591,7 +591,7 @@ function page() {
                       id="third-part-integrations"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Third-Party Integrations
+                      9. Third-Party Integrations
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -608,7 +608,7 @@ function page() {
                       id="secutiry"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Security
+                      10. Security
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -625,7 +625,7 @@ function page() {
                       id="a-specific-risks-and-limitations"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      AI-Specific Risks and Limitations
+                      11. AI-Specific Risks and Limitations
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -642,7 +642,7 @@ function page() {
                       id="disclaimers"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Disclaimers
+                      12. Disclaimers
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -659,7 +659,7 @@ function page() {
                       id="limitation-of-liability"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Limitation of Liability
+                      13. Limitation of Liability
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -676,7 +676,7 @@ function page() {
                       id="indemnification"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Indemnification
+                      14. Indemnification
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -693,7 +693,7 @@ function page() {
                       id="modifications-to-terms"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Modifications to Terms
+                      15. Modifications to Terms
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -710,7 +710,7 @@ function page() {
                       id="governing-law-and-jurisdiction"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Governing Law and Jurisdiction
+                      16. Governing Law and Jurisdiction
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -727,7 +727,7 @@ function page() {
                       id="termination"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Termination
+                      17. Termination
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
@@ -744,7 +744,7 @@ function page() {
                       id="contact-information"
                       className="scroll-mt-20 sm:scroll-mt-25 leading-[115%] text-xl sm:text-[22px] font-semibold text-[#0f1728] sm:leading-[115%] tracking-[-1px]"
                     >
-                      Contact Information
+                      18. Contact Information
                     </h2>
                     <p className="text-[#1f2937] text-base font-normal leading-7 mt-6">
                       <ReactMarkdown
