@@ -28,14 +28,14 @@ export default function page() {
                 <div className="flex justify-center w-full">
                   <ChipText text={'Company'} />
                 </div>
-                <div className=" font-heading text-black  text-3xl  line-height-[0.5] font-bold text-center">
+                <div className=" font-heading text-black  text-[44px] leading-11   font-bold text-center">
                   About MapleRecord
                 </div>
-                <div className="font-body text-[24px] leading-8 text-stone700 text-center w-full">
+                <p className="font-body leading-6 text-stone700 text-center w-full">
                   Transforming how organizations manage, share, and secure their
                   critical documents through innovative records management
                   solutions.
-                </div>
+                </p>
               </div>
               <ZigZagHomeSection
                 mapData={aboutUS?.sectionOne}
@@ -43,7 +43,7 @@ export default function page() {
                 leftAlign={true}
                 mustHaveBottomPadding=""
                 mustHaveLeftRightPadding=""
-                imageHeight="h-120 items-center"
+                cardHeight="h-max"
               />
             </div>
           </section>
@@ -68,15 +68,15 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >
               <div
-                className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-center `}
+                className={`font-heading text-black w-full text-3xl   font-bold text-center `}
               >
                 {aboutUS?.sectionThree?.label}
               </div>
-              <div
-                className={`font-body text-[24px] leading-8 text-stone700 text-center w-full`}
+              <p
+                className={`font-body leading-6 text-stone700 text-center w-full`}
               >
                 {aboutUS?.sectionThree?.description}
-              </div>
+              </p>
             </div>
 
             <div className=" flex flex-wrap justify-center w-full mx-auto pt-3 gap-4">

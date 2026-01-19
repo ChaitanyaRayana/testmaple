@@ -1,10 +1,17 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from './Button';
 import ChipText from './ChipText';
 import { toSentenceCase } from '../../utils/utils';
+import { useEffect, useState } from 'react';
+import PopupModal from './PopupModel';
+import Input from './Input';
 
-export default function FeaturedWebinar({ mapData }) {
+export default function FeaturedWebinar({
+  mapData,
+  setIsOpenWebinar = () => {},
+}) {
   console.log({ mapData });
 
   return (
@@ -41,7 +48,7 @@ export default function FeaturedWebinar({ mapData }) {
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
               {toSentenceCase(mapData?.label)}
             </h2>
-            <p className="mt-4 text-gray-600 text-lg max-w-3xl">
+            <p className="mt-4 text-gray-600 font-body max-w-3xl">
               {mapData?.description}
             </p>
 
@@ -170,7 +177,11 @@ export default function FeaturedWebinar({ mapData }) {
               </div>
 
               <div className="md:col-span-1 h-full flex md:justify-start items-end">
-                <Button padding={'px-6 py-3 rounded-xl'}>
+                <Button
+                  padding={'px-1 py-1 rounded-lg'}
+                  arrowIcon={true}
+                  onClickButton={() => setIsOpenWebinar(mapData)}
+                >
                   {mapData?.button?.label}
                 </Button>
               </div>

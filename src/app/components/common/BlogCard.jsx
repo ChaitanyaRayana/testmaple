@@ -33,7 +33,7 @@ function BlogCard({ mapData = {} }) {
         {/* Category pill */}
         {(category || location) && (
           <div className="mb-4">
-            <span className="inline-block bg-[#DFEDFA] text-[#226fb7] px-3 py-1 rounded-full text-sm">
+            <span className="inline-block bg-[#DFEDFA] text-[#226fb7] px-3 py-1 rounded-full text-[12px]">
               {category || location}
             </span>
           </div>
@@ -47,9 +47,9 @@ function BlogCard({ mapData = {} }) {
           </Link>
 
           {/* Excerpt */}
-          <div className=" text-gray-600 text-base fon leading-relaxed card-desc">
+          <p className=" text-gray-600 font-body fon leading-relaxed card-desc">
             {description}
-          </div>
+          </p>
 
           {/* Author / date and CTA */}
           <div className=" flex flex-col items-start gap-3 justify-between">

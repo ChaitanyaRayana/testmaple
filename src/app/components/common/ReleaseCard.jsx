@@ -16,7 +16,7 @@ export default function ReleaseCard({ mapData }) {
           {toSentenceCase(mapData?.label)}
         </h3>
 
-        <p className="mt-4 text-gray-600 text-lg max-w-3xl">
+        <p className="mt-4 text-gray-600 font-body max-w-3xl">
           {mapData?.description}
         </p>
 

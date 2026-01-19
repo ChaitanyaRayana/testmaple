@@ -1,3 +1,5 @@
+'use client';
+import { useEffect, useState } from 'react';
 import Button from '../components/common/Button';
 import CenterTextCardsSection from '../components/common/CenterTextCardsSection';
 import ChipText from '../components/common/ChipText';
@@ -5,10 +7,12 @@ import FeaturedWebinar from '../components/common/FeaturedWebinar';
 import Fotter from '../components/common/Fotter';
 import { VerticalBorderPattern } from '../components/common/Icon';
 import Input from '../components/common/Input';
+import PopupModal from '../components/common/PopupModel';
 import ScheduleBanner from '../components/common/ScheduleBanner';
 import StatCard from '../components/common/StatCard';
 import Navbar from '../components/Navbar';
 import { eventsContent } from '../constants/constants';
+import { toSentenceCase } from '../utils/utils';
 
 export default function page() {
   const statContent = [
@@ -23,6 +27,63 @@ export default function page() {
       "We can organize custom events, workshops, and training sessions tailored to your organization's needs.",
     buttonsText: ['Contact Us'],
   };
+
+  const [isSubmitting, setIsSubmitting] = useState();
+
+  const [isSuccessfulEventSubmit, setIsSuccessfulEventSubmit] = useState();
+  const [isOpenWebinar, setIsOpenWebinar] = useState('');
+  const [formData, setFormData] = useState({
+    fullName: '',
+    businessEmail: '',
+    workPhone: '',
+    companyName: '',
+  });
+
+  const handleEventSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Add your form submission logic here
+    console.log('Form submitted:', email);
+
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsOpenWebinar(false);
+      setIsSuccessfulEventSubmit(true);
+
+      // Reset form
+      setFormData({
+        fullName: '',
+        businessEmail: '',
+        workPhone: '',
+        companyName: '',
+      });
+    }, 1000);
+  };
+
+  useEffect(() => {
+    if (isOpenWebinar) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpenWebinar]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
       <Navbar />
@@ -43,17 +104,17 @@ export default function page() {
               </div>
               {/* )} */}
               <div
-                className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-center`}
+                className={`font-heading text-black w-full text-[44px] leading-11  font-bold text-center`}
               >
                 Connect, Learn, and Grow Together
               </div>
-              <div
-                className={`font-body text-[24px] leading-8 text-stone700 text-center w-full`}
+              <p
+                className={`font-body leading-6 text-stone700 text-center w-full`}
               >
                 Join MapleRecord at industry conferences, workshops, webinars,
                 and exclusive events designed to help you master records
                 management.
-              </div>
+              </p>
             </div>
             <div className=" flex flex-wrap justify-center w-full mx-auto pt-3 gap-4">
               {statContent?.map((item, i) => (
@@ -76,20 +137,24 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify start`}
             >
               <div
-                className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-start`}
+                className={`font-heading text-black w-full text-3xl   font-bold text-start`}
               >
                 {eventsContent?.sectionTwo?.label}
               </div>
-              <div
-                className={`font-body text-[24px] leading-8 text-stone700 w-full text-start`}
+              <p
+                className={`font-body leading-6 text-stone700 w-full text-start`}
               >
                 {eventsContent?.sectionTwo?.description}
-              </div>
+              </p>
             </div>
 
             <div className="flex flex-col gap-10">
               {eventsContent?.sectionTwo?.eventList?.map((item, i) => (
-                <FeaturedWebinar mapData={item} key={i} />
+                <FeaturedWebinar
+                  mapData={item}
+                  key={i}
+                  setIsOpenWebinar={setIsOpenWebinar}
+                />
               ))}
             </div>
           </section>
@@ -112,6 +177,95 @@ export default function page() {
       </main>
 
       <Fotter />
+
+      <PopupModal
+        isOpen={isOpenWebinar || isSuccessfulEventSubmit}
+        onClose={() => {
+          setIsOpenWebinar(false);
+          setIsSubmitting(false);
+        }}
+        title={
+          isSuccessfulEventSubmit
+            ? 'Thank you!'
+            : `Register for ${toSentenceCase(isOpenWebinar?.label)} event.`
+        }
+        description={
+          isSuccessfulEventSubmit
+            ? 'Stay ahead with exclusive updates and insider insights—delivered straight to your inbox.'
+            : "Fill out the form below to secure your spot. We'll send you a confirmation email with event details."
+        }
+        icon={isSuccessfulEventSubmit ? 'CircleThickIcon' : 'CalendarIcon'}
+        ppoupContent={
+          <form onSubmit={handleEventSubmit} className="space-y-4 ">
+            {/* First Name & Last Name */}
+            {!isSuccessfulEventSubmit && (
+              <div className="space-y-4 ">
+                <Input
+                  type="text"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  placeholder="Enter your full name"
+                  required
+                  className="w-full "
+                  label="Full Name"
+                />
+                <Input
+                  type="email"
+                  name="businessEmail"
+                  value={formData?.businessEmail}
+                  onChange={handleChange}
+                  placeholder="Enter your email"
+                  required
+                  className="w-full "
+                  label="Email Address"
+                />
+
+                <Input
+                  type="text"
+                  name="companyName"
+                  value={formData.companyName}
+                  onChange={handleChange}
+                  placeholder="Enter your company name"
+                  required
+                  className="w-full "
+                  label="Company Name"
+                />
+
+                <Input
+                  type="tel"
+                  name="workPhone"
+                  value={formData.workPhone}
+                  onChange={handleChange}
+                  placeholder="Enter your phone number"
+                  required
+                  className="w-full "
+                  label="Phone Number"
+                />
+              </div>
+            )}
+            {/* Submit Button */}
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              padding="w-full rounded-lg"
+            >
+              {isSubmitting
+                ? 'Submitting...'
+                : isSuccessfulEventSubmit
+                  ? 'Done'
+                  : 'Subscribe Now'}
+            </Button>
+
+            {!isSuccessfulEventSubmit && (
+              <p className="font-body text-[12px] text-center text-stone700">
+                By registering, you agree to receive event updates and related
+                communications.
+              </p>
+            )}
+          </form>
+        }
+      />
     </div>
   );
 }

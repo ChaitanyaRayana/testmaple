@@ -34,19 +34,19 @@ function CenterTextCardsSection({
             </div>
           )}
           <div
-            className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-center ${
+            className={`font-heading text-black w-full text-3xl   font-bold text-center ${
               headingStart ? 'text-start' : 'text-center'
             }`}
           >
             {toSentenceCase(mapData?.label)}
           </div>
-          <div
-            className={`font-body text-[24px] leading-8 text-stone700 text-center w-full ${
+          <p
+            className={`font-body  leading-6 text-stone700 text-center w-full ${
               headingStart ? 'text-start' : 'text-center'
             }`}
           >
             {mapData?.description}
-          </div>
+          </p>
         </div>
         <div
           className={`grid  gap-8 w-full ${gridGroup} ${mustHaveLeftRightPadding} ${mustHaveBottomPadding}

@@ -6,17 +6,17 @@ function ScheduleBanner({ content }) {
     <div className="flex flex-col w-full max-w-7xl bg-stone900 px-20">
       <div className="flex flex-col gap-8 max-w-300 mx-auto p-10">
         <div className="flex flex-col h-full items-start lg:w-full justify-center gap-4 ">
-          <div className=" font-heading  text-white text-3xl w-full  line-height-[0.5] font-bold text-center">
+          <div className=" font-heading  text-white text-3xl w-full   font-bold text-center">
             {toSentenceCase(
               content?.label || 'Ready to transform your record management?'
             )}
           </div>
-          <div className="font-body text-[20px] leading-8 text-stone700 text-center w-full">
+          <p className="font-body leading-6 text-stone700 font-body text-center w-full">
             {toSentenceCase(
               content?.description ||
                 'Join thousands of teams already using MapleRecord to streamline their workflows and boost productivity.'
             )}
-          </div>
+          </p>
         </div>
         <div className="flex flex-col h-full items-start lg:w-full justify-center gap-4 ">
           <div className="  w-full text-center">

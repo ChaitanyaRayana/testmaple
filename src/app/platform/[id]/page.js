@@ -37,8 +37,8 @@ async function Page({ params }) {
               mapData={contentToDisplay?.sectionOne}
               mustHaveBottomPadding={''}
               mustHaveLeftRightPadding={''}
-              imageHeight="items-center h-120"
-              zigZagClassName="flex g:flex-row max-lg:flex-col  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
+              heroSection={true}
+              zigZagClassName="flex g:flex-row max-lg:flex-col  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl p-8"
             />
           </section>
         </VerticalBorderPattern>
@@ -62,6 +62,7 @@ async function Page({ params }) {
               headingStart={true}
               mustHaveBottomPadding={'pb-15'}
               mustHaveLeftRightPadding={'px-10'}
+              cardHeight="h-130 overflow-y-scroll"
               zigZagClassName="flex g:flex-row max-lg:flex-col items-center  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
             />
           </section>
@@ -75,7 +76,7 @@ async function Page({ params }) {
               headingStart={true}
               mustHaveBottomPadding={'pb-15'}
               mustHaveLeftRightPadding={'px-10'}
-              imageHeight={'h-max'}
+              cardHeight="h-max"
               zigZagClassName="flex g:flex-row max-lg:flex-col items-center  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
             />
           </section>

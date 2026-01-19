@@ -25,6 +25,10 @@ export default function page() {
         if (entry.isIntersecting) {
           // Section visible → add hash
           history.replaceState(null, '', '#schedule-demo');
+          section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
         } else {
           // Section not visible → remove hash
           history.replaceState(
@@ -56,7 +60,7 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >
               <div
-                className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-center`}
+                className={`font-heading text-black w-full text-[44px]   font-bold text-center`}
               >
                 Contact Us
               </div>
@@ -79,7 +83,7 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >
               <div
-                className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-center`}
+                className={`font-heading text-black w-full text-3xl   font-bold text-center`}
               >
                 Ready to enhance your records management?
               </div>

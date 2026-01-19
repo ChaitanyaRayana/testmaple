@@ -41,7 +41,7 @@ async function Page({ params }) {
               mapData={contentToDisplay?.sectionOne}
               mustHaveBottomPadding={''}
               mustHaveLeftRightPadding={''}
-              imageHeight="h-120"
+              heroSection={true}
               zigZagClassName="flex g:flex-row max-lg:flex-col  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
             />
           </section>

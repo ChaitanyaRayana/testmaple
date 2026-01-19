@@ -56,16 +56,16 @@ export default function page() {
               </div>
               {/* )} */}
               <div
-                className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-center`}
+                className={`font-heading text-black w-full text-[44px] leading-11   font-bold text-center`}
               >
                 MapleRecord in the News
               </div>
-              <div
-                className={`font-body text-[24px] leading-8 text-stone700 text-center w-full`}
+              <p
+                className={`font-body leading-6 text-stone700 text-center w-full`}
               >
                 The latest news, press releases, and media resources about
                 MapleRecord and our mission to transform records management.
-              </div>
+              </p>
             </div>
 
             <div className=" flex flex-wrap justify-center w-full mx-auto pt-3 gap-4">

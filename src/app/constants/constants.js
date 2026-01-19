@@ -1286,12 +1286,12 @@ export const industriesSolutions = {
       ],
     },
     scheduleSection: {
-      chipIcon: 'LockIcon',
-      chipText: 'Security & Compliance',
-      label: 'Built for Financial Services Security',
+      // chipIcon: 'LockIcon',
+      // chipText: 'Security & Compliance',
+      label: 'Ready to Transform Your Financial Institution?',
       description:
-        'MapleRecord meets the stringent security and compliance requirements of banks, credit unions, insurance companies, and investment firms.',
-      // buttonsText: ['Contact Sales'],
+        'Join leading banks, credit unions, and financial services firms using MapleRecord to modernize document management and workflow automation.',
+      buttonsText: ['Schedule a Demo'],
     },
   },
   // Insurance
@@ -2341,7 +2341,7 @@ export const departmentalSolutions = {
       ],
     },
     sectionSix: {
-      chipText: 'Security & Compliance Features',
+      chipText: 'Security & Compliance',
       chipIcon: 'LockIcon',
       label: 'Built for Financial Security',
       description:
@@ -2349,7 +2349,7 @@ export const departmentalSolutions = {
 
       cardSection: [
         {
-          label: 'Faster Response Times',
+          label: 'Security & Compliance Features',
           featureHighlight: [
             'SOX compliance with complete audit trails',
             'Bank-level encryption and data protection',
@@ -2358,6 +2358,7 @@ export const departmentalSolutions = {
             'Integration with ERP systems (SAP, Oracle, NetSuite, QuickBooks)',
             ,
           ],
+          featureMarkDownIcon: 'CircleThickIcon',
         },
       ],
     },
@@ -2512,7 +2513,7 @@ export const departmentalSolutions = {
         'MapleRecord meets the rigorous security and compliance requirements of legal and compliance departments handling sensitive and privileged information.',
       cardSection: [
         {
-          label: 'Faster Response Times',
+          label: 'Security & Compliance Features',
           featureHighlight: [
             'Attorney-client privilege protection and ethical walls',
             'Legal hold management with defensible preservation',
@@ -2521,6 +2522,7 @@ export const departmentalSolutions = {
             'Integration with contract management and legal tech platforms',
             ,
           ],
+          featureMarkDownIcon: 'CircleThickIcon',
         },
       ],
     },
@@ -2684,6 +2686,7 @@ export const departmentalSolutions = {
             'Integration with HRIS, payroll, and benefits platforms',
             ,
           ],
+          featureMarkDownIcon: 'CircleThickIcon',
         },
       ],
     },
@@ -2850,6 +2853,7 @@ export const departmentalSolutions = {
             'Integration with ERP, procurement, and supply chain systems',
             ,
           ],
+          featureMarkDownIcon: 'CircleThickIcon',
         },
       ],
     },
@@ -3014,6 +3018,7 @@ export const departmentalSolutions = {
             'Integration with LIMS, ELN, and research management systems',
             ,
           ],
+          featureMarkDownIcon: 'CircleThickIcon',
         },
       ],
     },
@@ -3178,6 +3183,7 @@ export const departmentalSolutions = {
             'Integration with CRM, ticketing, and communication platforms',
             ,
           ],
+          featureMarkDownIcon: 'CircleThickIcon',
         },
       ],
     },
@@ -3773,4 +3779,264 @@ export const contactUsContent = {
     'Ready to elevate your records management? Contact us today to explore how our solutions can transform your organization. Our sales team is here to help you get the answers to all your queries!',
   buttonsText: [{ label: 'Get started', href: '/contact-us#schedule-demo' }],
   image: MRRecordImage,
+};
+
+export const termsOfService = {
+  termsIntro: `
+**Last Updated:** [Date]
+Welcome to **MapleRecord**. These Terms of Service (“Terms”) govern your access to and use of the MapleRecord website, platform, products, and services (collectively, the “Services”).
+
+By accessing or using the Services, you agree to be bound by these Terms.  
+If you do not agree to these Terms, you may not access or use the Services.
+`,
+
+  acceptanceOfTerms: `
+By accessing or using the MapleRecord Services, you confirm that you are legally capable of entering into a binding agreement and that you agree to comply with these Terms.
+`,
+
+  descriptionOfServices: `
+MapleRecord provides an **AI-first hybrid records management platform** designed to manage electronic and physical records, automate workflows, enforce governance and retention policies, and maintain audit trails for enterprises and government bodies.
+`,
+
+  accountRegistration: `
+Certain features of the Services require account registration. You agree to provide accurate and complete information and to maintain the confidentiality of your account credentials. You are responsible for all activities conducted through your account.
+`,
+
+  subscriptionAndBilling: `
+If you subscribe to a paid plan:
+
+- • Fees are billed in advance on a recurring basis.
+- • You agree to pay all applicable fees and taxes.
+- • MapleRecord reserves the right to modify pricing with prior notice.
+
+Failure to pay may result in suspension or termination of access to the Services.
+`,
+
+  userResponsibilities: `
+You agree not to:
+
+- • Use the Services for unlawful or unauthorized purposes
+- • Attempt to bypass security or access controls
+- • Interfere with or disrupt the Services
+- • Upload, store, or share content that infringes intellectual property or legal rights
+`,
+
+  acceptableUse: `
+You must use the Services in compliance with all applicable laws, regulations, and internal policies. MapleRecord reserves the right to restrict, suspend, or terminate access if misuse or violations are identified.
+`,
+
+  dataPrivacy: `
+MapleRecord processes data in accordance with applicable data protection laws. Information regarding data handling and protection practices is available in MapleRecord’s Privacy Policy.
+`,
+
+  intellectualPropertyRights: `
+All intellectual property rights related to the Services—including software, interfaces, designs, documentation, and content—remain the exclusive property of MapleRecord or its licensors.
+
+You are granted a limited, non-exclusive, non-transferable license to use the Services in accordance with these Terms.
+`,
+
+  thirdPartyIntegrations: `
+The Services may integrate with third-party platforms or services. MapleRecord does not control and is not responsible for the availability, performance, or functionality of such third-party services.
+`,
+
+  security: `
+MapleRecord implements industry-standard technical and organizational measures to protect data stored within the platform. However, no system can be guaranteed to be completely secure, and MapleRecord does not warrant absolute security.
+`,
+
+  aiSpecificRisksAndLimitations: `
+MapleRecord utilizes artificial intelligence (“AI”) and automated processing to assist with records classification, metadata extraction, search, workflow routing, and related functions.
+
+**Limitations include:**
+- •  AI-generated outputs may not always be complete, accurate, or up to date
+- •  Automated classifications and recommendations may require human validation
+- •  AI-based features may not identify all relevant records, metadata, or risks
+- •  Outputs may be influenced by data quality and completeness
+
+**You remain solely responsible for:**
+- •  Reviewing and approving AI-assisted outputs
+- •  Ensuring compliance with laws, regulations, and retention schedules
+- •  Determining suitability for legal, regulatory, or operational purposes
+
+MapleRecord disclaims liability for decisions made without appropriate human oversight.
+`,
+
+  disclaimers: `
+The Services are provided on an **“as is”** and **“as available”** basis. MapleRecord disclaims all warranties, whether express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement.
+`,
+
+  limitationOfLiability: `
+To the maximum extent permitted by law, MapleRecord shall not be liable for:
+
+- Indirect, incidental, special, or consequential damages
+- Loss of profits, revenue, business, or data
+
+Your exclusive remedy for dissatisfaction with the Services is to discontinue use.
+`,
+
+  indemnification: `
+You agree to indemnify and hold harmless MapleRecord from any claims, damages, liabilities, losses, or expenses arising from:
+
+- • Your use of the Services
+- • Your violation of these Terms
+- • Your violation of applicable laws or third-party rights
+`,
+
+  modificationsToTerms: `
+MapleRecord may revise these Terms from time to time. Updated Terms will be posted on the website with a revised **“Last Updated”** date. Continued use of the Services constitutes acceptance of the revised Terms.
+`,
+
+  governingLawAndJurisdiction: `
+These Terms shall be governed by and construed in accordance with applicable laws. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the competent courts.
+`,
+
+  termination: `
+MapleRecord may suspend or terminate access to the Services for violation of these Terms, non-payment, or operational reasons. Upon termination, all rights to access and use the Services shall immediately cease.
+`,
+
+  contactInformation: `
+**MapleRecord**  
+Email: s  
+Address: [Company Address]
+`,
+};
+
+export const privacyPolicy = {
+  privacyIntro: `
+**Last Updated:** [Date]
+
+**MapleRecord** (“we,” “our,” or “us”) is committed to protecting the privacy and security of information entrusted to us. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you access or use the MapleRecord website, platform, and services (collectively, the “Services”).
+
+By using the Services, you agree to the practices described in this Privacy Policy.
+`,
+
+  informationWeCollect: `
+
+#### <b>a. Information You Provide </b> 
+We may collect information you voluntarily provide, including:
+
+- • Name, email address, phone number, and organizational details  
+- • Account credentials and user role information  
+- • Communications, support requests, and feedback  
+- • Records, documents, and metadata uploaded or managed through the Services  
+
+#### <b>b. Automatically Collected Information  </b>
+When you use the Services, we may collect:
+
+- • IP address, browser type, device information, and operating system  
+- • Log data, usage activity, and access timestamps  
+- • Performance and diagnostic data to improve service reliability  
+
+#### <b>c. Records and Content Data  </b>
+MapleRecord processes electronic and physical records data as directed by customers. We act as a data processor for customer-managed content and do not claim ownership over such data.
+`,
+
+  howWeUseInformation: `
+
+We use collected information to:
+
+- • Provide, operate, and maintain the Services  
+- • Authenticate users and manage access controls  
+- • Process records, workflows, and requests as configured by customers  
+- • Improve platform performance, security, and usability  
+- • Communicate service-related notices and support responses  
+- • Comply with legal, regulatory, and contractual obligations  
+`,
+
+  aiAndAutomatedProcessing: `
+
+MapleRecord uses AI and automated technologies to support records classification, metadata extraction, workflow routing, and search capabilities.
+
+- • AI-assisted outputs are designed to enhance efficiency but require human review  
+- • We do not use customer data to train generalized AI models without explicit authorization  
+- • Customers remain responsible for validating outputs and ensuring regulatory compliance  
+`,
+
+  legalBasisForProcessing: `
+
+We process personal data based on:
+
+- • Contractual necessity to provide the Services  
+- • Legitimate business interests, including security and service improvement  
+- • Legal and regulatory obligations  
+- • Customer instructions and configurations  
+`,
+
+  dataSharingAndDisclosure: `
+
+We do not sell personal data. Information may be shared only:
+
+- • With authorized users within your organization  
+- • With trusted service providers under confidentiality obligations  
+- • To comply with legal requirements or government requests  
+- • To protect the rights, safety, or security of MapleRecord or its users  
+`,
+
+  dataRetention: `
+
+We retain information only for as long as necessary to:
+
+- • Fulfill contractual obligations  
+- • Meet regulatory and compliance requirements  
+- • Support audit and legal obligations  
+
+Retention periods are configurable based on customer-defined policies.
+`,
+
+  dataSecurity: `
+
+MapleRecord implements administrative, technical, and organizational safeguards designed to protect data, including:
+
+- • Role-based access controls  
+- • Encryption in transit and at rest (where applicable)  
+- • Audit logging and monitoring  
+- • Secure infrastructure practices  
+
+No method of transmission or storage is completely secure; however, we continuously enhance our security controls.
+`,
+
+  yourRightsAndChoices: `
+
+Depending on applicable laws, you may have the right to:
+
+- • Access, correct, or update personal information  
+- • Request deletion or restriction of processing  
+- • Object to certain data uses  
+- • Request data portability  
+
+Requests may be subject to verification and legal limitations.
+`,
+
+  governmentAndPublicSectorUse: `
+
+For government and public-sector customers, MapleRecord processes data strictly in accordance with contractual terms, applicable regulations, and customer-defined governance and retention policies.
+`,
+
+  thirdPartyServices: `
+
+The Services may integrate with third-party platforms. This Privacy Policy does not cover third-party practices, and MapleRecord is not responsible for their privacy controls.
+`,
+
+  internationalDataTransfers: `
+
+Data may be processed in locations where MapleRecord or its service providers operate, subject to appropriate safeguards and legal requirements.
+`,
+
+  childrensPrivacy: `
+
+The Services are not intended for use by individuals under the age of 18. MapleRecord does not knowingly collect personal data from minors.
+`,
+
+  changesToPrivacyPolicy: `
+
+We may update this Privacy Policy from time to time. Changes will be posted with an updated **“Last Updated”** date. Continued use of the Services constitutes acceptance of the revised policy.
+`,
+
+  contactInformation: `
+
+If you have questions or concerns regarding this Privacy Policy, please contact:
+
+**MapleRecord**  
+Email: [Email Address]  
+Address: [Company Address]
+`,
 };
