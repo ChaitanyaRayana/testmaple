@@ -101,7 +101,7 @@ function page({ headingStart = false }) {
       {/* Top Section */}
       <main className="flex w-full relative z-1 max-w-7xl mx-auto  flex-col items-center bg-white">
         <VerticalBorderPattern gradientName="backgroundGlow">
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center pt-50 pb-15 px-10 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center pt-30 pb-15 px-10 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 ${
                 headingStart ? 'justify-start' : 'justify-center'

@@ -92,7 +92,7 @@ function page() {
           gradientName={'backgroundGradientAnimation'}
           maxArraryLines={100}
         >
-          <div className=" flex-col sm:flex-row px-10 flex justify-center gap-20 max-sm:gap-2.5 pt-50 pb-15">
+          <div className=" flex-col sm:flex-row px-10 flex justify-center gap-20 max-sm:gap-2.5 pt-30 pb-15">
             {Object?.keys(privacyPolicy)?.length > 0 && (
               <div
                 className="flex flex-col gap-10  grow max-w-180"

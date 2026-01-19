@@ -237,3 +237,11 @@ h1, h2, h3, h4, h5, h6 {
     line-clamp: 5;
   }
 }
+
+.heroBackground {
+  background-image: url('/assets/images/png/bg-abstract.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  size: max(min(100vw - 40px, 1280px) - 80px, 1px);
+}

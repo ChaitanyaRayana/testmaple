@@ -56,7 +56,11 @@ function CenterTextCardsSection({
             <Cards
               content={item}
               key={i}
-              flexCss={centerCardContent ? 'text-start' : 'text-center'}
+              flexCss={
+                centerCardContent && !item?.percentage
+                  ? 'text-start'
+                  : 'text-center'
+              }
               cardArrow={cardArrow && i !== mapData?.cardSection?.length - 1}
               groupCss={groupCss}
             />
