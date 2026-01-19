@@ -93,7 +93,7 @@ export default function page() {
         <VerticalBorderPattern
           gradientName={'backgroundGlow backgroundGradient'}
         >
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 pt-50 pb-15 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 pt-30 pb-15 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4  justify-center
               `}

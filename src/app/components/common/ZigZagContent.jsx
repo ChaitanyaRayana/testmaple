@@ -216,7 +216,7 @@ function ZigZagContent({
               </motion.div>
             </div>
           )}
-          {hasCardSection && (
+          {!hasCardSection && (
             <div
               ref={cardScrollRef}
               className={` flex-col relative h-fit w-full pr-2 hidden md:flex gap-4 overflow-hidden`}

@@ -11,9 +11,9 @@ import { useEffect } from 'react';
 
 export default function page() {
   const contactDetails = [
-    { icon: '', label: '102 California Drive, Whitby, ON, CA' },
-    { icon: '', label: '+1 647 804 2023' },
-    { icon: '', label: 'info@maplerecord.com' },
+    { icon: 'LocationIcon', label: '102 California Drive, Whitby, ON, CA' },
+    { icon: 'PhoneIcon', label: '+1 647 804 2023' },
+    { icon: 'MailIcon', label: 'info@maplerecord.com' },
   ];
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export default function page() {
       {/* Top Section */}
       <main className="flex w-full relative z-1 max-w-7xl mx-auto  flex-col items-center bg-white">
         <VerticalBorderPattern gradientName={'backgroundGlow'}>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 pb-15 pt-50 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 pb-15 pt-30 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >

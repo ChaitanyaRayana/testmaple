@@ -22,7 +22,7 @@ export default function page() {
       {/* Top Section */}
       <main className="flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
         <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
-          <section className="flex w-full overflow-hidden  max-w-7xl pt-50 pb-15  flex-row items-center min-h-screen text-center">
+          <section className="flex w-full overflow-hidden  max-w-7xl pt-30 pb-15  flex-row items-center min-h-screen text-center">
             <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-12">
               <div className="flex flex-col h-full items-center lg:w-full  justify-center gap-3 ">
                 <div className="flex justify-center w-full">

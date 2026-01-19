@@ -33,15 +33,15 @@ export default function Home() {
 
       <main className="flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
         {/* Manage your information ecosystem */}
-        <VerticalBorderPattern gradientName="backgroundGlow">
-          <section className="flex w-full overflow-hidden mx-auto flex-row items-center min-h-screen text-center pt-50 pb-15 ">
-            <div className="flex w-full  max-w-300 mx-auto flex-row flex-1 h-full items-start justify-between px-10 gap-8">
+        <VerticalBorderPattern gradientName="heroBackground">
+          <section className="flex w-full overflow-hidden mx-auto flex-row items-center min-h-screen text-center pt-30 pb-15 ">
+            <div className="grid lg:grid-cols-2 gap-12  w-full  max-w-300 mx-auto flex-row flex-1 h-full items-start justify-between px-10">
               <div className="flex flex-col h-full items-start lg:w-full justify-center gap-8 ">
                 <ChipText
                   text="Manage your information ecosystem"
                   dotCircle={true}
                 />
-                <h2 className=" font-heading text-black text-[44px] leading-11  font-bold text-start">
+                <h2 className=" font-heading text-black text-5xl lg:text-6xl font-bold leading-17 text-start">
                   An AI-First Hybrid Records Management System for Electronic
                   and Physical Records
                 </h2>
@@ -54,13 +54,13 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-              <div className="w-full h-max justify-center">
+              <div className="w-full flex h-full  justify-center">
                 <Image
                   src={homeRecordTwo}
                   alt="Records Dashboard"
                   width={600}
                   height={600}
-                  className="object-contain hidden lg:inline-block rounded-2xl"
+                  className="object-cover lg:pt-15 lg:h-140 w-full h-max  rounded-2xl"
                 />
               </div>
             </div>
@@ -171,14 +171,14 @@ export default function Home() {
                   department?
                 </div>
               </div>
-              <div className="flex flex-wrap justify-center overflow-hidden overflow-x-auto w-max mx-auto bg-stone-200 rounded-2xl gap-4">
+              <div className="flex flex-wrap justify-center overflow-hidden overflow-x-auto w-max mx-auto bg-stone-200 rounded-3xl gap-4">
                 {howWeHelpContent?.map((item, i) => (
                   <Button
                     gradientColor={`${
                       i === selectedHelpMeBtn
-                        ? 'bg-black text-white text-center rounded-3xl flex flex-row gap-2 items-center'
-                        : 'bg-transparent rounded-3xl hover:text-white text-center flex flex-row gap-2 items-center'
-                    } p-5`}
+                        ? 'bg-black text-white  '
+                        : 'bg-transparent rounded-3xl hover:text-white'
+                    } text-center rounded-3xl flex flex-row gap-2 items-center p-5`}
                     key={i}
                     onClickButton={() => setSelectedHelpMeBtn(i)}
                   >

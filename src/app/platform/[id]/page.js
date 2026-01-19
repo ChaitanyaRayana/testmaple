@@ -32,7 +32,7 @@ async function Page({ params }) {
       <main className="flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
         {/* // Section one */}
         <VerticalBorderPattern gradientName="backgroundGlow">
-          <section className="flex  max-w-300 mx-auto px-10 pt-50 pb-15 flex-row gap-10">
+          <section className="flex  max-w-300 mx-auto px-10 pt-30 pb-15 flex-row gap-10">
             <ZigZagContent
               mapData={contentToDisplay?.sectionOne}
               mustHaveBottomPadding={''}

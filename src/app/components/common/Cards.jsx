@@ -46,6 +46,11 @@ function Cards({
               {/* {Icon} */}
             </div>
           )}
+          {content?.percentage && (
+            <div className=" text-[#0f5291] font-bold text-4xl text-center flex justify-center items-center">
+              {content?.percentage}
+            </div>
+          )}
         </div>
         <div
           className={`${
@@ -65,7 +70,7 @@ function Cards({
       <div className="flex w-full flex-col gap-3 justify-start items-start h-full">
         {content?.label && (
           <div
-            className={`text-body text-xl font-bold h-fit w-full text-black ${flexCss}`}
+            className={`text-body font-bold h-fit w-full text-black ${flexCss} text-lg`}
           >
             {toSentenceCase(content?.label)}
           </div>
@@ -79,7 +84,7 @@ function Cards({
           </div>
         )}
         {content?.description && (
-          <p className={`font-body w-full text-stone-600 ${flexCss}`}>
+          <p className={`font-body w-full text-stone-600 text-sm ${flexCss}`}>
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>
               {content?.description}
             </ReactMarkdown>
