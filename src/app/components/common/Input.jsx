@@ -58,7 +58,7 @@ const Input = forwardRef(function Input(
       {label && (
         <label
           htmlFor={inputId}
-          className="block text-sm font-medium text-gray-700 mb-2"
+          className="block text-sm font-medium pl-1 text-gray-700 mb-2"
         >
           {label} {required ? <span className="text-red-500">*</span> : null}
         </label>

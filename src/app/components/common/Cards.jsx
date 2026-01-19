@@ -6,13 +6,19 @@ import { CircleThickIcon } from './svgImage';
 import { toSentenceCase } from '../../utils/utils';
 
 const FeatureWrapper = ({ children }) => (
-  <div className="flex items-start gap-2 text-stone-700 text-[14px] font-body">
+  <p className="flex items-start gap-2 text-stone-700 font-body">
     <CircleThickIcon width={16} height={16} />
-    <span className="leading-5 text-[18px]">{children}</span>
-  </div>
+    <span className="leading-4 ">{children}</span>
+  </p>
 );
 
-function Cards({ content, flexCss = '', groupCss = '', cardArrow = false }) {
+function Cards({
+  content,
+  flexCss = '',
+  groupCss = '',
+  cardArrow = false,
+  shadowRemove = false,
+}) {
   const Icon = content?.icon ? ICONS[content?.icon] : null;
   const components = {
     p: FeatureWrapper,
@@ -21,7 +27,10 @@ function Cards({ content, flexCss = '', groupCss = '', cardArrow = false }) {
   };
   return (
     <div
-      className={`relative p-8 w-full h-full flex flex-col gap-4 bg-white shadow-xl border rounded-2xl transform transition-transform duration-300 hover:transform-3d cursor-pointer ${flexCss} ${groupCss}`}
+      className={`relative p-6 w-full flex flex-col gap-4 bg-white border rounded-2xl transition-all duration-300 ease-out
+    transform-gpu
+    hover:-translate-y-2 hover:scale-[1.02]
+    hover:shadow-2xl cursor-pointer ${flexCss} ${groupCss} ${shadowRemove ? '' : 'shadow-xl'}`}
     >
       <div>
         <div
@@ -53,7 +62,7 @@ function Cards({ content, flexCss = '', groupCss = '', cardArrow = false }) {
           )}
         </div>
       </div>
-      <div className="flex w-full flex-col gap-3 justify-around items-start h-full">
+      <div className="flex w-full flex-col gap-3 justify-start items-start h-full">
         {content?.label && (
           <div
             className={`text-body text-xl font-bold h-fit w-full text-black ${flexCss}`}
@@ -70,7 +79,7 @@ function Cards({ content, flexCss = '', groupCss = '', cardArrow = false }) {
           </div>
         )}
         {content?.description && (
-          <p className={`text-body w-full text-base text-stone-600 ${flexCss}`}>
+          <p className={`font-body w-full text-stone-600 ${flexCss}`}>
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>
               {content?.description}
             </ReactMarkdown>
@@ -79,7 +88,7 @@ function Cards({ content, flexCss = '', groupCss = '', cardArrow = false }) {
         {content?.featureHighlight &&
           content?.featureHighlight?.map((featureItem, idx) => (
             <p
-              className={`text-body w-full h-full text-base text-stone-600 ${flexCss}`}
+              className={`text-body w-full text-stone-600 ${flexCss}`}
               key={idx}
             >
               {content?.featureMarkDownIcon === 'CircleThickIcon' ? (

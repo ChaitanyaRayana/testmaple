@@ -80,7 +80,11 @@ export const DownArrowIcon = (props) => {
   );
 };
 
-export function VerticalBorderPattern({ children, gradientName }) {
+export function VerticalBorderPattern({
+  children,
+  gradientName,
+  maxArraryLines = 40,
+}) {
   const contentRef = useRef(null);
   const [contentHeight, setContentHeight] = useState(0);
 
@@ -109,7 +113,7 @@ export function VerticalBorderPattern({ children, gradientName }) {
         className="absolute left-0 top-0 w-3 flex flex-col items-center py-8 pointer-events-none"
         style={{ height: `${contentHeight}px` }}
       >
-        {Array.from({ length: 40 }).map((_, i) => (
+        {Array.from({ length: maxArraryLines }).map((_, i) => (
           <div key={i} className="flex flex-col items-center gap-3 w-full">
             <div className="w-0.5 h-7 bg-gray-200 rounded-b-full" />
             <div className="w-1 h-1 rounded-full bg-linear-to-br from-gray-200 to-gray-300 shadow-sm" />
@@ -123,7 +127,7 @@ export function VerticalBorderPattern({ children, gradientName }) {
         className="absolute right-0 top-0 w-3 flex flex-col items-center py-8 pointer-events-none"
         style={{ height: `${contentHeight}px` }}
       >
-        {Array.from({ length: 40 }).map((_, i) => (
+        {Array.from({ length: maxArraryLines }).map((_, i) => (
           <div key={i} className="flex flex-col items-center gap-2 w-full">
             <div className="w-0.5 h-7 bg-gray-200 rounded-b-full" />
             <div className="w-1 h-1 rounded-full bg-linear-to-br from-gray-200 to-gray-300 shadow-sm" />

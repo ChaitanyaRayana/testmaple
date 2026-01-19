@@ -8,7 +8,7 @@ import StatCard from '../components/common/StatCard';
 import ZigZagContent from '../components/common/ZigZagContent';
 import Navbar from '../components/Navbar';
 import MainArticeVideoImage from '@/public/assets/images/png/videoImages/mainImage.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { videoCardContent } from '../constants/constants';
 import CenterTextCardsSection from '../components/common/CenterTextCardsSection';
 import ScheduleBanner from '../components/common/ScheduleBanner';
@@ -21,6 +21,7 @@ import {
   VideoRecorderIcon,
 } from '../components/common/svgImage';
 import Fotter from '../components/common/Fotter';
+import PopupModal from '../components/common/PopupModel';
 
 function page({ headingStart = false }) {
   const statContent = [
@@ -95,6 +96,41 @@ function page({ headingStart = false }) {
 
   const [selectedHelpMeBtn, setSelectedHelpMeBtn] = useState(0);
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState();
+  const [email, setEmail] = useState('');
+  const [isSuccessful, setIsSuccessful] = useState();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Add your form submission logic here
+    console.log('Form submitted:', email);
+
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsOpen(false);
+      setIsSuccessful(true);
+      // Reset form
+      setEmail('');
+    }, 1000);
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const scheduleBannerData = {
     label: 'Ready to See MapleRecord in Action?',
     description:
@@ -125,20 +161,20 @@ function page({ headingStart = false }) {
               </div>
               {/* )} */}
               <div
-                className={`font-heading text-black w-full text-3xl  line-height-[0.5] font-bold text-center ${
+                className={`font-heading text-black w-full text-[44px] leading-11   font-bold text-center ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
               >
                 Explore MapleRecord Through Video
               </div>
-              <div
-                className={`font-body text-[24px] leading-8 text-stone700 text-center w-full ${
+              <p
+                className={`font-body leading-6 text-stone700 text-center w-full ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
               >
                 Watch product demos, tutorials, customer success stories, and
                 thought leadership content to master records management.
-              </div>
+              </p>
             </div>
             <div className="w-1/2 mx-auto">
               <Input
@@ -166,7 +202,6 @@ function page({ headingStart = false }) {
                 mapData={videoArticle}
                 mustHaveBottomPadding=""
                 mustHaveLeftRightPadding=""
-                imageHeight="h-120 items-center"
                 zigZagClassName="flex lg:flex-row-reverse max-lg:flex-col  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
               />
             </div>
@@ -179,7 +214,7 @@ function page({ headingStart = false }) {
             <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
               <div className="flex flex-col gap-4">
                 <div
-                  className={`font-body text-[16px] leading-8 text-black w-full text-start`}
+                  className={`font-body text-[16px] leading-4 text-black w-full text-start`}
                 >
                   Filter by Category:
                 </div>
@@ -236,22 +271,72 @@ function page({ headingStart = false }) {
         <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
           <div className="flex flex-col gap-8 max-w-300 mx-auto p-10">
             <div className="flex flex-col w-full h-full items-center lg:w-full justify-center gap-4 ">
-              <div className=" font-heading  text-black text-3xl w-full  line-height-[0.5] font-bold text-center">
+              <div className=" font-heading  text-black text-3xl w-full   font-bold text-center">
                 Subscribe for Video Updates
               </div>
-              <div className="font-body text-[24px] leading-8 text-stone700 text-center w-full">
+              <p className="font-body leading-6 text-stone700 text-center w-full">
                 Get notified when we release new videos, tutorials, and product
                 updates.{' '}
-              </div>
+              </p>
             </div>
-            <div className="flex flex-row gap-8 w-1/2 mx-auto">
-              <Input placeholder="Enter your email" />
-              <Button>Subscribe</Button>
+            <div className="flex flex-row gap-8 mx-auto">
+              {/* <Input placeholder="Enter your email" /> */}
+              <Button onClickButton={() => setIsOpen(true)}>Subscribe</Button>
             </div>
           </div>
         </VerticalBorderPattern>
 
         <ScheduleBanner content={scheduleBannerData} />
+
+        <PopupModal
+          isOpen={isOpen || isSuccessful}
+          onClose={() => {
+            setIsOpen(false);
+            setIsSubmitting(false);
+          }}
+          title={isSuccessful ? 'Thank you!' : 'Subscribe to Our Newsletter'}
+          description={
+            isSuccessful
+              ? 'Stay ahead with exclusive updates and insider insights—delivered straight to your inbox.'
+              : 'Get notified about upcoming webinars, new resources, and exclusive content delivered to your inbox.'
+          }
+          icon={isSuccessful ? 'CircleThickIcon' : 'MailIcon'}
+          ppoupContent={
+            <form onSubmit={handleSubmit} className="space-y-4">
+              {/* First Name & Last Name */}
+              {!isSuccessful && (
+                <Input
+                  type="email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="w-full "
+                  label="Email Address"
+                />
+              )}
+              {/* Submit Button */}
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                padding="w-full rounded-lg"
+              >
+                {isSubmitting
+                  ? 'Submitting...'
+                  : isSuccessful
+                    ? 'Done'
+                    : 'Subscribe Now'}
+              </Button>
+
+              {!isSuccessful && (
+                <p className="font-body text-[12px] text-center text-stone700">
+                  We respect your privacy. Unsubscribe at any time.
+                </p>
+              )}
+            </form>
+          }
+        />
       </main>
       <Fotter />
     </div>

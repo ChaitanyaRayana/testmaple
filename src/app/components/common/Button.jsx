@@ -7,7 +7,7 @@ function Button({
   gradientColor = 'bg-linear-to-br from-[#EBF3FA] to-[#DFEDFA] rounded  hover:text-white',
   padding = '',
   onClickButton = () => {},
-  type = 'submit',
+  type = '',
   disabled = false,
   arrowIcon = false,
 }) {

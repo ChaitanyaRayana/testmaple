@@ -25,6 +25,8 @@ function Fotter() {
     ],
   };
 
+  const router = useRouter();
+
   return (
     <footer className="  flex max-h-max w-full max-w-7xl  mx-auto flex-col flex-wrap items-center justify-between  bg-white font-body h-full">
       <div className="flex  flex-row flex-wrap items-center w-full text-center pb-5">
@@ -36,8 +38,18 @@ function Fotter() {
                   <MapleLogo />
                 </div>
                 <div className="flex flex-col gap-4 w-40">
-                  <Button padding="w-full">Start Now</Button>
                   <Button
+                    padding="w-full"
+                    onClickButton={() => {
+                      router.push('/contact-us#schedule-demo');
+                    }}
+                  >
+                    Start Now
+                  </Button>
+                  <Button
+                    onClickButton={() => {
+                      router.push('/contact-us#schedule-demo');
+                    }}
                     padding="w-full"
                     gradientColor="rounded bg-linear-to-br from-[#faf6eb] to-[#f9adad] hover:text-white hover:from-[#faf6eb] hover:to-[#ff5b5b]"
                   >
@@ -68,13 +80,13 @@ function Fotter() {
               <div></div>
               <div></div>
             </div>
-            <div className="w-full font-body flex px-5 flex-wrap gap-8 justify-between items-center pb-8">
+            <div className="w-full font-body flex flex-wrap gap-8 justify-between items-center pb-8">
               <p className="text-stone700 h-5 font-normal">
                 &#169; 2026 MapleRecord Inc. All rights reserved.
               </p>
               <div className="flex flex-row h-5 gap-11.5">
                 <Link
-                  href="/terms-of-service"
+                  href="/terms"
                   className="text-stone700 hover:text-stone900"
                 >
                   Terms of Service
