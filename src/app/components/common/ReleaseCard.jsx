@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect } from 'react';
 import Button from './Button';
 import { toSentenceCase } from '../../utils/utils';

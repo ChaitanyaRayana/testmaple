@@ -1,3 +1,4 @@
+'use client';
 import { useEffect } from 'react';
 import BlogCard from '../components/common/BlogCard';
 import CenterTextCardsSection from '../components/common/CenterTextCardsSection';
