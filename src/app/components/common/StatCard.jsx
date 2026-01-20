@@ -1,3 +1,8 @@
+'use client';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 /**
  * StatCard
  * Props:
@@ -7,6 +12,12 @@
  * - height: optional fixed height (Tailwind-style, e.g., 'h-40')
  */
 export default function StatCard({ mapData }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   const {
     value,
     label,
@@ -20,12 +31,20 @@ export default function StatCard({ mapData }) {
       } `}
     >
       <div
+        data-aos="fade-up"
+        data-aos-duration="200"
         className="text-4xl w-full text-center font-bold"
         style={{ color: '#226fb7' }}
       >
         {value}
       </div>
-      <div className="text-sm w-full text-center text-gray-600">{label}</div>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="600"
+        className="text-sm w-full text-center text-gray-600"
+      >
+        {label}
+      </div>
       {description && (
         <div className="text-sm w-full font-body text-center text-gray-400">
           {description}

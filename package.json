@@ -16,6 +16,7 @@
     "@next/font": "^14.2.15",
     "@next/mdx": "^16.1.1",
     "@types/mdx": "^2.0.13",
+    "aos": "^2.3.4",
     "autoprefixer": "^10.4.23",
     "framer-motion": "^12.27.0",
     "next": "16.1.1",

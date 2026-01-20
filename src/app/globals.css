@@ -245,3 +245,36 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   size: max(min(100vw - 40px, 1280px) - 80px, 1px);
 }
+
+.typewriter {
+  text-transform: none !important;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0; /* Remove auto margin to align left */
+  /* letter-spacing: 0.15em; */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+    border-right: 0.15em solid #1e2939;
+  }
+  to {
+    width: 100%;
+    border-right: 0.15em solid #1e2939;
+  }
+  100% {
+    border-right: 0.15em solid #1e2939;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #1e2939;
+  }
+}

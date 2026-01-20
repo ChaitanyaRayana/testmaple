@@ -1,5 +1,9 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function BlogCard({ mapData = {} }) {
   const {
@@ -16,10 +20,23 @@ function BlogCard({ mapData = {} }) {
     readMore = true,
   } = mapData || {};
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <article className="bg-white rounded-4xl overflow-hidden shadow-sm border flex flex-col h-full">
       {/* Image cover */}
-      <Link href={href} className="block w-full h-48">
+      <Link
+        data-aos="fade-down"
+        data-aos-duration="800"
+        key={label}
+        href={href}
+        className="block w-full h-48"
+      >
         <Image
           src={image}
           alt={label}
@@ -32,7 +49,12 @@ function BlogCard({ mapData = {} }) {
       <div className="p-6 h-full flex-1 flex flex-col">
         {/* Category pill */}
         {(category || location) && (
-          <div className="mb-4">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="200"
+            key={label}
+            className="mb-4"
+          >
             <span className="inline-block bg-[#DFEDFA] text-[#226fb7] px-3 py-1 rounded-full text-[12px]">
               {category || location}
             </span>
@@ -40,20 +62,35 @@ function BlogCard({ mapData = {} }) {
         )}
         <div className="flex flex-col h-full gap-2 justify-between">
           {/* Title */}
-          <Link href={href} className="text-gray-900 hover:underline">
+          <Link
+            data-aos="fade-up"
+            data-aos-duration="800"
+            href={href}
+            key={label}
+            className="text-gray-900 hover:underline"
+          >
             <h3 className="card-title text-xl font-heading font-extrabold leading-snug">
               {label}
             </h3>
           </Link>
 
           {/* Excerpt */}
-          <p className=" text-gray-600 font-body fon leading-relaxed card-desc">
+          <p
+            data-aos="fade-up"
+            key={label}
+            data-aos-duration="1200"
+            className=" text-gray-600 font-body fon leading-relaxed card-desc"
+          >
             {description}
           </p>
 
           {/* Author / date and CTA */}
           <div className=" flex flex-col items-start gap-3 justify-between">
-            <div className="flex items-center gap-4 text-sm text-gray-500">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1200"
+              className="flex items-center gap-4 text-sm text-gray-500"
+            >
               {authorDateWrap
                 ? authorDateWrap
                 : author && (
@@ -105,6 +142,9 @@ function BlogCard({ mapData = {} }) {
                     ? 'w-full bg-white border p-1 justify-center border-stone-400 rounded-xl'
                     : ''
                 }`}
+                data-aos="fade-left"
+                data-aos-duration="1200"
+                key={href}
               >
                 {buttonText ? buttonText?.label : 'Read More'}
                 <svg

@@ -13,6 +13,8 @@ import { MagnifyingIcon } from '../components/common/svgImage';
 import Navbar from '../components/Navbar';
 import { webinarsContent } from '../constants/constants';
 import { toSentenceCase } from '../utils/utils';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function page({ headingStart = false }) {
   const statContent = [
@@ -118,6 +120,13 @@ function page({ headingStart = false }) {
     }));
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
       <Navbar />
@@ -133,6 +142,8 @@ function page({ headingStart = false }) {
             >
               {/* {mapData?.chipText && ( */}
               <div
+                data-aos="fade-up"
+                data-aos-duration="200"
                 className={`flex w-full ${
                   headingStart ? 'justify-start' : 'justify-center'
                 }`}
@@ -141,6 +152,8 @@ function page({ headingStart = false }) {
               </div>
               {/* )} */}
               <div
+                data-aos="fade-up"
+                data-aos-duration="800"
                 className={`font-heading text-black w-full text-[44px] leading-11   font-bold text-center ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
@@ -148,6 +161,8 @@ function page({ headingStart = false }) {
                 Learn from the Experts
               </div>
               <div
+                data-aos="fade-up"
+                data-aos-duration="1200"
                 className={`font-body leading-6 text-stone700 text-center w-full ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
@@ -157,7 +172,11 @@ function page({ headingStart = false }) {
                 and digital transformation.
               </div>
             </div>
-            <div className="w-1/2 mx-auto">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              className="w-1/2 mx-auto"
+            >
               <Input
                 placeholder="Search videos..."
                 iconLeft={<MagnifyingIcon width={16} height={16} />}
@@ -170,7 +189,11 @@ function page({ headingStart = false }) {
               ))}
             </div>
 
-            <div className="flex flex-row gap-8 w-full justify-center mt-10">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="1200"
+              className="flex flex-row gap-8 w-full justify-center mt-10"
+            >
               <Button padding="p-2 rounded-lg">Upcoming Webinars</Button>
               <Button padding="p-2 rounded-lg ">On-Demand Library</Button>
             </div>
@@ -185,11 +208,15 @@ function page({ headingStart = false }) {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify start`}
             >
               <div
+                data-aos="fade-up"
+                data-aos-duration="800"
                 className={`font-heading text-black w-full text-3xl   font-bold text-start`}
               >
                 Upcoming Live Webinars
               </div>
               <p
+                data-aos="fade-up"
+                data-aos-duration="1200"
                 className={`font-body leading-6 text-stone700 w-full text-start`}
               >
                 Register now to secure your spot in our upcoming sessions
@@ -212,15 +239,27 @@ function page({ headingStart = false }) {
         <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
           <div className="flex flex-col gap-8 max-w-300 mx-auto px-10 py-15">
             <div className="flex flex-col w-full h-full items-center lg:w-full justify-center gap-4 ">
-              <div className=" font-heading  text-black text-3xl w-full   font-bold text-center">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="800"
+                className=" font-heading  text-black text-3xl w-full   font-bold text-center"
+              >
                 Never Miss a Webinar
               </div>
-              <p className="font-body leading-6 text-stone700 text-center w-full">
+              <p
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                className="font-body leading-6 text-stone700 text-center w-full"
+              >
                 Subscribe to get notified about upcoming webinars and access
                 exclusive content.
               </p>
             </div>
-            <div className="flex flex-row gap-8 mx-auto">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="1200"
+              className="flex flex-row gap-8 mx-auto"
+            >
               {/* <Input placeholder="Enter your email" /> */}
               <Button onClickButton={() => setIsOpen(true)}>Subscribe</Button>
             </div>

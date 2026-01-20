@@ -1,6 +1,16 @@
+import { useEffect } from 'react';
 import { ICONS } from './icons/AllIcons';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Table({ stats = [] }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   if (!stats || stats.length === 0) {
     return (
       <div className="max-w-6xl mx-auto p-6 text-center text-gray-500">
@@ -34,7 +44,12 @@ function Table({ stats = [] }) {
         {stats.map((item, index) => {
           const Icon = item?.isIcon ? ICONS[item?.value] : null;
           return (
-            <tr key={index} className="hover:bg-gray-50">
+            <tr
+              data-aos="fade-left"
+              data-aos-duration={(index + 1) * 400}
+              key={index}
+              className="hover:bg-gray-50"
+            >
               {/* <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{index + 1}</td> */}
 
               <td className="px-4 py-4 whitespace-nowrap text-sm font-semibold">

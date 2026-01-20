@@ -17,15 +17,44 @@ import {
   homeZipZapContent,
   powerfulCardSectionData,
 } from './constants/constants';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { CircleThickIcon } from './components/common/svgImage';
 import { useRouter } from 'next/navigation';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Home() {
   const [selectedMRBtn, setSelectedMRBtn] = useState(0);
   const [selectedHelpMeBtn, setSelectedHelpMeBtn] = useState(0);
+  const [showFeatures, setShowFeatures] = useState(false);
   console.log({ selectedMRBtn });
   const router = useRouter();
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariant = {
+    hidden: { opacity: 0, x: 30 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.4, ease: 'easeOut' },
+    },
+    exit: { opacity: 0, x: -20 },
+  };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
@@ -36,31 +65,45 @@ export default function Home() {
         <VerticalBorderPattern gradientName="heroBackground">
           <section className="flex w-full overflow-hidden mx-auto flex-row items-center min-h-screen text-center pt-30 pb-15 ">
             <div className="grid lg:grid-cols-2 gap-12  w-full  max-w-300 mx-auto flex-row flex-1 h-full items-start justify-between px-10">
-              <div className="flex flex-col h-full items-start lg:w-full justify-center gap-8 ">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="800"
+                className="flex flex-col h-full items-start lg:w-full justify-center gap-8 "
+              >
                 <ChipText
                   text="Manage your information ecosystem"
                   dotCircle={true}
                 />
-                <h2 className=" font-heading text-black text-5xl lg:text-6xl font-bold leading-17 text-start">
+                <h2
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  className=" font-heading text-black text-5xl lg:text-6xl font-bold leading-17 text-start"
+                >
                   An AI-First Hybrid Records Management System for Electronic
                   and Physical Records
                 </h2>
-                <p className="font-body leading-6 text-stone700 text-start">
+                <p className="font-body leading-6 text-stone700 text-start typewriter">
                   Secure records. Automate requests. Streamline operations.
                 </p>
                 <div className="flex flex-row gap-4">
-                  <Button gradientColor="bg-white rounded hover:text-white px-8">
+                  <Button gradientColor="bg-linear-to-br from-[#929aa1] to-[#88afd3] text-white rounded hover:text-white px-8">
                     Watch demo
                   </Button>
                 </div>
               </div>
-              <div className="w-full flex h-full  justify-center">
+              <div
+                data-aos="fade-down"
+                data-aos-duration="800"
+                className="w-full flex h-full  justify-center"
+              >
                 <Image
                   src={homeRecordTwo}
                   alt="Records Dashboard"
                   width={600}
                   height={600}
-                  className="object-cover lg:pt-15 lg:h-140 w-full h-max  rounded-2xl"
+                  data-aos="fade-left"
+                  data-aos-duration="800"
+                  className="lg:pt-15 object-top-right lg:h-140 w-full h-max  rounded-2xl"
                 />
               </div>
             </div>
@@ -72,14 +115,26 @@ export default function Home() {
           <section className="flex w-full overflow-hidden  max-w-7xl  flex-row items-center min-h-screen text-center pt-15">
             <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
               <div className="flex flex-col h-full items-start lg:w-full justify-center gap-8 ">
-                <div className="flex justify-center w-full">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="400"
+                  className="flex justify-center w-full"
+                >
                   <ChipText text="Never miss a deadline." />
                 </div>
-                <div className=" font-heading text-black text-3xl   font-bold text-center">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="600"
+                  className=" font-heading text-black text-3xl   font-bold text-center"
+                >
                   Eliminate legacy system risk by automating record handling
                   into secure, compliant, audit-ready workflows.
                 </div>
-                <p className="font-body leading-6 text-stone700 text-center w-full">
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  className="font-body leading-6 text-stone700 text-center w-full"
+                >
                   One Unified Platform. Four Integrated Modules.
                 </p>
               </div>
@@ -102,57 +157,99 @@ export default function Home() {
                     </Button>
                   ))}
                 </div>
-                <div className="flex flex-row h-130 gap-10 max-lg:justify-between max-md:flex-col shadow-2xl bg-white border border-solid border-bordergray rounded-3xl p-10">
-                  {neverMissDeadLine
-                    ?.filter((item, i) => i === selectedMRBtn)
-                    ?.map((item, index) => (
-                      <div
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={selectedMRBtn}
+                    variants={container}
+                    initial="hidden"
+                    animate="show"
+                    exit="hidden"
+                  >
+                    <div className="flex flex-row h-130 gap-10 max-lg:justify-between max-md:flex-col shadow-2xl bg-white border border-solid border-bordergray rounded-3xl p-10">
+                      {neverMissDeadLine
+                        ?.filter((item, i) => i === selectedMRBtn)
+                        ?.map((item, index) => (
+                          <motion.div
+                            key={index}
+                            // variants={itemVariant}
+                            className="flex flex-col w-full justify-center gap-6"
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                          >
+                            {/* <div
                         className="flex flex-col w-full justify-center gap-6"
                         key={index}
-                      >
-                        <div className="font-heading text-3xl text-black text-start font-bold">
-                          {item?.label}
-                        </div>
-                        <p className="font-body text-base text-stone700 text-start">
-                          {item?.description}
-                        </p>
-
-                        <div className="flex flex-col gap-3">
-                          {item?.featureHighlight?.map((hightLightItem) => (
-                            <div className="font-body flex flex-row gap-3 items-start justify-start text-stone700 text-start text-[16px]">
-                              <span className="mt-1">
-                                <CircleThickIcon width={16} height={16} />{' '}
-                              </span>{' '}
-                              <span>{hightLightItem}</span>
+                      > */}
+                            <div
+                              data-aos="fade-up"
+                              data-aos-duration="400"
+                              className="font-heading text-3xl text-black text-start font-bold"
+                            >
+                              {item?.label}
                             </div>
-                          ))}
-                        </div>
-                        <Button
-                          padding={'w-fit'}
-                          onClickButton={() => router.push(item?.href)}
-                          arrowIcon={true}
-                        >
-                          Learn more
-                        </Button>
-                      </div>
-                    ))}
+                            <p
+                              data-aos="fade-up"
+                              data-aos-duration="600"
+                              className="font-body text-base text-stone700 text-start"
+                            >
+                              {item?.description}
+                            </p>
 
-                  {neverMissDeadLine
-                    ?.filter((item, i) => i === selectedMRBtn)
-                    ?.map((item, index) => (
-                      <div className="w-full flex justify-center">
-                        <div className="w-full overflow-hidden flex justify-center">
-                          <Image
-                            src={item?.image}
-                            alt={item?.label}
-                            width={500}
-                            height={300}
-                            className="object-contain overflow-hidden rounded-xl"
-                          />
-                        </div>
-                      </div>
-                    ))}
-                </div>
+                            {item?.featureHighlight?.map(
+                              (hightLightItem, i) => (
+                                <div className="font-body flex gap-3 items-start text-stone700 text-[16px]">
+                                  <span className="mt-1">
+                                    <CircleThickIcon
+                                      width={16}
+                                      height={16}
+                                    />{' '}
+                                  </span>{' '}
+                                  <span className="text-sm text-gray-500">
+                                    {hightLightItem}
+                                  </span>
+                                </div>
+                              )
+                            )}
+
+                            <Button
+                              padding={'w-fit'}
+                              onClickButton={() => router.push(item?.href)}
+                              arrowIcon={true}
+                              data-aos="fade-up"
+                              data-aos-duration="800"
+                            >
+                              Learn more
+                            </Button>
+
+                            {/* </div> */}
+                          </motion.div>
+                        ))}
+
+                      {neverMissDeadLine
+                        ?.filter((item, i) => i === selectedMRBtn)
+                        ?.map((item, index) => (
+                          <div
+                            className="w-full flex justify-center"
+                            key={index}
+                          >
+                            <div
+                              data-aos="fade-down"
+                              data-aos-duration="800"
+                              className="w-full overflow-hidden flex justify-center"
+                            >
+                              <Image
+                                src={item?.image}
+                                alt={item?.label}
+                                width={500}
+                                height={300}
+                                className="object-contain overflow-hidden rounded-xl"
+                              />
+                            </div>
+                          </div>
+                        ))}
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </div>
           </section>
@@ -163,15 +260,27 @@ export default function Home() {
           <section className="flex w-full overflow-hidden  max-w-7xl  flex-row items-center min-h-screen text-center py-15">
             <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
               <div className="flex flex-col h-full items-start lg:w-full justify-center gap-8 ">
-                <div className="flex justify-center w-full">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="400"
+                  className="flex justify-center w-full"
+                >
                   <ChipText text="How we help." />
                 </div>
-                <div className=" font-heading text-black text-3xl   font-bold text-center">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="600"
+                  className=" font-heading text-black text-3xl   font-bold text-center"
+                >
                   How our records management system delivers impact across every
                   department?
                 </div>
               </div>
-              <div className="flex flex-wrap justify-center overflow-hidden overflow-x-auto w-max mx-auto bg-stone-200 rounded-3xl gap-4">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="800"
+                className="flex flex-wrap justify-center overflow-hidden overflow-x-auto w-max mx-auto bg-stone-200 rounded-3xl gap-4"
+              >
                 {howWeHelpContent?.map((item, i) => (
                   <Button
                     gradientColor={`${
@@ -187,49 +296,79 @@ export default function Home() {
                   </Button>
                 ))}
               </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={selectedHelpMeBtn}
+                  variants={container}
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                >
+                  <div className="flex max-h-130 flex-row gap-12 max-lg:justify-between max-md:flex-col bg-linear-to-bl from-white to-[#edf5fa] border border-solid border-bordergray rounded-2xl p-8">
+                    {howWeHelpContent
+                      ?.filter((item, i) => i === selectedHelpMeBtn)
+                      ?.map((item, index) => (
+                        <motion.div
+                          className="flex flex-col justify-start pt-12 gap-6"
+                          key={index}
+                          data-aos="fade-up"
+                          data-aos-duration="800"
+                        >
+                          <div
+                            data-aos="fade-up"
+                            data-aos-duration="400"
+                            className="font-heading font-bold text-3xl text-black text-start"
+                          >
+                            {item?.label}
+                          </div>
+                          <div
+                            data-aos="fade-up"
+                            data-aos-duration={(index + 1) * 400}
+                            className="flex flex-col gap-3"
+                          >
+                            {item?.featureHighlight?.map((hightLightItem) => (
+                              <span className="font-body flex flex-row gap-4 items-start text-stone700 text-start text-[16px]">
+                                <span className="mt-1">
+                                  <CircleThickIcon
+                                    width={16}
+                                    height={16}
+                                  />{' '}
+                                </span>{' '}
+                                <span>{hightLightItem}</span>
+                              </span>
+                            ))}
+                          </div>
+                          <Button
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                            padding={'w-fit'}
+                          >
+                            Get started today
+                          </Button>
+                        </motion.div>
+                      ))}
 
-              <div className="flex max-h-130 flex-row gap-12 max-lg:justify-between max-md:flex-col bg-linear-to-bl from-white to-[#edf5fa] border border-solid border-bordergray rounded-2xl p-8">
-                {howWeHelpContent
-                  ?.filter((item, i) => i === selectedHelpMeBtn)
-                  ?.map((item, index) => (
-                    <div
-                      className="flex flex-col justify-start pt-12 gap-6"
-                      key={index}
-                    >
-                      <div className="font-heading font-bold text-3xl text-black text-start">
-                        {item?.label}
-                      </div>
-                      <div className="flex flex-col gap-3">
-                        {item?.featureHighlight?.map((hightLightItem) => (
-                          <span className="font-body flex flex-row gap-4 items-start text-stone700 text-start text-[16px]">
-                            <span className="mt-1">
-                              <CircleThickIcon width={16} height={16} />{' '}
-                            </span>{' '}
-                            <span>{hightLightItem}</span>
-                          </span>
-                        ))}
-                      </div>
-                      <Button padding={'w-fit'}>Get started today</Button>
-                    </div>
-                  ))}
-
-                {howWeHelpContent
-                  ?.filter((item, i) => i === selectedHelpMeBtn)
-                  ?.map((item, index) => (
-                    <div
-                      className="w-full overflow-hidden flex justify-center"
-                      key={index}
-                    >
-                      <Image
-                        src={item?.image}
-                        alt={item?.label}
-                        width={500}
-                        height={10}
-                        className="object-contain"
-                      />
-                    </div>
-                  ))}
-              </div>
+                    {howWeHelpContent
+                      ?.filter((item, i) => i === selectedHelpMeBtn)
+                      ?.map((item, index) => (
+                        <div
+                          className="w-full overflow-hidden flex justify-center"
+                          key={index}
+                          data-aos="fade-down"
+                          data-aos-duration="800"
+                        >
+                          <Image
+                            src={item?.image}
+                            alt={item?.label}
+                            width={500}
+                            height={10}
+                            className="object-contain"
+                          />
+                        </div>
+                      ))}
+                  </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </section>
         </VerticalBorderPattern>

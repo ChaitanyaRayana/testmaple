@@ -35,9 +35,9 @@ import HealthcareImage from '@/public/assets/images/png/department/Healthcare.pn
 import HumanResource from '@/public/assets/images/png/department/Humanresources.png';
 import MRRecordIndustryImage from '@/public/assets/images/png/mrProducts/MRecords.png';
 import MRReqeustIndustryImage from '@/public/assets/images/png/mrProducts/MRequests.png';
-import MRWorkIndustryImage from '@/public/assets/images/png/mrProducts/Worflows.png';
+import MRWorkIndustryImage from '@/public/assets/images/png/mrProducts/Workflows.png';
 import MRWorkFlowIndustryImage from '@/public/assets/images/png/mrProducts/MRWordFlow.png';
-import MRRecordWorkingImage from '@/public/assets/images/png/platform/Recordsworking.png';
+import MRRecordWorkingImage from '@/public/assets/images/png/platform/MRRecordsFlow.png';
 import MRRequestWorkingImage from '@/public/assets/images/png/platform/Requestworking.png';
 import MRWorkflowWorkingImage from '@/public/assets/images/png/platform/workfolwworking.png';
 
@@ -322,12 +322,18 @@ export const homePageFaq = [
 export const mrRecordsPlatformContent = {
   'mr-records': {
     sectionOne: {
-      buttonsText: ['See the Platform in Action', 'Explore Capailities'],
       label: 'An Intelligent, Secure, and Scalable Records Management Core',
       description:
         'Seamlessly manage both electronic documents and physical records in one unified, AI-powered platform with intelligent automation and complete lifecycle control.',
       image: MRRecordIndustryImage,
-      buttonsText: ['See the Platform in Action', 'Explore Capabilities'],
+      buttonsText: [
+        {
+          label: 'See the Platform in Action',
+          href: '/platform/mr-records#How-MR-Records-Works',
+        },
+        { label: 'Explore Capabilities', href: '/contact-us#schedule-demo' },
+      ],
+
       bottomText:
         'Secure &nbsp; • &nbsp; Compliant &nbsp; • &nbsp; Enterprise-Ready',
     },
@@ -361,27 +367,28 @@ export const mrRecordsPlatformContent = {
       chipIcon: 'LightingIcon',
       label: 'How MR Records Works',
       image: MRRecordWorkingImage,
+      ref: 'How-MR-Records-Works',
       cardSection: [
         {
-          label: 'Ingest & Classify',
+          label: '1. Ingest & Classify',
           description:
             'Automatically categorize records on intake using AI-enabled metadata and smart tagging.',
           icon: 'FileIcon',
         },
         {
-          label: 'Govern & Secure',
+          label: '2. Govern & Secure',
           description:
             'Apply retention policies and access controls to every record, with full audit visibility.',
           icon: 'SheldCardIcon',
         },
         {
-          label: 'Find & Respond',
+          label: '3. Find & Respond',
           description:
             'Use AI search to locate records instantly and fulfill internal or public information requests with confidence.',
           icon: 'MagnifyingIcon',
         },
         {
-          label: 'Automate Workflows',
+          label: '4. Automate Workflows',
           description:
             'Orchestrate workflows for approvals, compliance reviews, and cross-departmental requests — all without manual steps.',
           icon: 'LightingIcon',
@@ -514,7 +521,13 @@ export const mrRecordsPlatformContent = {
   },
   'mr-request': {
     sectionOne: {
-      buttonsText: ['See the Platform in Action', 'Explore Capailities'],
+      buttonsText: [
+        {
+          label: 'See the Platform in Action',
+          href: '/platform/mr-request#How-MR-Requests-Works',
+        },
+        { label: 'Explore Capabilities', href: '/contact-us#schedule-demo' },
+      ],
       label:
         'AI-Driven Request Management for Timely and Transparent Responses',
       description:
@@ -551,6 +564,7 @@ export const mrRecordsPlatformContent = {
       chipText: 'How It Operates',
       chipIcon: 'LightingIcon',
       label: 'How MR Requests Works',
+      ref: 'How-MR-Requests-Works',
       image: MRRequestWorkingImage,
       cardSection: [
         {
@@ -660,6 +674,12 @@ export const mrRecordsPlatformContent = {
             '<ul><li>• &nbsp;Align with regulatory and governance requirements</li><li>• &nbsp; Support reporting audits and reviews</li><li>• &nbsp;Ensure consistent compliant request handling</li></ul>',
           icon: 'FunnelIcon',
         },
+        {
+          label: 'Multi-Department Coordination',
+          description:
+            '<ul><li>• &nbsp;Tools for handling requests requiring input from multiple departments</li><li>• &nbsp; Cross-departmental collaboration and review</li><li>• &nbsp;Third-party notification workflows</li></ul>',
+          icon: 'HumanResourcesCardIcon',
+        },
       ],
     },
     sectionSix: {
@@ -715,7 +735,13 @@ export const mrRecordsPlatformContent = {
   },
   'mr-workflow': {
     sectionOne: {
-      buttonsText: ['See the Platform in Action', 'Explore Capailities'],
+      buttonsText: [
+        {
+          label: 'See the Platform in Action',
+          href: '/platform/mr-workflow#How-MR-Workflows-Works',
+        },
+        { label: 'Explore Capabilities', href: '/contact-us#schedule-demo' },
+      ],
       label: 'AI-Driven Workflow Automation for Enterprise Efficiency',
       description:
         'Design, automate, and monitor business processes with a no-code workflow engine that scales securely across your organization.',
@@ -751,6 +777,7 @@ export const mrRecordsPlatformContent = {
       chipText: 'How It Operates',
       chipIcon: 'LightingIcon',
       label: 'How MR Workflows Works',
+      ref: 'How-MR-Workflows-Works',
       image: MRWorkFlowIndustryImage,
       cardSection: [
         {
@@ -914,7 +941,14 @@ export const mrRecordsPlatformContent = {
   },
   'mr-forms': {
     sectionOne: {
-      buttonsText: ['See the Platform in Action', 'Explore Templates'],
+      buttonsText: [
+        {
+          label: 'See the Platform in Action',
+          href: '/platform/mr-records#How-MR-Forms-Works',
+        },
+        { label: 'Explore Templates', href: '/platform/mr-forms#' },
+      ],
+
       label: 'Build Smart Forms with AI',
       description:
         "Create professional forms in seconds with MapleRecord's AI-powered form builder. Seamlessly integrate data collection with your records management system.",
@@ -952,6 +986,8 @@ export const mrRecordsPlatformContent = {
       chipIcon: 'LightingIcon',
       label: 'How MR Forms Works',
       image: MRWorkflowWorkingImage,
+      ref: 'How-MR-Forms-Works',
+
       cardSection: [
         {
           label: 'AI Form Generation',
@@ -1119,7 +1155,9 @@ export const industriesSolutions = {
       chipIcon: 'FinanceIcon',
       description:
         'Transform your financial institution with intelligent document management, automated workflows, and enterprise-grade compliance built for banking, wealth management, and insurance.',
-      buttonsText: ['Request a Demo'],
+      buttonsText: [
+        { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+      ],
       bottomText: 'Bank-Grade Security',
       image: FinanceImage,
     },
@@ -1154,7 +1192,7 @@ export const industriesSolutions = {
       label: 'How MapleRecord Serves Financial Services',
       cardSection: [
         {
-          label: 'MR Records',
+          label: ' Intelligent Records Management',
           icon: 'UnlimitedIcon',
           description:
             'Secure document repository for loan files, account records, transaction history, and compliance documentation with automated retention policies.',
@@ -1168,7 +1206,7 @@ export const industriesSolutions = {
           image: StateGovernImage,
         },
         {
-          label: 'MR Requests',
+          label: 'Requests Intake & Management',
           icon: 'FileIcon',
           description:
             'Streamline audit responses, regulatory inquiries, FOIA requests, and internal document requests with automated search and fulfillment.',
@@ -1182,7 +1220,7 @@ export const industriesSolutions = {
           image: MRRequestImage,
         },
         {
-          label: 'MR Workflows',
+          label: 'Workflow Management',
           icon: 'LightingIcon',
           description:
             'Automate loan origination, account opening, KYC verification, compliance reviews, and approval workflows with no-code process orchestration.',
@@ -1303,7 +1341,9 @@ export const industriesSolutions = {
       chipText: 'Industry Solutions',
       description:
         'Accelerate claims processing, streamline policy administration, and ensure compliance with intelligent document management and automated workflows built for insurance carriers, brokers, and MGAs.',
-      buttonsText: ['Request a Demo'],
+      buttonsText: [
+        { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+      ],
       bottomText: 'Secure, Compliant Information Management',
       image: FinanceImage,
     },
@@ -1338,7 +1378,7 @@ export const industriesSolutions = {
       label: 'How MapleRecord Serves Insurance',
       cardSection: [
         {
-          label: 'MR Records',
+          label: ' Intelligent Records Management',
           description:
             'Centralized repository for policy documents, claims files, underwriting records, and regulatory filings with automated retention and disposition.',
           featureHighlight: [
@@ -1352,7 +1392,7 @@ export const industriesSolutions = {
           icon: 'UnlimitedIcon',
         },
         {
-          label: 'MR Requests',
+          label: 'Requests Intake & Management',
           description:
             'Accelerate responses to claims documentation requests, policy inquiries, regulatory audits, and subpoenas with intelligent search and retrieval.',
           featureHighlight: [
@@ -1366,7 +1406,7 @@ export const industriesSolutions = {
           icon: 'FileIcon',
         },
         {
-          label: 'MR Workflows',
+          label: 'Workflow Management',
           description:
             'Automate claims processing, policy underwriting, new business workflows, and renewal processes with AI-enabled workflow orchestration.',
           featureHighlight: [
@@ -1486,7 +1526,9 @@ export const industriesSolutions = {
       chipIcon: 'HealthIcon',
       description:
         'Transform healthcare administration with secure patient record management, automated workflows, and HIPAA-compliant document handling built for hospitals, clinics, and health systems.',
-      buttonsText: ['Request a Demo'],
+      buttonsText: [
+        { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+      ],
       bottomText: 'Secure, Compliant Information Management',
       image: HealthcareImage,
     },
@@ -1521,7 +1563,7 @@ export const industriesSolutions = {
       label: 'How MapleRecord Serves Healthcare',
       cardSection: [
         {
-          label: 'MR Records',
+          label: ' Intelligent Records Management',
           description:
             'Centralized repository for administrative records, operational documentation, and patient-related files with automated retention and HIPAA-compliant security.',
           featureHighlight: [
@@ -1535,7 +1577,7 @@ export const industriesSolutions = {
           icon: 'UnlimitedIcon',
         },
         {
-          label: 'MR Requests',
+          label: 'Requests Intake & Management',
           description:
             'Accelerate responses to patient record requests, legal inquiries, regulatory audits, and subpoenas with intelligent search and HIPAA-compliant retrieval.',
           featureHighlight: [
@@ -1549,7 +1591,7 @@ export const industriesSolutions = {
           icon: 'FileIcon',
         },
         {
-          label: 'MR Workflows',
+          label: 'Workflow Management',
           description:
             'Automate patient record requests, authorization processing, compliance workflows, and administrative tasks with AI-enabled workflow orchestration.',
           featureHighlight: [
@@ -1666,7 +1708,9 @@ export const industriesSolutions = {
       chipIcon: 'AwardIcon',
       description:
         'Transform academic administration with secure, compliant student record management and automated workflows for K–12 schools, colleges, and universities.',
-      buttonsText: ['Request a Demo'],
+      buttonsText: [
+        { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+      ],
       bottomText: 'Secure, Compliant Information Management',
       image: RDImage,
     },
@@ -1701,7 +1745,7 @@ export const industriesSolutions = {
       label: 'How MapleRecord Serves Education',
       cardSection: [
         {
-          label: 'MR Records',
+          label: ' Intelligent Records Management',
           description:
             'Centralized repository for student records, academic transcripts, enrollment documents, and administrative files with automated retention and compliant security.',
           featureHighlight: [
@@ -1715,7 +1759,7 @@ export const industriesSolutions = {
           icon: 'UnlimitedIcon',
         },
         {
-          label: 'MR Requests',
+          label: 'Requests Intake & Management',
           description:
             'Accelerate responses to transcript requests, student record inquiries, verification requests, and subpoenas with intelligent search and compliant retrieval.',
           featureHighlight: [
@@ -1729,7 +1773,7 @@ export const industriesSolutions = {
           icon: 'FileIcon',
         },
         {
-          label: 'MR Workflows',
+          label: 'Workflow Management',
           description:
             'Automate transcript requests, enrollment processing, records transfer, and administrative tasks with AI-enabled workflow orchestration.',
           featureHighlight: [
@@ -1848,7 +1892,9 @@ export const industriesSolutions = {
       chipText: 'Industry Solutions',
       description:
         'Streamline quality documentation, manage compliance records, and automate manufacturing workflows with intelligent document management built for production excellence and regulatory compliance.',
-      buttonsText: ['Request a Demo'],
+      buttonsText: [
+        { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+      ],
       bottomText: 'Secure, Compliant Information Management',
       image: OperationsImage,
     },
@@ -1883,7 +1929,7 @@ export const industriesSolutions = {
       label: 'How MapleRecord Serves Manufacturing',
       cardSection: [
         {
-          label: 'MR Records',
+          label: ' Intelligent Records Management',
           description:
             'Centralized repository for quality records, technical documentation, compliance certificates, and operational files with automated retention and version control.',
           featureHighlight: [
@@ -1897,7 +1943,7 @@ export const industriesSolutions = {
           icon: 'UnlimitedIcon',
         },
         {
-          label: 'MR Requests',
+          label: 'Requests Intake & Management',
           description:
             'Accelerate responses to quality documentation requests, customer audits, regulatory inquiries, and certification renewals with intelligent search and retrieval.',
           featureHighlight: [
@@ -1911,7 +1957,7 @@ export const industriesSolutions = {
           icon: 'FileIcon',
         },
         {
-          label: 'MR Workflows',
+          label: 'Workflow Management',
           description:
             'Automate quality approval processes, document control workflows, change management, and compliance reporting with AI-enabled workflow orchestration.',
           featureHighlight: [
@@ -2029,7 +2075,9 @@ export const industriesSolutions = {
       chipIcon: 'FactoryIcon',
       description:
         'Transform public records management with secure document handling, automated FOIA processing, and compliant workflows built for municipal governments, state agencies, counties, and public institutions.',
-      buttonsText: ['Request a Demo'],
+      buttonsText: [
+        { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+      ],
       bottomText: 'Secure, Compliant Information Management',
       image: LegalImage,
     },
@@ -2063,7 +2111,7 @@ export const industriesSolutions = {
       label: 'How MapleRecord Serves Government',
       cardSection: [
         {
-          label: 'MR Records',
+          label: ' Intelligent Records Management',
           description:
             'Centralized repository for public records, administrative documents, permits, licenses, and historical files with automated retention schedules and compliant security.',
           featureHighlight: [
@@ -2077,7 +2125,7 @@ export const industriesSolutions = {
           icon: 'UnlimitedIcon',
         },
         {
-          label: 'MR Requests',
+          label: 'Requests Intake & Management',
           description:
             'Accelerate responses to FOIA requests, public records inquiries, subpoenas, and information requests with intelligent search and compliant retrieval workflows.',
           featureHighlight: [
@@ -2091,7 +2139,7 @@ export const industriesSolutions = {
           icon: 'FileIcon',
         },
         {
-          label: 'MR Workflows',
+          label: 'Workflow Management',
 
           description:
             'Automate permit processing, license renewals, records requests, and administrative tasks with AI-enabled workflow orchestration for government efficiency.',
@@ -2215,7 +2263,9 @@ export const departmentalSolutions = {
       chipText: 'Department Solutions',
       description:
         'Streamline financial document management, automate accounting workflows, and ensure regulatory compliance with intelligent solutions designed for finance and accounting departments.',
-      buttonsText: ['Request a Demo'],
+      buttonsText: [
+        { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+      ],
       bottomText: 'Audit-Ready | Secure',
       image: FinanceImage,
     },
@@ -2378,7 +2428,9 @@ export const departmentalSolutions = {
       chipText: 'Department Solutions',
       description:
         'Centralize legal document management, automate compliance workflows, and mitigate risk with intelligent solutions designed for legal and compliance departments.',
-      buttonsText: ['Request a Demo'],
+      buttonsText: [
+        { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+      ],
       bottomText: 'Audit-Ready | Secure',
       image: LegalImage,
     },
@@ -2543,7 +2595,9 @@ export const departmentalSolutions = {
       chipIcon: 'HumanResourcesIcon',
       description:
         'Streamline employee records management, automate HR workflows, and ensure compliance with comprehensive document management solutions built for modern HR departments.',
-      buttonsText: ['Request a Demo'],
+      buttonsText: [
+        { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+      ],
       bottomText: 'Simplify HR operations',
       image: HumanResource,
     },
@@ -2707,7 +2761,9 @@ export const departmentalSolutions = {
       chipText: 'Department Solutions',
       description:
         'Optimize operational workflows, centralize process documentation, and ensure supply chain compliance with intelligent document management built for operations teams.',
-      buttonsText: ['Request a Demo'],
+      buttonsText: [
+        { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+      ],
       bottomText: 'Reduced bottlenecks',
       image: OperationsImage,
     },
@@ -2874,7 +2930,9 @@ export const departmentalSolutions = {
       chipText: 'Department Solutions',
       description:
         'Accelerate innovation cycles, protect intellectual property, streamline regulatory submissions, and ensure research compliance with intelligent document management built for R&D teams.',
-      buttonsText: ['Request a Demo'],
+      buttonsText: [
+        { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+      ],
       bottomText: 'IP protection | Governance',
       image: RDImage,
     },
@@ -3039,7 +3097,9 @@ export const departmentalSolutions = {
       chipText: 'Department Solutions',
       description:
         'Deliver exceptional customer experiences, streamline case resolution, centralize customer documentation, and ensure service compliance with intelligent document management built for customer service teams.',
-      buttonsText: ['Request a Demo'],
+      buttonsText: [
+        { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+      ],
       bottomText: 'Faster | Transparent service',
       image: CustomerServiceImage,
     },

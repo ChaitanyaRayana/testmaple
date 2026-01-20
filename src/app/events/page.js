@@ -13,6 +13,8 @@ import StatCard from '../components/common/StatCard';
 import Navbar from '../components/Navbar';
 import { eventsContent } from '../constants/constants';
 import { toSentenceCase } from '../utils/utils';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function page() {
   const statContent = [
@@ -84,6 +86,13 @@ export default function page() {
     }));
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
       <Navbar />
@@ -99,16 +108,24 @@ export default function page() {
               `}
             >
               {/* {mapData?.chipText && ( */}
-              <div className={`flex w-full justify-center`}>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="200"
+                className={`flex w-full justify-center`}
+              >
                 <ChipText text={'Events & Conferences'} />
               </div>
               {/* )} */}
               <div
+                data-aos="fade-up"
+                data-aos-duration="800"
                 className={`font-heading text-black w-full text-[44px] leading-11  font-bold text-center`}
               >
                 Connect, Learn, and Grow Together
               </div>
               <p
+                data-aos="fade-up"
+                data-aos-duration="1200"
                 className={`font-body leading-6 text-stone700 text-center w-full`}
               >
                 Join MapleRecord at industry conferences, workshops, webinars,
@@ -122,7 +139,11 @@ export default function page() {
               ))}
             </div>
 
-            <div className="flex flex-row gap-8 w-full justify-center mt-10">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="1200"
+              className="flex flex-row gap-8 w-full justify-center mt-10"
+            >
               <Button padding="p-2 rounded-lg">Upcoming Events</Button>
               <Button padding="p-2 rounded-lg ">Past Events</Button>
             </div>
@@ -137,11 +158,15 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify start`}
             >
               <div
+                data-aos="fade-up"
+                data-aos-duration="800"
                 className={`font-heading text-black w-full text-3xl   font-bold text-start`}
               >
                 {eventsContent?.sectionTwo?.label}
               </div>
               <p
+                data-aos="fade-up"
+                data-aos-duration="1200"
                 className={`font-body leading-6 text-stone700 w-full text-start`}
               >
                 {eventsContent?.sectionTwo?.description}

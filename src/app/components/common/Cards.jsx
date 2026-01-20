@@ -4,6 +4,9 @@ import rehypeRaw from 'rehype-raw';
 import { ICONS } from './icons/AllIcons';
 import { CircleThickIcon } from './svgImage';
 import { toSentenceCase } from '../../utils/utils';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const FeatureWrapper = ({ children }) => (
   <p className="flex items-start gap-2 text-stone-700 font-body">
@@ -18,6 +21,7 @@ function Cards({
   groupCss = '',
   cardArrow = false,
   shadowRemove = false,
+  hasCardWithAnimation = false,
 }) {
   const Icon = content?.icon ? ICONS[content?.icon] : null;
   const components = {
@@ -25,9 +29,17 @@ function Cards({
     li: FeatureWrapper,
     span: FeatureWrapper,
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div
-      className={`relative p-6 w-full flex flex-col gap-4 bg-white border rounded-2xl transition-all duration-300 ease-out
+      className={`relative p-6 w-full  flex flex-col gap-4 bg-white border rounded-2xl transition-all duration-300 ease-out
     transform-gpu
     hover:-translate-y-2 hover:scale-[1.02]
     hover:shadow-2xl cursor-pointer ${flexCss} ${groupCss} ${shadowRemove ? '' : 'shadow-xl'}`}
@@ -41,13 +53,21 @@ function Cards({
           } `}
         >
           {Icon && (
-            <div className="w-12 h-12 text-center rounded-2xl bg-[#DFEDFA] flex justify-center items-center">
+            <div
+              data-aos={hasCardWithAnimation ? '' : 'fade-up'}
+              data-aos-duration={hasCardWithAnimation ? '' : '200'}
+              className="w-12 h-12 text-center rounded-2xl bg-[#DFEDFA] flex justify-center items-center"
+            >
               <Icon width={24} height={24} color="text-[#0f5291]" />
               {/* {Icon} */}
             </div>
           )}
           {content?.percentage && (
-            <div className=" text-[#0f5291] font-bold text-4xl text-center flex justify-center items-center">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="200"
+              className=" text-[#0f5291] font-bold text-4xl text-center flex justify-center items-center"
+            >
               {content?.percentage}
             </div>
           )}
@@ -61,15 +81,21 @@ function Cards({
         >
           {' '}
           {content?.iconText && (
-            <div className="w-12 h-12 text-center text-[#226fb7] flex justify-center items-center">
+            <div
+              data-aos={hasCardWithAnimation ? '' : 'fade-up'}
+              data-aos-duration={hasCardWithAnimation ? '' : '200'}
+              className="w-12 h-12 text-center text-[#226fb7] flex justify-center items-center"
+            >
               {content?.iconText}
             </div>
           )}
         </div>
       </div>
-      <div className="flex w-full flex-col gap-3 justify-start items-start h-full">
+      <div className="flex w-full flex-col gap-3 justify-start items-start h-fit">
         {content?.label && (
           <div
+            data-aos={hasCardWithAnimation ? '' : 'fade-up'}
+            data-aos-duration={hasCardWithAnimation ? '' : '800'}
             className={`text-body font-bold h-fit w-full text-black ${flexCss} text-lg`}
           >
             {toSentenceCase(content?.label)}
@@ -77,6 +103,8 @@ function Cards({
         )}
         {cardArrow && (
           <div
+            data-aos="fade-up"
+            data-aos-duration={hasCardWithAnimation ? '' : '1200'}
             className="absolute -right-2 top-1/2 -translate-y-1/2
                text-4xl font-bold z-10 text-[#0f5291]"
           >
@@ -84,7 +112,11 @@ function Cards({
           </div>
         )}
         {content?.description && (
-          <p className={`font-body w-full text-stone-600 text-sm ${flexCss}`}>
+          <p
+            data-aos={hasCardWithAnimation ? '' : 'fade-up'}
+            data-aos-duration="1200"
+            className={`font-body w-full text-stone-600 text-sm ${flexCss}`}
+          >
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>
               {content?.description}
             </ReactMarkdown>
@@ -95,6 +127,8 @@ function Cards({
             <p
               className={`text-body w-full text-stone-600 ${flexCss}`}
               key={idx}
+              data-aos="fade-up"
+              data-aos-duration={(idx + 1) * 400}
             >
               {content?.featureMarkDownIcon === 'CircleThickIcon' ? (
                 <ReactMarkdown
@@ -112,6 +146,8 @@ function Cards({
           ))}
         {content?.subdescrp && (
           <p
+            data-aos="fade-up"
+            data-aos-duration="1000"
             className={`text-body w-full flex items-end justify-center text-base text-[#0f5291] font-semibold ${flexCss}`}
           >
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>
