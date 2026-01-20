@@ -1,3 +1,4 @@
+'use client';
 import CenterTextCardsSection from '../components/common/CenterTextCardsSection';
 import ChipText from '../components/common/ChipText';
 import Fotter from '../components/common/Fotter';
