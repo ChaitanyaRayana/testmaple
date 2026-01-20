@@ -12,6 +12,8 @@ import { termsOfService } from '../constants/constants';
 import Navbar from '../components/Navbar';
 import { VerticalBorderPattern } from '../components/common/Icon';
 import Fotter from '../components/common/Fotter';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function page() {
   const [activeIds, setActiveIds] = useState([]);
@@ -83,6 +85,13 @@ function page() {
       behavior: 'smooth',
     });
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">

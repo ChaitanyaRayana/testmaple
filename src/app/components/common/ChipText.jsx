@@ -4,6 +4,7 @@ import { ICONS } from './icons/AllIcons';
 
 function ChipText({ text, styling = '', chipIcon = null, dotCircle = false }) {
   const Icon = chipIcon ? ICONS[chipIcon] : null;
+
   return (
     <div
       className={` bg-[#d2e6ed] flex flex-row items-center justify-center gap-2 text-gray-800 text-sm font-medium px-4 py-1 rounded-full ${styling}`}
@@ -14,7 +15,7 @@ function ChipText({ text, styling = '', chipIcon = null, dotCircle = false }) {
         </span>
       )}
       {dotCircle && <span className="w-2 h-2 bg-gray-500 rounded-full"></span>}
-      <span>{text}</span>
+      <span className="typewriter">{text}</span>
     </div>
   );
 }

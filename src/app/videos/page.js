@@ -22,6 +22,8 @@ import {
 } from '../components/common/svgImage';
 import Fotter from '../components/common/Fotter';
 import PopupModal from '../components/common/PopupModel';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function page({ headingStart = false }) {
   const statContent = [
@@ -131,6 +133,13 @@ function page({ headingStart = false }) {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   const scheduleBannerData = {
     label: 'Ready to See MapleRecord in Action?',
     description:
@@ -153,6 +162,8 @@ function page({ headingStart = false }) {
             >
               {/* {mapData?.chipText && ( */}
               <div
+                data-aos="fade-up"
+                data-aos-duration="200"
                 className={`flex w-full ${
                   headingStart ? 'justify-start' : 'justify-center'
                 }`}
@@ -161,6 +172,8 @@ function page({ headingStart = false }) {
               </div>
               {/* )} */}
               <div
+                data-aos="fade-up"
+                data-aos-duration="800"
                 className={`font-heading text-black w-full text-[44px] leading-11   font-bold text-center ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
@@ -168,6 +181,8 @@ function page({ headingStart = false }) {
                 Explore MapleRecord Through Video
               </div>
               <p
+                data-aos="fade-up"
+                data-aos-duration="1200"
                 className={`font-body leading-6 text-stone700 text-center w-full ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
@@ -176,7 +191,11 @@ function page({ headingStart = false }) {
                 thought leadership content to master records management.
               </p>
             </div>
-            <div className="w-1/2 mx-auto">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              className="w-1/2 mx-auto"
+            >
               <Input
                 placeholder="Search videos..."
                 iconLeft={<MagnifyingIcon width={16} height={16} />}
@@ -193,9 +212,17 @@ function page({ headingStart = false }) {
 
         <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
           <div className="flex  max-w-300 mx-auto px-10 py-15 flex-row gap-10">
-            <div className="flex flex-col gap-4">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="200"
+              className="flex flex-col gap-4"
+            >
               <ChipText text={'Featured Video'} styling="w-fit" />
-              <div className="font-heading text-3xl text-black text-start">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="800"
+                className="font-heading text-3xl text-black text-start"
+              >
                 Don't Miss This
               </div>
               <ZigZagContent
@@ -214,11 +241,17 @@ function page({ headingStart = false }) {
             <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
               <div className="flex flex-col gap-4">
                 <div
+                  data-aos="fade-up"
+                  data-aos-duration="800"
                   className={`font-body text-[16px] leading-4 text-black w-full text-start`}
                 >
                   Filter by Category:
                 </div>
-                <div className=" flex flex-wrap justify-center overflow-x-auto w-max mx-auto rounded-3xl gap-4">
+                <div
+                  data-aos="fade-down"
+                  data-aos-duration="1200"
+                  className=" flex flex-wrap justify-center overflow-x-auto w-max mx-auto rounded-3xl gap-4"
+                >
                   {topicsText?.map((item, i) => (
                     <Button
                       gradientColor={`${
@@ -238,10 +271,18 @@ function page({ headingStart = false }) {
             <section className="flex  max-w-300 mx-auto px-10 flex-row gap-10">
               <div className="flex flex-col gap-4">
                 <div className="text-start">
-                  <h2 className="font-heading text-3xl text-black">
+                  <h2
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                    className="font-heading text-3xl text-black"
+                  >
                     All Videos
                   </h2>
-                  <span className="inline-block mt-2 text-lg text-stone-500">
+                  <span
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    className="inline-block mt-2 text-lg text-stone-500"
+                  >
                     3 videos found
                   </span>
                 </div>
@@ -271,15 +312,27 @@ function page({ headingStart = false }) {
         <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
           <div className="flex flex-col gap-8 max-w-300 mx-auto p-10">
             <div className="flex flex-col w-full h-full items-center lg:w-full justify-center gap-4 ">
-              <div className=" font-heading  text-black text-3xl w-full   font-bold text-center">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="800"
+                className=" font-heading  text-black text-3xl w-full   font-bold text-center"
+              >
                 Subscribe for Video Updates
               </div>
-              <p className="font-body leading-6 text-stone700 text-center w-full">
+              <p
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                className="font-body leading-6 text-stone700 text-center w-full"
+              >
                 Get notified when we release new videos, tutorials, and product
                 updates.{' '}
               </p>
             </div>
-            <div className="flex flex-row gap-8 mx-auto">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="1200"
+              className="flex flex-row gap-8 mx-auto"
+            >
               {/* <Input placeholder="Enter your email" /> */}
               <Button onClickButton={() => setIsOpen(true)}>Subscribe</Button>
             </div>

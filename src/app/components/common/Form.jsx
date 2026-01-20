@@ -1,9 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Input from './Input';
 import Button from './Button';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function ContactFormWithMap() {
   const [formData, setFormData] = useState({
@@ -17,6 +19,13 @@ function ContactFormWithMap() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -55,7 +64,11 @@ function ContactFormWithMap() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Map Section */}
-          <div className="w-full h-full min-h-125 lg:min-h-150 rounded-2xl overflow-hidden shadow-lg">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="800"
+            className="w-full h-full min-h-125 lg:min-h-150 rounded-2xl overflow-hidden shadow-lg"
+          >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.0929992635744!2d-78.94345492346214!3d43.648776571099746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d51c087e5e2d11%3A0x5c5e9b5e5e5e5e5e!2sDundas%20St%20E%2C%20Whitby%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
               width="100%"
@@ -69,7 +82,11 @@ function ContactFormWithMap() {
           </div>
 
           {/* Form Section */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-10">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="800"
+            className="bg-white rounded-2xl shadow-lg p-8 lg:p-10"
+          >
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* First Name & Last Name */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

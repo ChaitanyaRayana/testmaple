@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import BlogCard from '../components/common/BlogCard';
 import CenterTextCardsSection from '../components/common/CenterTextCardsSection';
 import ChipText from '../components/common/ChipText';
@@ -9,6 +10,8 @@ import StatCard from '../components/common/StatCard';
 import { FileIcon } from '../components/common/svgImage';
 import Navbar from '../components/Navbar';
 import { awardsSection, mediaPageContent } from '../constants/constants';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function page() {
   const statContent = [
@@ -37,6 +40,13 @@ export default function page() {
     buttonsText: ['Contact Our Team'],
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
       <Navbar />
@@ -51,16 +61,24 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >
               {/* {mapData?.chipText && ( */}
-              <div className={`flex w-full justify-center`}>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="200"
+                className={`flex w-full justify-center`}
+              >
                 <ChipText text={'Media & Press'} />
               </div>
               {/* )} */}
               <div
+                data-aos="fade-up"
+                data-aos-duration="800"
                 className={`font-heading text-black w-full text-[44px] leading-11   font-bold text-center`}
               >
                 MapleRecord in the News
               </div>
               <p
+                data-aos="fade-up"
+                data-aos-duration="1200"
                 className={`font-body leading-6 text-stone700 text-center w-full`}
               >
                 The latest news, press releases, and media resources about
@@ -81,10 +99,18 @@ export default function page() {
           <section className="flex  max-w-300 mx-auto px-10 py-15 w-full  flex-row gap-10">
             <div className="flex flex-col w-full gap-4">
               <div className="text-start">
-                <h2 className="font-heading text-3xl text-black">
+                <h2
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  className="font-heading text-3xl text-black"
+                >
                   Press Releases
                 </h2>
-                <span className="inline-block mt-2 text-lg text-stone-500">
+                <span
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                  className="inline-block mt-2 text-lg text-stone-500"
+                >
                   Latest announcements and company news from MapleRecord
                 </span>
               </div>
@@ -99,10 +125,18 @@ export default function page() {
         <VerticalBorderPattern gradientName={' backgroundGradient'}>
           <section className="flex  max-w-300 mx-auto px-10 py-15   flex-row gap-10">
             <div className="flex flex-col gap-4">
-              <div className="font-heading text-3xl text-black text-start">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="800"
+                className="font-heading text-3xl text-black text-start"
+              >
                 News Coverage
               </div>
-              <div className="font-heading text-lg text-stone-700 text-start">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                className="font-heading text-lg text-stone-700 text-start"
+              >
                 MapleRecord featured in leading industry publications
               </div>
               <div className="grid md:grid-cols-2 w-full lg:grid-cols-3 gap-8 ">

@@ -7,12 +7,20 @@ import { toSentenceCase } from '../../utils/utils';
 import { useEffect, useState } from 'react';
 import PopupModal from './PopupModel';
 import Input from './Input';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function FeaturedWebinar({
   mapData,
   setIsOpenWebinar = () => {},
 }) {
   console.log({ mapData });
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <section
@@ -32,7 +40,11 @@ export default function FeaturedWebinar({
         <div className="grid grid-cols-1  lg:grid-cols-12 gap-6 items-start">
           {/* image left */}
           <div className="lg:col-span-4 h-full">
-            <div className="rounded-xl h-full overflow-hidden">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="800"
+              className="rounded-xl h-full overflow-hidden"
+            >
               <Image
                 src={mapData?.image}
                 alt={mapData?.title}
@@ -45,14 +57,26 @@ export default function FeaturedWebinar({
 
           {/* content right */}
           <div className="lg:col-span-8">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+            <h2
+              data-aos="fade-up"
+              data-aos-duration="800"
+              className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight"
+            >
               {toSentenceCase(mapData?.label)}
             </h2>
-            <p className="mt-4 text-gray-600 font-body max-w-3xl">
+            <p
+              data-aos="fade-down"
+              data-aos-duration="1200"
+              className="mt-4 text-gray-600 font-body max-w-3xl"
+            >
               {mapData?.description}
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="1200"
+              className="mt-6 flex flex-wrap gap-3"
+            >
               {mapData?.chipText.map((t, i) => (
                 <ChipText
                   key={i}
@@ -62,8 +86,16 @@ export default function FeaturedWebinar({
               ))}
             </div>
 
-            <div className="mt-6 flex flex-1 justify-around flex-wrap items-center gap-6 text-gray-600">
-              <div className="flex items-center gap-2">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1200"
+              className="mt-6 flex flex-1 justify-around flex-wrap items-center gap-6 text-gray-600"
+            >
+              <div
+                data-aos="fade-down"
+                data-aos-duration="800"
+                className="flex items-center gap-2"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-red-500"
@@ -153,7 +185,11 @@ export default function FeaturedWebinar({
 
             {/* speaker and CTA */}
             <div className="mt-6 grid grid-cols-1  gap-4 items-center">
-              <div className="md:col-span-2 w-full bg-gray-50 rounded-lg p-5">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                className="md:col-span-2 w-full bg-gray-50 rounded-lg p-5"
+              >
                 <div className="text-sm text-gray-900 font-semibold">
                   {mapData?.featureHighlight ? 'Event Highlights' : 'Speaker'}
                 </div>
@@ -176,7 +212,11 @@ export default function FeaturedWebinar({
                 )}
               </div>
 
-              <div className="md:col-span-1 h-full flex md:justify-start items-end">
+              <div
+                data-aos="fade-down"
+                data-aos-duration="1200"
+                className="md:col-span-1 h-full flex md:justify-start items-end"
+              >
                 <Button
                   padding={'px-1 py-1 rounded-lg'}
                   arrowIcon={true}

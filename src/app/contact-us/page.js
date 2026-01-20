@@ -8,6 +8,8 @@ import ZigZagContent from '../components/common/ZigZagContent';
 import Navbar from '../components/Navbar';
 import { contactUsContent } from '../constants/constants';
 import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function page() {
   const contactDetails = [
@@ -15,6 +17,13 @@ export default function page() {
     { icon: 'PhoneIcon', label: '+1 647 804 2023' },
     { icon: 'MailIcon', label: 'info@maplerecord.com' },
   ];
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   useEffect(() => {
     const section = document.getElementById('schedule-demo');
@@ -60,6 +69,8 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >
               <div
+                data-aos="fade-up"
+                data-aos-duration="400"
                 className={`font-heading text-black w-full text-[44px]   font-bold text-center`}
               >
                 Contact Us
@@ -83,6 +94,8 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >
               <div
+                data-aos="fade-up"
+                data-aos-duration="600"
                 className={`font-heading text-black w-full text-3xl   font-bold text-center`}
               >
                 Ready to enhance your records management?
@@ -94,13 +107,13 @@ export default function page() {
         {/* Cards */}
         <VerticalBorderPattern gradientName={'backgroundGradient'}>
           <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 py-15 gap-8">
-            <div className="flex flex-row gap-6 w-full h-full pb-20">
+            <div className="flex max-md:flex-wrap lg:flex-row gap-6 w-full h-full pb-20">
               {contactDetails?.map((item, i) => (
                 <Cards
                   content={item}
                   key={i}
                   flexCss={'text-center'}
-                  groupCss={'flex-col gap-4 min-h-50'}
+                  groupCss={'flex-col gap-4 min-h-30'}
                 />
               ))}
             </div>

@@ -47,6 +47,10 @@ export const useUTMParams = (id) => {
 export function toSentenceCase(text) {
   if (!text) return text;
 
+  // 🚫 Skip if text starts with numbering like "1.", "2)", "3 -", etc.
+  const startsWithNumbering = /^\s*\d+\s*[\.\)\-:]/.test(text);
+  if (startsWithNumbering) return text;
+
   const SPECIAL_PHRASES = [
     'MR Forms',
     'MR Records',

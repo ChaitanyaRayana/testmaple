@@ -12,6 +12,8 @@ import { toSentenceCase } from '../../utils/utils';
 import { ICONS } from './icons/AllIcons';
 import { useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function ZigZagContent({
   mapData,
@@ -65,6 +67,22 @@ function ZigZagContent({
     };
   }, [hasCardWithAnimation, mapData?.cardSection]);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
   return (
     <div
       className={`flex flex-col w-full ${mustHaveBottomPadding} ${mustHaveLeftRightPadding} ${hasCardWithAnimation ? 'min-h-screen lg:h-screen' : ''}`}
@@ -78,27 +96,43 @@ function ZigZagContent({
         >
           <div className="flex flex-col gap-5">
             {mapData?.chipText && (
-              <ChipText
-                styling="w-fit"
-                text={mapData?.chipText}
-                chipIcon={mapData?.chipIcon}
-              />
+              <div
+                data-aos="fade-up"
+                data-aos-duration="200"
+                key={mapData?.chipText}
+              >
+                <ChipText
+                  styling="w-fit"
+                  text={mapData?.chipText}
+                  chipIcon={mapData?.chipIcon}
+                />
+              </div>
             )}
 
             <div className="flex flex-row items-center gap-4">
               {mapData?.icon && (
-                <div className="w-12 h-12 text-center rounded-2xl bg-[#DFEDFA] flex justify-center items-center">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="200"
+                  className="w-12 h-12 text-center rounded-2xl bg-[#DFEDFA] flex justify-center items-center"
+                >
                   <Icon width={24} height={24} color="text-[#0f5291]" />
                 </div>
               )}
               <div
+                data-aos={'fade-up'}
+                data-aos-duration="800"
                 className={`font-heading text-3xl text-black text-start font-bold ${heroSection ? 'text-[44px] leading-11' : 'text-3xl'}`}
               >
                 {toSentenceCase(mapData?.label)}
               </div>
             </div>
             {mapData?.description && (
-              <p className={`font-body text-stone700 text-start`}>
+              <p
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                className={`font-body text-stone700 text-start`}
+              >
                 {mapData?.description}
               </p>
             )}
@@ -109,6 +143,7 @@ function ZigZagContent({
               {mapData?.featureHighlight?.map((hightLightItem, idx) => (
                 <div
                   key={idx}
+                  data-aos-duration={(idx + 1) * 400}
                   className="font-body flex flex-row gap-4 items-start text-stone700 text-start text-[16px]"
                 >
                   <span className="flex h-full items-center">
@@ -124,7 +159,11 @@ function ZigZagContent({
 
           {mapData?.buttonsText ? (
             <div className="flex flex-col gap-4">
-              <div className="flex flex-row gap-4 w-full">
+              <div
+                data-aos="fade-down"
+                data-aos-duration="800"
+                className="flex flex-row gap-4 w-full"
+              >
                 {mapData?.buttonsText?.map((item, i) => (
                   <Button
                     key={i}
@@ -144,7 +183,11 @@ function ZigZagContent({
                   </Button>
                 ))}
               </div>
-              <div className="font-body text-stone700 text-start text-[12px]">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="800"
+                className="font-body text-stone700 text-start text-[12px]"
+              >
                 {typeof mapData?.bottomText === 'string' ? (
                   <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                     {mapData.bottomText}
@@ -157,7 +200,9 @@ function ZigZagContent({
           ) : (
             !mapData?.cardSection &&
             !mapData?.stats && (
-              <Button padding="text-center w-fit">Get started today</Button>
+              <div data-aos="fade-down" data-aos-duration="800">
+                <Button padding="text-center w-fit">Get started today</Button>
+              </div>
             )
           )}
 
@@ -186,6 +231,7 @@ function ZigZagContent({
                     }
                     groupCss={'flex-row gap-4 shadow-none'}
                     shadowRemove={true}
+                    hasCardWithAnimation={true}
                   />
                 ))}
               </motion.div>
@@ -212,6 +258,7 @@ function ZigZagContent({
                     }
                     groupCss={'flex-row gap-4 shadow-none'}
                     shadowRemove={true}
+                    hasCardWithAnimation={true}
                   />
                 ))}
               </motion.div>
@@ -219,6 +266,8 @@ function ZigZagContent({
           )}
           {hasCardWithAnimation && (
             <div
+              data-aos="fade-up"
+              data-aos-duration="800"
               ref={cardScrollRef}
               className={` flex-col relative h-fit w-full pr-2 hidden max-md:flex gap-4 overflow-hidden`}
             >
@@ -244,6 +293,9 @@ function ZigZagContent({
         {/* Sticky Image Section */}
         {mapData?.image && (
           <div
+            data-aos="fade-down"
+            data-aos-duration="800"
+            key={mapData?.image}
             className={`w-full flex justify-center  ${hasCardWithAnimation ? '  items-start  sticky top-12 overflow-hidden' : 'h-full max-h-120 items-center'}`}
           >
             {/* <div className="w-full  flex justify-center items-center p-4"> */}
@@ -252,7 +304,7 @@ function ZigZagContent({
               alt={toSentenceCase(mapData?.label)}
               width={500}
               height={300}
-              className={`${hasCardWithAnimation ? 'max-md:h-120 w-fit max-md:object-contain items-start lg:min-h-130 lg:object-top' : 'object-contain'} rounded-xl max-h-full w-auto`}
+              className={`${mapData?.label === 'How MR Workflows Works' ? 'lg:min-h-130 max-md:h-120 w-fit max-md:object-contain items-start lg:object-top' : hasCardWithAnimation ? 'w-fit max-md:object-contain items-start lg:object-top' : 'object-contain'} rounded-xl max-h-full w-auto`}
             />
             {/* </div> */}
           </div>

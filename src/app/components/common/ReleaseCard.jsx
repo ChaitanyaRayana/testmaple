@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Button from './Button';
 import { toSentenceCase } from '../../utils/utils';
 import ChipText from './ChipText';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function ReleaseCard({ mapData }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <article className="w-full rounded-2xl bg-white border border-gray-100 shadow-lg p-8 flex items-start gap-6">
       <div className="flex-1">
         <div className="flex items-center gap-4">
-          <div className="text-sm text-gray-500">{mapData?.date}</div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="200"
+            className="text-sm text-gray-500"
+          >
+            {mapData?.date}
+          </div>
           <ChipText text={mapData?.chipText} />
         </div>
 
-        <h3 className="mt-4 text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight">
+        <h3
+          data-aos="fade-up"
+          data-aos-duration="800"
+          className="mt-4 text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight"
+        >
           {toSentenceCase(mapData?.label)}
         </h3>
 
@@ -20,7 +39,11 @@ export default function ReleaseCard({ mapData }) {
           {mapData?.description}
         </p>
 
-        <div className="mt-6 flex items-center gap-4">
+        <div
+          data-aos="fade-down"
+          data-aos-duration="800"
+          className="mt-6 flex items-center gap-4"
+        >
           <Button padding={'px-6 py-3'}>{mapData?.primaryCta?.text}</Button>
 
           <Button padding={'px-6 py-3'} href={mapData?.secondaryCta?.href}>
@@ -29,7 +52,7 @@ export default function ReleaseCard({ mapData }) {
         </div>
       </div>
 
-      <div className="shrink-0">
+      <div data-aos="fade-left" data-aos-duration="800" className="shrink-0">
         <div className="w-20 h-20 rounded-lg bg-blue-50 flex items-center justify-center">
           {mapData?.icon ? (
             mapData?.icon
