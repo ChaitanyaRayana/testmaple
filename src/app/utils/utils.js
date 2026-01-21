@@ -51,6 +51,13 @@ export function toSentenceCase(text) {
   const startsWithNumbering = /^\s*\d+\s*[\.\)\-:]/.test(text);
   if (startsWithNumbering) return text;
 
+  // 🚫 Skip if text contains an email address
+  const containsEmail = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/.test(
+    text
+  );
+
+  if (containsEmail) return text;
+
   const SPECIAL_PHRASES = [
     'MR Forms',
     'MR Records',
@@ -72,6 +79,7 @@ export function toSentenceCase(text) {
     'AI-Driven',
     'Machine Learning',
     'Natural Language Processing',
+    '102 California Drive, Whitby, ON, CA',
     'Data Science',
     'Cloud Computing',
     'Edge Computing',
@@ -85,6 +93,7 @@ export function toSentenceCase(text) {
     'Customer Experience',
     'User Experience',
     'Content Management System',
+    'Multi-Department',
   ];
 
   const SPECIAL_WORDS = new Set([
@@ -133,21 +142,25 @@ export function toSentenceCase(text) {
   });
 
   // 3️⃣ Process individual words
+  let capitalized = false;
+
   result = result
     .split(' ')
-    .map((word, index) => {
+    .map((word) => {
       const cleanWord = word.replace(/[^a-zA-Z]/g, '');
 
-      // Preserve special single words
       for (const special of SPECIAL_WORDS) {
         if (cleanWord.toLowerCase() === special.toLowerCase()) {
           return word.replace(cleanWord, special);
         }
       }
 
-      // Capitalize first word only
-      if (index === 0) {
-        return word.charAt(0).toUpperCase() + word.slice(1);
+      if (!capitalized && cleanWord) {
+        capitalized = true;
+        return word.replace(
+          cleanWord,
+          cleanWord.charAt(0).toUpperCase() + cleanWord.slice(1)
+        );
       }
 
       return word;

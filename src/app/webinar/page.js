@@ -148,7 +148,7 @@ function page({ headingStart = false }) {
                   headingStart ? 'justify-start' : 'justify-center'
                 }`}
               >
-                <ChipText text={'Educational Webinars'} />
+                <ChipText heroSection={true} text={'Educational Webinars'} />
               </div>
               {/* )} */}
               <div
@@ -208,15 +208,15 @@ function page({ headingStart = false }) {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify start`}
             >
               <div
-                data-aos="fade-up"
-                data-aos-duration="800"
+                // data-aos="fade-up"
+                // data-aos-duration="800"
                 className={`font-heading text-black w-full text-3xl   font-bold text-start`}
               >
                 Upcoming Live Webinars
               </div>
               <p
-                data-aos="fade-up"
-                data-aos-duration="1200"
+                // data-aos="fade-up"
+                // data-aos-duration="1200"
                 className={`font-body leading-6 text-stone700 w-full text-start`}
               >
                 Register now to secure your spot in our upcoming sessions
@@ -240,15 +240,15 @@ function page({ headingStart = false }) {
           <div className="flex flex-col gap-8 max-w-300 mx-auto px-10 py-15">
             <div className="flex flex-col w-full h-full items-center lg:w-full justify-center gap-4 ">
               <div
-                data-aos="fade-up"
-                data-aos-duration="800"
+                // data-aos="fade-up"
+                // data-aos-duration="800"
                 className=" font-heading  text-black text-3xl w-full   font-bold text-center"
               >
                 Never Miss a Webinar
               </div>
               <p
-                data-aos="fade-up"
-                data-aos-duration="1200"
+                // data-aos="fade-up"
+                // data-aos-duration="1200"
                 className="font-body leading-6 text-stone700 text-center w-full"
               >
                 Subscribe to get notified about upcoming webinars and access
@@ -256,8 +256,8 @@ function page({ headingStart = false }) {
               </p>
             </div>
             <div
-              data-aos="fade-down"
-              data-aos-duration="1200"
+              // data-aos="fade-down"
+              // data-aos-duration="1200"
               className="flex flex-row gap-8 mx-auto"
             >
               {/* <Input placeholder="Enter your email" /> */}

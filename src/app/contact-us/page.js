@@ -64,9 +64,9 @@ export default function page() {
       {/* Top Section */}
       <main className="flex w-full relative z-1 max-w-7xl mx-auto  flex-col items-center bg-white">
         <VerticalBorderPattern gradientName={'backgroundGlow'}>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 pb-15 pt-30 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center  pb-15 pt-30 gap-8">
             <div
-              className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
+              className={`flex flex-col h-full items-start lg:w-full  px-10 gap-4 justify-center`}
             >
               <div
                 data-aos="fade-up"
@@ -80,7 +80,8 @@ export default function page() {
               mapData={contactUsContent}
               mustHaveBottomPadding=""
               mustHaveLeftRightPadding=""
-              zigZagClassName="flex lg:flex-row-reverse max-lg:flex-col  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
+              heroSection={true}
+              zigZagClassName="flex lg:flex-row-reverse max-lg:flex-col    w-full justify-between gap-6 p-8"
             />
           </section>
         </VerticalBorderPattern>

@@ -86,26 +86,27 @@ function ZigZagContent({
 
   return (
     <div
-      className={`flex flex-col w-full ${mustHaveBottomPadding} ${mustHaveLeftRightPadding} ${hasCardWithAnimation ? 'min-h-screen lg:h-screen' : ''}`}
+      className={`flex flex-col w-full ${mustHaveBottomPadding} ${mustHaveLeftRightPadding} ${hasCardWithAnimation || heroSection ? 'max-h-screen h-full' : ''}`}
     >
       <div
-        className={`${zigZagClassName} ${hasCardWithAnimation ? 'h-full overflow-hidden' : 'lg:h-130 max-md:h-auto overflow-hidden'}  max-lg:flex-col items-start gap-10`}
+        className={`${zigZagClassName} ${hasCardWithAnimation || heroSection ? 'h-full overflow-hidden' : 'lg:h-130 max-md:h-auto overflow-hidden'}  max-lg:flex-col items-start gap-10`}
       >
         {/* Left Content Section */}
         <div
-          className={`flex w-full flex-col gap-6 justify-start  ${hasCardWithAnimation ? 'h-full max-md:h-fit' : mapData?.stats ? '' : 'pt-12'}`}
+          className={`flex w-full flex-col gap-6 justify-start  ${hasCardWithAnimation || heroSection ? 'h-full max-md:h-fit' : mapData?.stats ? '' : 'pt-12'}`}
         >
           <div className="flex flex-col gap-5">
             {mapData?.chipText && (
               <div
-                data-aos="fade-up"
-                data-aos-duration="200"
+                data-aos={heroSection ? 'fade-up' : ''}
+                data-aos-duration={heroSection ? '200' : ''}
                 key={mapData?.chipText}
               >
                 <ChipText
                   styling="w-fit"
                   text={mapData?.chipText}
                   chipIcon={mapData?.chipIcon}
+                  heroSection={heroSection}
                 />
               </div>
             )}
@@ -113,26 +114,26 @@ function ZigZagContent({
             <div className="flex flex-row items-center gap-4">
               {Icon && (
                 <div
-                  data-aos="fade-up"
-                  data-aos-duration="200"
+                  data-aos={heroSection ? 'fade-up' : ''}
+                  data-aos-duration={heroSection ? '200' : ''}
                   className="w-12 h-12 text-center rounded-2xl bg-[#DFEDFA] flex justify-center items-center"
                 >
                   <Icon width={24} height={24} color="text-[#0f5291]" />
                 </div>
               )}
               <div
-                data-aos={'fade-up'}
-                data-aos-duration="800"
-                className={`font-heading text-3xl text-black text-start font-bold ${heroSection ? 'text-[44px] leading-11' : 'text-3xl'}`}
+                data-aos={heroSection ? 'fade-up' : ''}
+                data-aos-duration={heroSection ? '800' : ''}
+                className={`font-heading text-black text-start font-bold ${heroSection ? 'text-5xl lg:text-6xl leading-17' : 'text-3xl'}`}
               >
                 {toSentenceCase(mapData?.label)}
               </div>
             </div>
             {mapData?.description && (
               <p
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                className={`font-body text-stone700 text-start`}
+                data-aos={heroSection ? 'fade-down' : ''}
+                data-aos-duration={heroSection ? '1200' : ''}
+                className={`font-body text-stone700 text-start ${heroSection ? 'leading-6' : ''}`}
               >
                 {mapData?.description}
               </p>
@@ -161,8 +162,8 @@ function ZigZagContent({
           {mapData?.buttonsText ? (
             <div className="flex flex-col gap-4">
               <div
-                data-aos="fade-down"
-                data-aos-duration="800"
+                data-aos={heroSection ? 'fade-down' : ''}
+                data-aos-duration={heroSection ? '800' : ''}
                 className="flex flex-row gap-4 w-full"
               >
                 {mapData?.buttonsText?.map((item, i) => (
@@ -185,8 +186,8 @@ function ZigZagContent({
                 ))}
               </div>
               <div
-                data-aos="fade-up"
-                data-aos-duration="800"
+                data-aos={heroSection ? 'fade-up' : ''}
+                data-aos-duration={heroSection ? '800' : ''}
                 className="font-body text-stone700 text-start text-[12px]"
               >
                 {typeof mapData?.bottomText === 'string' ? (
@@ -201,7 +202,10 @@ function ZigZagContent({
           ) : (
             !mapData?.cardSection &&
             !mapData?.stats && (
-              <div data-aos="fade-down" data-aos-duration="800">
+              <div
+                data-aos={heroSection ? 'fade-down' : ''}
+                data-aos-duration={heroSection ? '800' : ''}
+              >
                 <Button padding="text-center w-fit">Get started today</Button>
               </div>
             )
@@ -267,8 +271,8 @@ function ZigZagContent({
           )}
           {hasCardWithAnimation && (
             <div
-              data-aos="fade-up"
-              data-aos-duration="800"
+              data-aos={heroSection ? 'fade-up' : ''}
+              data-aos-duration={heroSection ? '800' : ''}
               ref={cardScrollRef}
               className={` flex-col relative h-fit w-full pr-2 hidden max-md:flex gap-4 overflow-hidden`}
             >
@@ -289,8 +293,8 @@ function ZigZagContent({
           )}
           {!hasCardWithAnimation && (
             <div
-              data-aos="fade-up"
-              data-aos-duration="800"
+              data-aos={heroSection ? 'fade-up' : ''}
+              data-aos-duration={heroSection ? '800' : ''}
               ref={cardScrollRef}
               className={` flex flex-col relative h-full w-full pr-2 gap-4 overflow-hidden`}
             >
@@ -316,8 +320,8 @@ function ZigZagContent({
         {/* Sticky Image Section */}
         {mapData?.image && (
           <div
-            data-aos="fade-down"
-            data-aos-duration="800"
+            data-aos={heroSection ? 'fade-down' : ''}
+            data-aos-duration={heroSection ? '800' : ''}
             key={mapData?.image}
             className={`w-full flex justify-center  ${hasCardWithAnimation ? '  items-start  sticky top-12 overflow-hidden' : 'h-full max-h-120 items-center'}`}
           >
@@ -327,7 +331,7 @@ function ZigZagContent({
               alt={toSentenceCase(mapData?.label)}
               width={500}
               height={300}
-              className={`${mapData?.label === 'How MR Workflows Works' ? 'lg:min-h-130 max-md:h-120 w-fit max-md:object-contain items-start lg:object-top' : hasCardWithAnimation ? 'w-fit max-md:object-contain items-start lg:object-top' : 'max-md:h-120 max-md:justify-start object-contain'} rounded-xl max-h-full w-auto`}
+              className={`${heroSection ? 'lg:mt-15 lg:h-140 w-full object-fill  h-max' : mapData?.label === 'How MR Workflows Works' ? 'lg:min-h-130 max-md:h-120 w-fit max-md:object-contain items-start lg:object-top' : hasCardWithAnimation ? 'w-fit max-md:object-contain items-start lg:object-top' : 'max-md:h-120 max-md:justify-start object-contain'} rounded-xl max-h-full w-auto`}
             />
             {/* </div> */}
           </div>

@@ -17,8 +17,8 @@ function ScheduleBanner({ content }) {
       <div className="flex flex-col gap-8 max-w-300 mx-auto p-10">
         <div className="flex flex-col h-full items-start lg:w-full justify-center gap-4 ">
           <div
-            data-aos="fade-up"
-            data-aos-duration="800"
+            // data-aos="fade-up"
+            // data-aos-duration="800"
             className=" font-heading  text-white text-3xl w-full   font-bold text-center"
           >
             {toSentenceCase(
@@ -26,8 +26,8 @@ function ScheduleBanner({ content }) {
             )}
           </div>
           <p
-            data-aos="fade-up"
-            data-aos-duration="1200"
+            // data-aos="fade-up"
+            // data-aos-duration="1200"
             className="font-body leading-6 text-stone700 text-center w-full"
           >
             {toSentenceCase(
@@ -38,8 +38,8 @@ function ScheduleBanner({ content }) {
         </div>
         <div className="flex flex-col h-full items-start lg:w-full justify-center gap-4 ">
           <div
-            data-aos="fade-down"
-            data-aos-duration="1200"
+            // data-aos="fade-down"
+            // data-aos-duration="1200"
             className="  w-full text-center"
           >
             {content?.buttonsText ? (
@@ -61,8 +61,8 @@ function ScheduleBanner({ content }) {
           </div>
           {!content?.buttonsText && (
             <div
-              data-aos="fade-up"
-              data-aos-duration="1600"
+              // data-aos="fade-up"
+              // data-aos-duration="1600"
               className="font-body text-[16px] text-stone700 text-center w-full"
             >
               No credit card required • Cancel anytime

@@ -43,7 +43,7 @@ function FAQSection() {
               } overflow-hidden flex flex-col justify-center sm:justify-start bg-[#F6F7F8] rounded-xl`}
               onClick={() => toggleFAQ(index)}
             >
-              <button className="flex w-full gap-5 items-center px-2 py-5 sm:p-5">
+              <button className="flex w-full  cursor-pointer gap-5 items-center px-2 py-5 sm:p-5">
                 <span
                   className={`scale-[1.8] text-black duration-700 opacity-50 ${
                     activeIndex === index ? 'rotate-46' : 'rotate-0'

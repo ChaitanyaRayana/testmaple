@@ -9,6 +9,8 @@ import ScheduleBanner from '../common/ScheduleBanner';
 import Fotter from '../common/Fotter';
 import ChipText from '../common/ChipText';
 import ZigZagHomeSection from '../common/ZigZagHomeSection';
+import Image from 'next/image';
+import heroSectionBgTwoImage from '@/public/assets/images/png/bgImages/bg1.png';
 
 export default function SolutionPageClient({ contentToDisplay, pathName }) {
   useEffect(() => {
@@ -48,13 +50,22 @@ export default function SolutionPageClient({ contentToDisplay, pathName }) {
       <main className="flex w-full relative z-1 max-w-7xl mx-auto  flex-col items-center bg-white">
         {/* // Section one */}
         <VerticalBorderPattern gradientName="backgroundGlow">
+          <Image
+            src={heroSectionBgTwoImage}
+            alt=""
+            width={600}
+            height={600}
+            data-aos="fade-left"
+            data-aos-duration="800"
+            className="absolute z-0  max-w-7xl mx-auto w-full h-full px-2 pb-1 "
+          />
           <section className="flex  max-w-300 mx-auto px-10 pt-30 pb-15  flex-row gap-10">
             <ZigZagContent
               mapData={contentToDisplay?.sectionOne}
               mustHaveBottomPadding={''}
               mustHaveLeftRightPadding={''}
               heroSection={true}
-              zigZagClassName="flex g:flex-row max-lg:flex-col  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl shadow-2xl p-8"
+              zigZagClassName="flex g:flex-row max-lg:flex-col  w-full justify-between gap-6 p-8"
             />
           </section>
         </VerticalBorderPattern>
@@ -134,6 +145,7 @@ export default function SolutionPageClient({ contentToDisplay, pathName }) {
               gridGroup="md:grid-cols-4"
               mustHaveBottomPadding={'pb-15'}
               mustHaveLeftRightPadding={'px-10'}
+              businessSection={true}
             />
           </section>
         </VerticalBorderPattern>
