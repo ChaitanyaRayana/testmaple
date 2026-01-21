@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect } from 'react';
-import Navbar from '../../components/Navbar';
-import ZigZagContent from '../../components/common/ZigZagContent';
-import { VerticalBorderPattern } from '../../components/common/Icon';
-import CenterTextCardsSection from '../../components/common/CenterTextCardsSection';
-import ScheduleBanner from '../../components/common/ScheduleBanner';
-import Fotter from '../../components/common/Fotter';
+import Navbar from '../Navbar';
+import ZigZagContent from '../common/ZigZagContent';
+import { VerticalBorderPattern } from '../common/Icon';
+import CenterTextCardsSection from '../common/CenterTextCardsSection';
+import ScheduleBanner from '../common/ScheduleBanner';
+import Fotter from '../common/Fotter';
 
 export default function PlatformPageClient({ contentToDisplay }) {
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function PlatformPageClient({ contentToDisplay }) {
           );
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.5 }
     );
 
     observer.observe(section);

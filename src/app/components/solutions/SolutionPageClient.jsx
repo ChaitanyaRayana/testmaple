@@ -34,7 +34,7 @@ export default function SolutionPageClient({ contentToDisplay, pathName }) {
           );
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.5 }
     );
 
     observer.observe(section);
@@ -73,7 +73,14 @@ export default function SolutionPageClient({ contentToDisplay, pathName }) {
         {/* Section  Three*/}
         <VerticalBorderPattern>
           <section className="flex  max-w-300 mx-auto flex-col pt-15 pb-15 gap-12">
-            {contentToDisplay?.[pathName] ? (
+            {[
+              'finance-accounting',
+              'legal-compliance',
+              'human-resource',
+              'operations',
+              'research-development',
+              'customer-service',
+            ]?.includes(pathName) ? (
               <CenterTextCardsSection
                 mapData={contentToDisplay?.sectionThree}
                 cardGroup={true}

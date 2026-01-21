@@ -82,13 +82,14 @@ function ZigZagContent({
       },
     },
   };
+  console.log({ mapData });
 
   return (
     <div
       className={`flex flex-col w-full ${mustHaveBottomPadding} ${mustHaveLeftRightPadding} ${hasCardWithAnimation ? 'min-h-screen lg:h-screen' : ''}`}
     >
       <div
-        className={`${zigZagClassName} ${hasCardWithAnimation ? 'h-full overflow-hidden' : 'lg:h-130 overflow-hidden'}  max-lg:flex-col items-start gap-10`}
+        className={`${zigZagClassName} ${hasCardWithAnimation ? 'h-full overflow-hidden' : 'lg:h-130 max-md:h-auto overflow-hidden'}  max-lg:flex-col items-start gap-10`}
       >
         {/* Left Content Section */}
         <div
@@ -110,7 +111,7 @@ function ZigZagContent({
             )}
 
             <div className="flex flex-row items-center gap-4">
-              {mapData?.icon && (
+              {Icon && (
                 <div
                   data-aos="fade-up"
                   data-aos-duration="200"
@@ -286,6 +287,28 @@ function ZigZagContent({
               ))}
             </div>
           )}
+          {!hasCardWithAnimation && (
+            <div
+              data-aos="fade-up"
+              data-aos-duration="800"
+              ref={cardScrollRef}
+              className={` flex flex-col relative h-full w-full pr-2 gap-4 overflow-hidden`}
+            >
+              {mapData?.cardSection?.map((item, i) => (
+                <Cards
+                  content={item}
+                  key={`first-${i}`}
+                  flexCss={
+                    mapData?.chipText || mapData?.leftAlign
+                      ? 'text-start'
+                      : 'text-center'
+                  }
+                  groupCss={'flex-row gap-4 shadow-none'}
+                  shadowRemove={true}
+                />
+              ))}
+            </div>
+          )}
 
           {mapData?.stats && <Table stats={mapData?.stats} />}
         </div>
@@ -304,7 +327,7 @@ function ZigZagContent({
               alt={toSentenceCase(mapData?.label)}
               width={500}
               height={300}
-              className={`${mapData?.label === 'How MR Workflows Works' ? 'lg:min-h-130 max-md:h-120 w-fit max-md:object-contain items-start lg:object-top' : hasCardWithAnimation ? 'w-fit max-md:object-contain items-start lg:object-top' : 'object-contain'} rounded-xl max-h-full w-auto`}
+              className={`${mapData?.label === 'How MR Workflows Works' ? 'lg:min-h-130 max-md:h-120 w-fit max-md:object-contain items-start lg:object-top' : hasCardWithAnimation ? 'w-fit max-md:object-contain items-start lg:object-top' : 'max-md:h-120 max-md:justify-start object-contain'} rounded-xl max-h-full w-auto`}
             />
             {/* </div> */}
           </div>

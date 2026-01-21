@@ -112,7 +112,7 @@ function Cards({
           </div>
         )}
         {content?.description && (
-          <p
+          <div
             data-aos={hasCardWithAnimation ? '' : 'fade-up'}
             data-aos-duration="1200"
             className={`font-body w-full text-stone-600 text-sm ${flexCss}`}
@@ -120,11 +120,11 @@ function Cards({
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>
               {content?.description}
             </ReactMarkdown>
-          </p>
+          </div>
         )}
         {content?.featureHighlight &&
           content?.featureHighlight?.map((featureItem, idx) => (
-            <p
+            <div
               className={`text-body w-full text-stone-600 ${flexCss}`}
               key={idx}
               data-aos="fade-up"
@@ -142,7 +142,7 @@ function Cards({
                   {featureItem}
                 </ReactMarkdown>
               )}
-            </p>
+            </div>
           ))}
         {content?.subdescrp && (
           <p
