@@ -32,7 +32,7 @@ export default function StatCard({ mapData }) {
     >
       <div
         data-aos="fade-up"
-        data-aos-duration="200"
+        data-aos-duration="600"
         className="text-4xl w-full text-center font-bold"
         style={{ color: '#226fb7' }}
       >
@@ -40,13 +40,17 @@ export default function StatCard({ mapData }) {
       </div>
       <div
         data-aos="fade-up"
-        data-aos-duration="600"
+        data-aos-duration="800"
         className="text-sm w-full text-center text-gray-600"
       >
         {label}
       </div>
       {description && (
-        <div className="text-sm w-full font-body text-center text-gray-400">
+        <div
+          data-aos="fade-down"
+          data-aos-duration="1200"
+          className="text-sm w-full font-body text-center text-gray-400"
+        >
           {description}
         </div>
       )}

@@ -113,7 +113,7 @@ export default function page() {
                 data-aos-duration="200"
                 className={`flex w-full justify-center`}
               >
-                <ChipText text={'Events & Conferences'} />
+                <ChipText heroSection={true} text={'Events & Conferences'} />
               </div>
               {/* )} */}
               <div
@@ -158,15 +158,15 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify start`}
             >
               <div
-                data-aos="fade-up"
-                data-aos-duration="800"
+                // data-aos="fade-up"
+                // data-aos-duration="800"
                 className={`font-heading text-black w-full text-3xl   font-bold text-start`}
               >
                 {eventsContent?.sectionTwo?.label}
               </div>
               <p
-                data-aos="fade-up"
-                data-aos-duration="1200"
+                // data-aos="fade-up"
+                // data-aos-duration="1200"
                 className={`font-body leading-6 text-stone700 w-full text-start`}
               >
                 {eventsContent?.sectionTwo?.description}
@@ -194,6 +194,7 @@ export default function page() {
               gridGroup={'md:grid-cols-2 lg:grid-cols-4'}
               mustHaveLeftRightPadding="px-10"
               mustHaveBottomPadding="pb-15"
+              businessSection={false}
             />
           </section>
         </VerticalBorderPattern>

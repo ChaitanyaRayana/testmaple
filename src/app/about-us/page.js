@@ -1,4 +1,5 @@
 'use client';
+import { useEffect } from 'react';
 import CenterTextCardsSection from '../components/common/CenterTextCardsSection';
 import ChipText from '../components/common/ChipText';
 import Fotter from '../components/common/Fotter';
@@ -8,6 +9,8 @@ import StatCard from '../components/common/StatCard';
 import ZigZagHomeSection from '../components/common/ZigZagHomeSection';
 import Navbar from '../components/Navbar';
 import { aboutUS } from '../constants/constants';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function page() {
   const scheduleBannerData = {
@@ -16,6 +19,14 @@ export default function page() {
       'Discover how MapleRecord can help your organization streamline workflows, ensure compliance, and unlock the value in your documents.',
     buttonsText: ['Get Started Today'],
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
       <Navbar />
@@ -27,12 +38,20 @@ export default function page() {
             <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-12">
               <div className="flex flex-col h-full items-center lg:w-full  justify-center gap-3 ">
                 <div className="flex justify-center w-full">
-                  <ChipText text={'Company'} />
+                  <ChipText heroSection={true} text={'Company'} />
                 </div>
-                <div className=" font-heading text-black  text-[44px] leading-11   font-bold text-center">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  className=" font-heading text-black  text-[44px] leading-11   font-bold text-center"
+                >
                   About MapleRecord
                 </div>
-                <p className="font-body leading-6 text-stone700 text-center w-full">
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                  className="font-body leading-6 text-stone700 text-center w-full"
+                >
                   Transforming how organizations manage, share, and secure their
                   critical documents through innovative records management
                   solutions.
@@ -70,11 +89,15 @@ export default function page() {
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >
               <div
+                data-aos="fade-up"
+                data-aos-duration="800"
                 className={`font-heading text-black w-full text-3xl   font-bold text-center `}
               >
                 {aboutUS?.sectionThree?.label}
               </div>
               <p
+                data-aos="fade-up"
+                data-aos-duration="1200"
                 className={`font-body leading-6 text-stone700 text-center w-full`}
               >
                 {aboutUS?.sectionThree?.description}

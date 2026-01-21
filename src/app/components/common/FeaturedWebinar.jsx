@@ -1,12 +1,9 @@
 'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import Button from './Button';
 import ChipText from './ChipText';
 import { toSentenceCase } from '../../utils/utils';
-import { useEffect, useState } from 'react';
-import PopupModal from './PopupModel';
-import Input from './Input';
+import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -41,8 +38,8 @@ export default function FeaturedWebinar({
           {/* image left */}
           <div className="lg:col-span-4 h-full">
             <div
-              data-aos="fade-down"
-              data-aos-duration="800"
+              // data-aos="fade-down"
+              // data-aos-duration="800"
               className="rounded-xl h-full overflow-hidden"
             >
               <Image
@@ -58,23 +55,23 @@ export default function FeaturedWebinar({
           {/* content right */}
           <div className="lg:col-span-8">
             <h2
-              data-aos="fade-up"
-              data-aos-duration="800"
+              // data-aos="fade-up"
+              // data-aos-duration="800"
               className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight"
             >
               {toSentenceCase(mapData?.label)}
             </h2>
             <p
-              data-aos="fade-down"
-              data-aos-duration="1200"
+              // data-aos="fade-down"
+              // data-aos-duration="1200"
               className="mt-4 text-gray-600 font-body max-w-3xl"
             >
               {mapData?.description}
             </p>
 
             <div
-              data-aos="fade-down"
-              data-aos-duration="1200"
+              // data-aos="fade-down"
+              // data-aos-duration="1200"
               className="mt-6 flex flex-wrap gap-3"
             >
               {mapData?.chipText.map((t, i) => (
@@ -87,13 +84,13 @@ export default function FeaturedWebinar({
             </div>
 
             <div
-              data-aos="fade-left"
-              data-aos-duration="1200"
+              // data-aos="fade-left"
+              // data-aos-duration="1200"
               className="mt-6 flex flex-1 justify-around flex-wrap items-center gap-6 text-gray-600"
             >
               <div
-                data-aos="fade-down"
-                data-aos-duration="800"
+                // data-aos="fade-down"
+                // data-aos-duration="800"
                 className="flex items-center gap-2"
               >
                 <svg
@@ -186,8 +183,8 @@ export default function FeaturedWebinar({
             {/* speaker and CTA */}
             <div className="mt-6 grid grid-cols-1  gap-4 items-center">
               <div
-                data-aos="fade-up"
-                data-aos-duration="1200"
+                // data-aos="fade-up"
+                // data-aos-duration="1200"
                 className="md:col-span-2 w-full bg-gray-50 rounded-lg p-5"
               >
                 <div className="text-sm text-gray-900 font-semibold">
@@ -213,8 +210,8 @@ export default function FeaturedWebinar({
               </div>
 
               <div
-                data-aos="fade-down"
-                data-aos-duration="1200"
+                // data-aos="fade-down"
+                // data-aos-duration="1200"
                 className="md:col-span-1 h-full flex md:justify-start items-end"
               >
                 <Button

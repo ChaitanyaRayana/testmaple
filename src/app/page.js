@@ -81,6 +81,7 @@ export default function Home() {
                 className="flex flex-col h-full items-start lg:w-full justify-center gap-8 "
               >
                 <ChipText
+                  heroSection={true}
                   text="Manage your information ecosystem"
                   dotCircle={true}
                 />
@@ -126,23 +127,23 @@ export default function Home() {
             <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
               <div className="flex flex-col h-full items-start lg:w-full justify-center gap-8 ">
                 <div
-                  data-aos="fade-up"
-                  data-aos-duration="400"
+                  // data-aos="fade-up"
+                  // data-aos-duration="400"
                   className="flex justify-center w-full"
                 >
                   <ChipText text="Never miss a deadline." />
                 </div>
                 <div
-                  data-aos="fade-up"
-                  data-aos-duration="600"
+                  // data-aos="fade-up"
+                  // data-aos-duration="600"
                   className=" font-heading text-black text-3xl   font-bold text-center"
                 >
                   Eliminate legacy system risk by automating record handling
                   into secure, compliant, audit-ready workflows.
                 </div>
                 <p
-                  data-aos="fade-up"
-                  data-aos-duration="800"
+                  // data-aos="fade-up"
+                  // data-aos-duration="800"
                   className="font-body leading-6 text-stone700 text-center w-full"
                 >
                   One Unified Platform. Four Integrated Modules.
@@ -183,23 +184,23 @@ export default function Home() {
                             key={index}
                             // variants={itemVariant}
                             className="flex flex-col w-full justify-center gap-6"
-                            data-aos="fade-up"
-                            data-aos-duration="800"
+                            // data-aos="fade-up"
+                            // data-aos-duration="800"
                           >
                             {/* <div
                         className="flex flex-col w-full justify-center gap-6"
                         key={index}
                       > */}
                             <div
-                              data-aos="fade-up"
-                              data-aos-duration="400"
+                              // data-aos="fade-up"
+                              // data-aos-duration="400"
                               className="font-heading text-3xl text-black text-start font-bold"
                             >
                               {item?.label}
                             </div>
                             <p
-                              data-aos="fade-up"
-                              data-aos-duration="600"
+                              // data-aos="fade-up"
+                              // data-aos-duration="600"
                               className="font-body text-base text-stone700 text-start"
                             >
                               {item?.description}
@@ -225,8 +226,8 @@ export default function Home() {
                               padding={'w-fit'}
                               onClickButton={() => router.push(item?.href)}
                               arrowIcon={true}
-                              data-aos="fade-up"
-                              data-aos-duration="800"
+                              // data-aos="fade-up"
+                              // data-aos-duration="800"
                             >
                               Learn more
                             </Button>
@@ -243,8 +244,8 @@ export default function Home() {
                             key={index}
                           >
                             <div
-                              data-aos="fade-down"
-                              data-aos-duration="800"
+                              // data-aos="fade-down"
+                              // data-aos-duration="800"
                               className="w-full overflow-hidden max-md:h-100 max-md:justify-start flex justify-center"
                             >
                               <Image
@@ -271,15 +272,15 @@ export default function Home() {
             <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
               <div className="flex flex-col h-full items-start lg:w-full justify-center gap-8 ">
                 <div
-                  data-aos="fade-up"
-                  data-aos-duration="400"
+                  // data-aos="fade-up"
+                  // data-aos-duration="400"
                   className="flex justify-center w-full"
                 >
                   <ChipText text="How we help." />
                 </div>
                 <div
-                  data-aos="fade-up"
-                  data-aos-duration="600"
+                  // data-aos="fade-up"
+                  // data-aos-duration="600"
                   className=" font-heading text-black text-3xl   font-bold text-center"
                 >
                   How our records management system delivers impact across every
@@ -287,8 +288,8 @@ export default function Home() {
                 </div>
               </div>
               <div
-                data-aos="fade-up"
-                data-aos-duration="800"
+                // data-aos="fade-up"
+                // data-aos-duration="800"
                 className="flex flex-wrap justify-center overflow-hidden overflow-x-auto lg:w-max mx-auto max-md:w-full bg-stone-200 rounded-3xl gap-4"
               >
                 {howWeHelpContent?.map((item, i) => (
@@ -321,19 +322,19 @@ export default function Home() {
                         <motion.div
                           className="flex flex-col justify-start pt-12 gap-6"
                           key={index}
-                          data-aos="fade-up"
-                          data-aos-duration="800"
+                          // data-aos="fade-up"
+                          // data-aos-duration="800"
                         >
                           <div
-                            data-aos="fade-up"
-                            data-aos-duration="400"
+                            // data-aos="fade-up"
+                            // data-aos-duration="400"
                             className="font-heading font-bold text-3xl text-black text-start"
                           >
                             {item?.label}
                           </div>
                           <div
-                            data-aos="fade-up"
-                            data-aos-duration={(index + 1) * 400}
+                            // data-aos="fade-up"
+                            // data-aos-duration={(index + 1) * 400}
                             className="flex flex-col gap-3"
                           >
                             {item?.featureHighlight?.map((hightLightItem) => (
@@ -349,8 +350,8 @@ export default function Home() {
                             ))}
                           </div>
                           <Button
-                            data-aos="fade-up"
-                            data-aos-duration="800"
+                            // data-aos="fade-up"
+                            // data-aos-duration="800"
                             padding={'w-fit'}
                           >
                             Get started today
@@ -364,8 +365,8 @@ export default function Home() {
                         <div
                           className="w-full overflow-hidden max-md:h-120 max-md:justify-start flex justify-center"
                           key={index}
-                          data-aos="fade-down"
-                          data-aos-duration="800"
+                          // data-aos="fade-down"
+                          // data-aos-duration="800"
                         >
                           <Image
                             src={item?.image}

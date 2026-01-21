@@ -22,6 +22,7 @@ function Cards({
   cardArrow = false,
   shadowRemove = false,
   hasCardWithAnimation = false,
+  businessSection = false,
 }) {
   const Icon = content?.icon ? ICONS[content?.icon] : null;
   const components = {
@@ -54,8 +55,12 @@ function Cards({
         >
           {Icon && (
             <div
-              data-aos={hasCardWithAnimation ? '' : 'fade-up'}
-              data-aos-duration={hasCardWithAnimation ? '' : '200'}
+              data-aos={
+                hasCardWithAnimation ? '' : businessSection ? 'fade-up' : ''
+              }
+              data-aos-duration={
+                hasCardWithAnimation ? '' : businessSection ? '200' : ''
+              }
               className="w-12 h-12 text-center rounded-2xl bg-[#DFEDFA] flex justify-center items-center"
             >
               <Icon width={24} height={24} color="text-[#0f5291]" />
@@ -64,8 +69,8 @@ function Cards({
           )}
           {content?.percentage && (
             <div
-              data-aos="fade-up"
-              data-aos-duration="200"
+              data-aos={businessSection ? 'fade-up' : ''}
+              data-aos-duration={businessSection ? '200' : ''}
               className=" text-[#0f5291] font-bold text-4xl text-center flex justify-center items-center"
             >
               {content?.percentage}
@@ -82,8 +87,12 @@ function Cards({
           {' '}
           {content?.iconText && (
             <div
-              data-aos={hasCardWithAnimation ? '' : 'fade-up'}
-              data-aos-duration={hasCardWithAnimation ? '' : '200'}
+              data-aos={
+                hasCardWithAnimation ? '' : businessSection ? 'fade-up' : ''
+              }
+              data-aos-duration={
+                hasCardWithAnimation ? '' : businessSection ? '200' : ''
+              }
               className="w-12 h-12 text-center text-[#226fb7] flex justify-center items-center"
             >
               {content?.iconText}
@@ -94,8 +103,12 @@ function Cards({
       <div className="flex w-full flex-col gap-3 justify-start items-start h-fit">
         {content?.label && (
           <div
-            data-aos={hasCardWithAnimation ? '' : 'fade-up'}
-            data-aos-duration={hasCardWithAnimation ? '' : '800'}
+            data-aos={
+              hasCardWithAnimation ? '' : businessSection ? 'fade-up' : ''
+            }
+            data-aos-duration={
+              hasCardWithAnimation ? '' : businessSection ? '800' : ''
+            }
             className={`text-body font-bold h-fit w-full text-black ${flexCss} text-lg`}
           >
             {toSentenceCase(content?.label)}
@@ -104,7 +117,9 @@ function Cards({
         {cardArrow && (
           <div
             data-aos="fade-up"
-            data-aos-duration={hasCardWithAnimation ? '' : '1200'}
+            data-aos-duration={
+              hasCardWithAnimation ? '' : businessSection ? '1200' : ''
+            }
             className="absolute -right-2 top-1/2 -translate-y-1/2
                text-4xl font-bold z-10 text-[#0f5291]"
           >
@@ -113,7 +128,9 @@ function Cards({
         )}
         {content?.description && (
           <div
-            data-aos={hasCardWithAnimation ? '' : 'fade-up'}
+            data-aos={
+              hasCardWithAnimation ? '' : businessSection ? 'fade-up' : ''
+            }
             data-aos-duration="1200"
             className={`font-body w-full text-stone-600 text-sm ${flexCss}`}
           >
@@ -127,8 +144,8 @@ function Cards({
             <div
               className={`text-body w-full text-stone-600 ${flexCss}`}
               key={idx}
-              data-aos="fade-up"
-              data-aos-duration={(idx + 1) * 400}
+              data-aos={businessSection ? 'fade-up' : ''}
+              data-aos-duration={businessSection ? (idx + 1) * 400 : ''}
             >
               {content?.featureMarkDownIcon === 'CircleThickIcon' ? (
                 <ReactMarkdown
@@ -146,8 +163,8 @@ function Cards({
           ))}
         {content?.subdescrp && (
           <p
-            data-aos="fade-up"
-            data-aos-duration="1000"
+            data-aos={businessSection ? 'fade-up' : ''}
+            data-aos-duration={businessSection ? '1000' : ''}
             className={`text-body w-full flex items-end justify-center text-base text-[#0f5291] font-semibold ${flexCss}`}
           >
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>

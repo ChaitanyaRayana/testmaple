@@ -16,6 +16,7 @@ function CenterTextCardsSection({
   cardArrow = false,
   mustHaveLeftRightPadding = 'px-10',
   mustHaveBottomPadding = 'pb-15',
+  businessSection = false,
 }) {
   useEffect(() => {
     AOS.init({
@@ -37,8 +38,8 @@ function CenterTextCardsSection({
         >
           {mapData?.chipText && (
             <div
-              data-aos="fade-up"
-              data-aos-duration="200"
+              // data-aos="fade-up"
+              // data-aos-duration="200"
               key={mapData?.chipText}
               className={`flex w-full ${
                 headingStart ? 'justify-start' : 'justify-center'
@@ -48,8 +49,8 @@ function CenterTextCardsSection({
             </div>
           )}
           <div
-            data-aos="fade-up"
-            data-aos-duration="800"
+            // data-aos="fade-up"
+            // data-aos-duration="800"
             className={`font-heading text-black w-full text-3xl   font-bold text-center ${
               headingStart ? 'text-start' : 'text-center'
             }`}
@@ -58,7 +59,7 @@ function CenterTextCardsSection({
           </div>
           {mapData?.description && (
             <p
-              data-aos="fade-up"
+              // data-aos="fade-up"
               data-aos-duration="1200"
               className={`font-body  leading-6 text-stone700 text-center w-full ${
                 headingStart ? 'text-start' : 'text-center'
@@ -69,8 +70,8 @@ function CenterTextCardsSection({
           )}
         </div>
         <div
-          data-aos="fade-up"
-          data-aos-duration="800"
+          // data-aos="fade-up"
+          // data-aos-duration="800"
           className={`grid  gap-8 w-full ${gridGroup} ${mustHaveLeftRightPadding} ${mustHaveBottomPadding}
           `}
         >
@@ -85,6 +86,7 @@ function CenterTextCardsSection({
               }
               cardArrow={cardArrow && i !== mapData?.cardSection?.length - 1}
               groupCss={groupCss}
+              businessSection={businessSection}
             />
           ))}
         </div>

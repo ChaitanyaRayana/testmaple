@@ -7,6 +7,8 @@ import { VerticalBorderPattern } from '../common/Icon';
 import CenterTextCardsSection from '../common/CenterTextCardsSection';
 import ScheduleBanner from '../common/ScheduleBanner';
 import Fotter from '../common/Fotter';
+import Image from 'next/image';
+import heroSectionBgOneImage from '@/public/assets/images/png/bgImages/bg1.png';
 
 export default function PlatformPageClient({ contentToDisplay }) {
   useEffect(() => {
@@ -45,13 +47,22 @@ export default function PlatformPageClient({ contentToDisplay }) {
       <main className="flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
         {/* // Section one */}
         <VerticalBorderPattern gradientName="backgroundGlow">
+          <Image
+            src={heroSectionBgOneImage}
+            alt=""
+            width={600}
+            height={600}
+            data-aos="fade-left"
+            data-aos-duration="800"
+            className="absolute z-0  max-w-7xl mx-auto w-full h-full px-2 pb-1 "
+          />
           <section className="flex  max-w-300 mx-auto px-10 pt-30 pb-15 flex-row gap-10">
             <ZigZagContent
               mapData={contentToDisplay?.sectionOne}
               mustHaveBottomPadding={''}
               mustHaveLeftRightPadding={''}
               heroSection={true}
-              zigZagClassName="flex g:flex-row max-lg:flex-col  backgroundGradient  w-full justify-between gap-6 border border-solid border-bordergray rounded-3xl p-8"
+              zigZagClassName="flex g:flex-row max-lg:flex-col  w-full justify-between gap-6  p-8"
             />
           </section>
         </VerticalBorderPattern>

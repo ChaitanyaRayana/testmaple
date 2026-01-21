@@ -1378,7 +1378,7 @@ export const industriesSolutions = {
       label: 'How MapleRecord Serves Insurance',
       cardSection: [
         {
-          label: ' Intelligent Records Management',
+          label: 'Intelligent Records Management',
           description:
             'Centralized repository for policy documents, claims files, underwriting records, and regulatory filings with automated retention and disposition.',
           featureHighlight: [
@@ -1563,7 +1563,7 @@ export const industriesSolutions = {
       label: 'How MapleRecord Serves Healthcare',
       cardSection: [
         {
-          label: ' Intelligent Records Management',
+          label: 'Intelligent Records Management',
           description:
             'Centralized repository for administrative records, operational documentation, and patient-related files with automated retention and HIPAA-compliant security.',
           featureHighlight: [
@@ -1745,7 +1745,7 @@ export const industriesSolutions = {
       label: 'How MapleRecord Serves Education',
       cardSection: [
         {
-          label: ' Intelligent Records Management',
+          label: 'Intelligent Records Management',
           description:
             'Centralized repository for student records, academic transcripts, enrollment documents, and administrative files with automated retention and compliant security.',
           featureHighlight: [
@@ -1929,7 +1929,7 @@ export const industriesSolutions = {
       label: 'How MapleRecord Serves Manufacturing',
       cardSection: [
         {
-          label: ' Intelligent Records Management',
+          label: 'Intelligent Records Management',
           description:
             'Centralized repository for quality records, technical documentation, compliance certificates, and operational files with automated retention and version control.',
           featureHighlight: [
@@ -2111,7 +2111,7 @@ export const industriesSolutions = {
       label: 'How MapleRecord Serves Government',
       cardSection: [
         {
-          label: ' Intelligent Records Management',
+          label: 'Intelligent Records Management',
           description:
             'Centralized repository for public records, administrative documents, permits, licenses, and historical files with automated retention schedules and compliant security.',
           featureHighlight: [
@@ -3844,7 +3844,7 @@ export const contactUsContent = {
 
 export const termsOfService = {
   termsIntro: `
-**Last Updated:** [Date] <br/><br/>
+**Last Updated:** Jan 21, 2026 <br/><br/>
 Welcome to **MapleRecord**. These Terms of Service (“Terms”) govern your access to and use of the MapleRecord website, platform, products, and services (collectively, the “Services”).
 
 By accessing or using the Services, you agree to be bound by these Terms.  
@@ -3956,14 +3956,14 @@ MapleRecord may suspend or terminate access to the Services for violation of the
 
   contactInformation: `
 **MapleRecord**  
-Email: s  
-Address: [Company Address]
+Email: info@maplerecord.com <br/>
+Address: 102 California Drive, Whitby, ON, CA
 `,
 };
 
 export const privacyPolicy = {
   privacyIntro: `
-**Last Updated:** [Date] <br/><br/>
+**Last Updated:** Jan 21, 2026 <br/><br/>
 
 **MapleRecord** (“we,” “our,” or “us”) is committed to protecting the privacy and security of information entrusted to us. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you access or use the MapleRecord website, platform, and services (collectively, the “Services”).
 
@@ -4097,7 +4097,7 @@ We may update this Privacy Policy from time to time. Changes will be posted with
 If you have questions or concerns regarding this Privacy Policy, please contact:
 
 **MapleRecord**  
-Email: [Email Address]  
-Address: [Company Address]
+Email: info@maplerecord.com <br/>
+Address: 102 California Drive, Whitby, ON, CA
 `,
 };

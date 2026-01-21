@@ -31,8 +31,8 @@ function BlogCard({ mapData = {} }) {
     <article className="bg-white rounded-4xl overflow-hidden shadow-sm border flex flex-col h-full">
       {/* Image cover */}
       <Link
-        data-aos="fade-down"
-        data-aos-duration="800"
+        // data-aos="fade-down"
+        // data-aos-duration="800"
         key={label}
         href={href}
         className="block w-full h-48"
@@ -50,8 +50,8 @@ function BlogCard({ mapData = {} }) {
         {/* Category pill */}
         {(category || location) && (
           <div
-            data-aos="fade-up"
-            data-aos-duration="200"
+            // data-aos="fade-up"
+            // data-aos-duration="200"
             key={label}
             className="mb-4"
           >
@@ -63,8 +63,8 @@ function BlogCard({ mapData = {} }) {
         <div className="flex flex-col h-full gap-2 justify-between">
           {/* Title */}
           <Link
-            data-aos="fade-up"
-            data-aos-duration="800"
+            // data-aos="fade-up"
+            // data-aos-duration="800"
             href={href}
             key={label}
             className="text-gray-900 hover:underline"
@@ -76,9 +76,9 @@ function BlogCard({ mapData = {} }) {
 
           {/* Excerpt */}
           <p
-            data-aos="fade-up"
             key={label}
-            data-aos-duration="1200"
+            // data-aos="fade-up"
+            // data-aos-duration="1200"
             className=" text-gray-600 font-body fon leading-relaxed card-desc"
           >
             {description}
@@ -87,8 +87,8 @@ function BlogCard({ mapData = {} }) {
           {/* Author / date and CTA */}
           <div className=" flex flex-col items-start gap-3 justify-between">
             <div
-              data-aos="fade-left"
-              data-aos-duration="1200"
+              // data-aos="fade-left"
+              // data-aos-duration="1200"
               className="flex items-center gap-4 text-sm text-gray-500"
             >
               {authorDateWrap
@@ -142,8 +142,8 @@ function BlogCard({ mapData = {} }) {
                     ? 'w-full bg-white border p-1 justify-center border-stone-400 rounded-xl'
                     : ''
                 }`}
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
                 key={href}
               >
                 {buttonText ? buttonText?.label : 'Read More'}

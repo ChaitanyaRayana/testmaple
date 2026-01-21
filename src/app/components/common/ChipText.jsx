@@ -2,7 +2,13 @@
 
 import { ICONS } from './icons/AllIcons';
 
-function ChipText({ text, styling = '', chipIcon = null, dotCircle = false }) {
+function ChipText({
+  text,
+  styling = '',
+  chipIcon = null,
+  dotCircle = false,
+  heroSection = false,
+}) {
   const Icon = chipIcon ? ICONS[chipIcon] : null;
 
   return (
@@ -15,7 +21,7 @@ function ChipText({ text, styling = '', chipIcon = null, dotCircle = false }) {
         </span>
       )}
       {dotCircle && <span className="w-2 h-2 bg-gray-500 rounded-full"></span>}
-      <span className="typewriter">{text}</span>
+      <span className={`${heroSection ? 'typewriter' : ''}`}>{text}</span>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 'use client';
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '../components/common/Button';
 import Navbar from '../components/Navbar';
 import ChipText from '../components/common/ChipText';
@@ -18,6 +18,8 @@ import {
 } from '../components/common/svgImage';
 import BlogAIImage from '../../../public/assets/images/png/BlogAIImage.png';
 import PopupModal from '../components/common/PopupModel';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function page({ headingStart = false }) {
   const topicsText = [
@@ -94,6 +96,13 @@ function page({ headingStart = false }) {
     buttonsText: ['Get Started Today'],
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className={`flex min-h-screen w-full flex-col bg-white `}>
       <Navbar />
@@ -113,13 +122,19 @@ function page({ headingStart = false }) {
                   headingStart ? 'justify-start' : 'justify-center'
                 }`}
               >
-                <ChipText text={'Resources'} chipIcon={'BookIcon'} />
+                <ChipText
+                  heroSection={true}
+                  text={'Resources'}
+                  chipIcon={'BookIcon'}
+                />
               </div>
               {/* )} */}
               <div
                 className={`font-heading text-black w-full text-[44px] leading-11   font-bold text-center ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
+                data-aos={'fade-up'}
+                data-aos-duration={'800'}
               >
                 MapleRecord Blog
               </div>
@@ -127,12 +142,18 @@ function page({ headingStart = false }) {
                 className={`font-body leading-6 text-stone700 text-center w-full ${
                   headingStart ? 'text-start' : 'text-center'
                 }`}
+                data-aos={'fade-up'}
+                data-aos-duration={'1200'}
               >
                 Insights, best practices, and thought leadership on records
                 management, compliance, and workflow automation.
               </p>
             </div>
-            <div className=" flex flex-wrap justify-center w-max mx-auto rounded-2xl gap-4">
+            <div
+              data-aos={'fade-down'}
+              data-aos-duration={'1200'}
+              className=" flex flex-wrap justify-center w-max mx-auto rounded-2xl gap-4"
+            >
               {topicsText?.map((item, i) => (
                 <Button
                   gradientColor={`${

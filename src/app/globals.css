@@ -252,8 +252,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; /* Remove auto margin to align left */
   /* letter-spacing: 0.15em; */
   animation:
-    typing 3.5s steps(40, end),
-    blink-caret 0.75s step-end infinite;
+    typing 2s steps(40, end),
+    blink-caret 0.5s step-end infinite;
 }
 @keyframes typing {
   from {
