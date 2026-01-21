@@ -101,15 +101,15 @@ export default function page() {
             <div className="flex flex-col w-full gap-4">
               <div className="text-start">
                 <h2
-                  data-aos="fade-up"
-                  data-aos-duration="800"
+                  // data-aos="fade-up"
+                  // data-aos-duration="800"
                   className="font-heading text-3xl text-black"
                 >
                   Press Releases
                 </h2>
                 <span
-                  data-aos="fade-up"
-                  data-aos-duration="1200"
+                  // data-aos="fade-up"
+                  // data-aos-duration="1200"
                   className="inline-block mt-2 text-lg text-stone-500"
                 >
                   Latest announcements and company news from MapleRecord

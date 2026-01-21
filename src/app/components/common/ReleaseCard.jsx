@@ -19,8 +19,8 @@ export default function ReleaseCard({ mapData }) {
       <div className="flex-1">
         <div className="flex items-center gap-4">
           <div
-            data-aos="fade-up"
-            data-aos-duration="200"
+            // data-aos="fade-up"
+            // data-aos-duration="200"
             className="text-sm text-gray-500"
           >
             {mapData?.date}
@@ -29,8 +29,8 @@ export default function ReleaseCard({ mapData }) {
         </div>
 
         <h3
-          data-aos="fade-up"
-          data-aos-duration="800"
+          // data-aos="fade-up"
+          // data-aos-duration="800"
           className="mt-4 text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight"
         >
           {toSentenceCase(mapData?.label)}
@@ -41,8 +41,8 @@ export default function ReleaseCard({ mapData }) {
         </p>
 
         <div
-          data-aos="fade-down"
-          data-aos-duration="800"
+          // data-aos="fade-down"
+          // data-aos-duration="800"
           className="mt-6 flex items-center gap-4"
         >
           <Button padding={'px-6 py-3'}>{mapData?.primaryCta?.text}</Button>
