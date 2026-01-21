@@ -4,6 +4,7 @@ import { VerticalBorderPattern } from './components/common/Icon';
 import ChipText from './components/common/ChipText';
 // import homeRecordTwo from '@/public/assets/images/png/home-request-two.png';
 import homeRecordTwo from '@/public/assets/images/png/heroSectionImage.png';
+import heroSectionBgImage from '@/public/assets/images/png/bg-abstract.png';
 import Navbar from './components/Navbar';
 import Fotter from './components/common/Fotter';
 import Button from './components/common/Button';
@@ -63,6 +64,15 @@ export default function Home() {
       <main className="flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
         {/* Manage your information ecosystem */}
         <VerticalBorderPattern gradientName="heroBackground">
+          <Image
+            src={heroSectionBgImage}
+            alt=""
+            width={600}
+            height={600}
+            data-aos="fade-left"
+            data-aos-duration="800"
+            className="absolute z-0 max-w-300 mx-auto px-10 w-full h-full pb-1 rounded-2xl"
+          />
           <section className="flex w-full overflow-hidden mx-auto flex-row items-center min-h-screen text-center pt-30 pb-15 ">
             <div className="grid lg:grid-cols-2 gap-12  w-full  max-w-300 mx-auto flex-row flex-1 h-full items-start justify-between px-10">
               <div
@@ -165,7 +175,7 @@ export default function Home() {
                     animate="show"
                     exit="hidden"
                   >
-                    <div className="flex flex-row h-130 gap-10 max-lg:justify-between max-md:flex-col shadow-2xl bg-white border border-solid border-bordergray rounded-3xl p-10">
+                    <div className="flex flex-row lg:h-130 max-md:h-auto gap-10 max-lg:justify-between max-md:flex-col shadow-2xl bg-white border border-solid border-bordergray rounded-3xl p-10">
                       {neverMissDeadLine
                         ?.filter((item, i) => i === selectedMRBtn)
                         ?.map((item, index) => (
@@ -229,13 +239,13 @@ export default function Home() {
                         ?.filter((item, i) => i === selectedMRBtn)
                         ?.map((item, index) => (
                           <div
-                            className="w-full flex justify-center"
+                            className="w-full flex max-md:justify-start justify-center"
                             key={index}
                           >
                             <div
                               data-aos="fade-down"
                               data-aos-duration="800"
-                              className="w-full overflow-hidden flex justify-center"
+                              className="w-full overflow-hidden max-md:h-100 max-md:justify-start flex justify-center"
                             >
                               <Image
                                 src={item?.image}
@@ -279,7 +289,7 @@ export default function Home() {
               <div
                 data-aos="fade-up"
                 data-aos-duration="800"
-                className="flex flex-wrap justify-center overflow-hidden overflow-x-auto w-max mx-auto bg-stone-200 rounded-3xl gap-4"
+                className="flex flex-wrap justify-center overflow-hidden overflow-x-auto lg:w-max mx-auto max-md:w-full bg-stone-200 rounded-3xl gap-4"
               >
                 {howWeHelpContent?.map((item, i) => (
                   <Button
@@ -304,7 +314,7 @@ export default function Home() {
                   animate="show"
                   exit="hidden"
                 >
-                  <div className="flex max-h-130 flex-row gap-12 max-lg:justify-between max-md:flex-col bg-linear-to-bl from-white to-[#edf5fa] border border-solid border-bordergray rounded-2xl p-8">
+                  <div className="flex lg:max-h-130 max-md:h-auto flex-row gap-12 max-lg:justify-between max-md:flex-col bg-linear-to-bl from-white to-[#edf5fa] border border-solid border-bordergray rounded-2xl p-8">
                     {howWeHelpContent
                       ?.filter((item, i) => i === selectedHelpMeBtn)
                       ?.map((item, index) => (
@@ -352,7 +362,7 @@ export default function Home() {
                       ?.filter((item, i) => i === selectedHelpMeBtn)
                       ?.map((item, index) => (
                         <div
-                          className="w-full overflow-hidden flex justify-center"
+                          className="w-full overflow-hidden max-md:h-120 max-md:justify-start flex justify-center"
                           key={index}
                           data-aos="fade-down"
                           data-aos-duration="800"

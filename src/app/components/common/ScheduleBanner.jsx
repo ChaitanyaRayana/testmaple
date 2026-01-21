@@ -46,6 +46,7 @@ function ScheduleBanner({ content }) {
               <div className="flex flex-row gap-3 w-full justify-center items-center">
                 {content?.buttonsText?.map((item) => (
                   <Button
+                    key={item}
                     arrowIcon={
                       item === 'Contact Us' || item === 'Contact Our Team'
                     }

@@ -23,7 +23,6 @@ function Button({
   const router = useRouter();
   return (
     <button
-      href={''}
       onClick={(e) => {
         if (childrenName) {
           router.push('/contact-us#schedule-demo');

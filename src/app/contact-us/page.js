@@ -48,7 +48,7 @@ export default function page() {
         }
       },
       {
-        threshold: 0.1, // 50% visible
+        threshold: 0.5, // 50% visible
       }
     );
 

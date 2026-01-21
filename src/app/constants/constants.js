@@ -990,25 +990,25 @@ export const mrRecordsPlatformContent = {
 
       cardSection: [
         {
-          label: 'AI Form Generation',
+          label: '1. AI Form Generation',
           description:
             'Describe your needs in plain English and watch AI build a complete form with appropriate fields, validations, and logic.',
           icon: 'AIIcon',
         },
         {
-          label: 'Customize & Brand',
+          label: '2. Customize & Brand',
           description:
             "Use drag-and-drop editor to refine layouts, add conditional logic, and apply your brand's colors and styling.",
           icon: 'PaintHolderIcon',
         },
         {
-          label: 'Deploy Anywhere',
+          label: '3. Deploy Anywhere',
           description:
             'Publish forms via web link, embed on websites, or integrate into mobile apps—all responsive and optimized.',
           icon: 'GlobeIcon',
         },
         {
-          label: 'Collect & Integrate',
+          label: '4. Collect & Integrate',
           description:
             "Form submissions automatically flow into MapleRecord's system with full audit trails and secure storage.",
           icon: 'UnlimitedIcon',

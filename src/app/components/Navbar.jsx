@@ -143,10 +143,10 @@ function Navbar() {
                     onMouseLeave={() => setPlatformPop(false)}
                     className="text-[#374151] text-base cursor-pointer font-medium hover:text-black"
                   >
-                    <div className="flex items-center gap-0.5 text-stone700 hover:text-stone900 hover:font-semibold">
+                    <span className="flex items-center gap-0.5 text-stone700 hover:text-stone900 hover:font-semibold">
                       {' '}
-                      <div>Platform</div> <DownArrowIcon />
-                    </div>
+                      <span>Platform</span> <DownArrowIcon />
+                    </span>
                   </p>
                   {platformPop && (
                     <div
@@ -198,10 +198,10 @@ function Navbar() {
                     onMouseLeave={() => setProductPop(false)}
                     className="text-[#374151] text-base cursor-pointer font-medium hover:text-black"
                   >
-                    <div className="flex items-center gap-0.5 text-stone700 hover:text-stone900 hover:font-semibold">
+                    <span className="flex items-center gap-0.5 text-stone700 hover:text-stone900 hover:font-semibold">
                       {' '}
-                      <div>Solutions</div> <DownArrowIcon />
-                    </div>
+                      <span>Solutions</span> <DownArrowIcon />
+                    </span>
                   </p>
                   {productPop && (
                     <div
@@ -332,10 +332,10 @@ function Navbar() {
                     onMouseLeave={() => setSolutionsPop(false)}
                     className="text-[#374151] text-base cursor-pointer  font-medium hover:text-black"
                   >
-                    <div className="flex items-center gap-0.5 text-stone700 hover:text-stone900 hover:font-semibold">
+                    <span className="flex items-center gap-0.5 text-stone700 hover:text-stone900 hover:font-semibold">
                       {' '}
-                      <div>Resources</div> <DownArrowIcon />
-                    </div>
+                      <span>Resources</span> <DownArrowIcon />
+                    </span>
                   </p>
                   {solutionsPop && (
                     <div
@@ -386,10 +386,10 @@ function Navbar() {
                     onMouseLeave={() => setResourcesPop(false)}
                     className="text-[#374151] text-base cursor-pointer font-medium hover:text-black"
                   >
-                    <div className="flex items-center gap-0.5 text-stone700 hover:text-stone900 hover:font-semibold">
+                    <span className="flex items-center gap-0.5 text-stone700 hover:text-stone900 hover:font-semibold">
                       {' '}
-                      <div>Company</div> <DownArrowIcon />
-                    </div>
+                      <span>Company</span> <DownArrowIcon />
+                    </span>
                   </p>
                   {resourcespop && (
                     <div

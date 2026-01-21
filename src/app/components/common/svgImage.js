@@ -11,10 +11,10 @@ export const FileIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-file-text w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-file-text w-${width / 4} h-${height / 4} ${color}`}
       data-fg-cbux16="207.17:369.5204:/src/app/components/ProductShowcase.tsx:130:21:4990:78:e:Icon"
     >
       <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
@@ -39,10 +39,10 @@ export const FactoryIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-factory w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-factory w-${width / 4} h-${height / 4} ${color}`}
       data-fg-c7pq10="207.78:207.21174:/src/app/pages/ManufacturingPage.tsx:19:17:930:31:e:Factory::::::ClJz"
     >
       <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
@@ -65,10 +65,10 @@ export const CalculatorIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-calculator w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-calculator w-${width / 4} h-${height / 4} ${color}`}
       data-fg-cqwn10="208.15:210.4579:/src/app/pages/FinanceAccountingPage.tsx:19:17:937:34:e:Calculator::::::Bya7"
     >
       <rect width="16" height="20" x="4" y="2" rx="2"></rect>
@@ -97,10 +97,10 @@ export const FileSearchIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-file-search w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-file-search w-${width / 4} h-${
         height / 4
       } ${color}`}
       data-fg-c1ku52="210.52:210.17271:/src/app/pages/LegalCompliancePage.tsx:80:17:4206:47:e:FileSearch::::::BgbH"
@@ -125,10 +125,10 @@ export const BlubIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-lightbulb w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-lightbulb w-${width / 4} h-${height / 4} ${color}`}
       data-fg-cbok10="210.99:227.292:/src/app/pages/ResearchDevelopmentPage.tsx:19:17:960:33:e:Lightbulb::::::TsG"
     >
       <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
@@ -150,10 +150,10 @@ export const BookIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-book-open w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-book-open w-${width / 4} h-${height / 4} ${color}`}
       data-fg-efjw6="231.82:279.377:/src/app/pages/BlogPage.tsx:77:15:3329:32:e:BookOpen::::::VQk"
     >
       <path d="M12 7v14"></path>
@@ -174,10 +174,10 @@ export const UserIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-user w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-user w-${width / 4} h-${height / 4} ${color}`}
       data-fg-efjw36="231.82:279.377:/src/app/pages/BlogPage.tsx:125:19:5361:28:e:User::::::CIsY"
     >
       <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
@@ -199,10 +199,10 @@ export const MessagerIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-send w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-send w-${width / 4} h-${height / 4} ${color}`}
       data-fg-cbux16="207.17:369.5204:/src/app/components/ProductShowcase.tsx:130:21:4990:78:e:Icon"
     >
       <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
@@ -224,10 +224,10 @@ export const WorkflowIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-workflow w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-workflow w-${width / 4} h-${height / 4} ${color}`}
       data-fg-cbux16="207.17:369.5204:/src/app/components/ProductShowcase.tsx:130:21:4990:78:e:Icon"
     >
       <rect width="8" height="8" x="3" y="3" rx="2"></rect>
@@ -249,10 +249,10 @@ export const FileRightIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-file-check w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-file-check w-${width / 4} h-${height / 4} ${color}`}
       data-fg-cbux16="207.17:715.3712:/src/app/components/ProductShowcase.tsx:157:21:6054:78:e:Icon"
     >
       <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
@@ -275,10 +275,10 @@ export const CircleThickIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-circle-check w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-circle-check w-${width / 4} h-${
         height / 4
       } text-[#226fb7] shrink-0`}
       data-fg-cbux30="207.17:369.5204:/src/app/components/ProductShowcase.tsx:152:21:5943:68:e:CheckCircle2::::::DMDP"
@@ -302,10 +302,10 @@ export const DollarIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-dollar-sign w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-dollar-sign w-${width / 4} h-${
         height / 4
       } ${color}`}
       data-fg-ijt13="207.18:377.1888:/src/app/components/ProductShowcase2.tsx:315:17:10534:28:e:Icon"
@@ -329,10 +329,10 @@ export const LegalIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-scale w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-scale w-${width / 4} h-${height / 4} ${color}`}
       data-fg-ijt13="207.18:377.1888:/src/app/components/ProductShowcase2.tsx:315:17:10534:28:e:Icon"
     >
       <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
@@ -357,10 +357,10 @@ export const HumanResourcesIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-users w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-users w-${width / 4} h-${height / 4} ${color}`}
       data-fg-ijt13="207.18:377.1888:/src/app/components/ProductShowcase2.tsx:315:17:10534:28:e:Icon"
     >
       <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
@@ -383,10 +383,10 @@ export const HumanResourcesCardIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-users  w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-users  w-${width / 4} h-${height / 4} ${color}`}
       data-fg-dvy214="207.8:207.2719:/src/app/components/Features.tsx:61:19:2387:41:e:Icon"
     >
       <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
@@ -410,10 +410,10 @@ export const SettingIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-settings  w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-settings  w-${width / 4} h-${height / 4} ${color}`}
       data-fg-ijt13="207.18:377.1888:/src/app/components/ProductShowcase2.tsx:315:17:10534:28:e:Icon"
     >
       <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
@@ -435,10 +435,10 @@ export const HealthIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-heart w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-heart w-${width / 4} h-${height / 4} ${color}`}
       data-fg-ijt13="207.18:377.1888:/src/app/components/ProductShowcase2.tsx:315:17:10534:28:e:Icon"
     >
       <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
@@ -459,10 +459,10 @@ export const ResearchDeploymentIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-flask-conical w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-flask-conical w-${width / 4} h-${
         height / 4
       } ${color}`}
       data-fg-ijt13="207.18:377.1888:/src/app/components/ProductShowcase2.tsx:315:17:10534:28:e:Icon"
@@ -487,10 +487,10 @@ export const HeadSetIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-headphones w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-headphones w-${width / 4} h-${height / 4} ${color}`}
       data-fg-ijt13="207.18:377.1888:/src/app/components/ProductShowcase2.tsx:315:17:10534:28:e:Icon"
     >
       <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path>
@@ -511,10 +511,10 @@ export const SheldIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-shield  w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-shield  w-${width / 4} h-${height / 4} ${color}`}
       data-fg-cjh6="207.15:401.7028:/src/app/components/PlatformFeatures2.tsx:15:15:575:43:e:Shield::::::IYg"
     >
       <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
@@ -534,10 +534,10 @@ export const SheldCardIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-shield w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-shield w-${width / 4} h-${height / 4} ${color}`}
       data-fg-bazh51="207.75:421.173:/src/app/pages/MRRecordsPage.tsx:75:17:3486:43:e:Shield::::::EA5A"
     >
       <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
@@ -558,10 +558,10 @@ export const FinanceIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-building2 lucide-building-2 w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-building2 lucide-building-2 w-${width / 4} h-${
         height / 4
       } ${color}`}
       data-fg-bazh285="207.75:421.173:/src/app/pages/MRRecordsPage.tsx:385:19:18063:46:e:Building2::::::FLb"
@@ -590,10 +590,10 @@ export const PlugIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-plug  w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-plug  w-${width / 4} h-${height / 4} ${color}`}
       data-fg-c7l034="207.13:207.5255:/src/app/components/HowItWorks2.tsx:78:15:3560:41:e:Plug::::::MOh"
     >
       <path d="M12 22v-5"></path>
@@ -612,10 +612,10 @@ export const BrainIcon = ({ width = 24, height = 24 }) => {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-brain w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-brain w-${width / 4} h-${
         height / 4
       } text-[#226fb7]`}
       data-fg-dvy214="207.8:207.2719:/src/app/components/Features.tsx:61:19:2387:41:e:Icon"
@@ -645,10 +645,10 @@ export const LockIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-lock w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-lock w-${width / 4} h-${height / 4} ${color}`}
       data-fg-dvy214="207.8:207.2719:/src/app/components/Features.tsx:61:19:2387:41:e:Icon"
     >
       <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
@@ -665,10 +665,10 @@ export const LightingIcon = ({ width = 24, height = 24 }) => {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-zap w-${width / 4} h-${height / 4} text-[#226fb7]`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-zap w-${width / 4} h-${height / 4} text-[#226fb7]`}
       data-fg-dvy214="207.8:207.2719:/src/app/components/Features.tsx:61:19:2387:41:e:Icon"
     >
       <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
@@ -688,10 +688,10 @@ export const UnlimitedIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-database w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-database w-${width / 4} h-${height / 4} ${color}`}
       data-fg-dvy214="207.8:207.2719:/src/app/components/Features.tsx:61:19:2387:41:e:Icon"
     >
       <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
@@ -713,10 +713,10 @@ export const BarChatIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-chart-column w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-chart-column w-${width / 4} h-${
         height / 4
       } ${color}`}
       data-fg-dvy214="207.8:207.2719:/src/app/components/Features.tsx:61:19:2387:41:e:Icon"
@@ -741,10 +741,10 @@ export const CircleQuestionMarkIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-circle-help w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-circle-help w-${width / 4} h-${
         height / 4
       } ${color}`}
       data-fg-doc95="256.5:256.3626:/src/app/components/FAQ.tsx:36:13:1546:34:e:HelpCircle::::::C3fK"
@@ -768,10 +768,10 @@ export const VArrowIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-chevron-down w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-chevron-down w-${width / 4} h-${
         height / 4
       } ${color} transition-transform`}
       data-fg-doc919="256.5:256.3626:/src/app/components/FAQ.tsx:59:17:2569:202:e:ChevronDown::::::6cG"
@@ -794,9 +794,9 @@ export const FolderIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className={`lucide lucide-folder-open w-${width / 4} h-${
         height / 4
       } ${color}`}
@@ -820,10 +820,10 @@ export const ClockIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-clock w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-clock w-${width / 4} h-${height / 4} ${color}`}
       data-fg-bazh58="207.75:421.173:/src/app/pages/MRRecordsPage.tsx:85:17:4008:42:e:Clock::::::EKIx"
     >
       <circle cx="12" cy="12" r="10"></circle>
@@ -845,10 +845,10 @@ export const MagnifyingIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-search w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-search w-${width / 4} h-${height / 4} ${color}`}
       data-fg-bazh100="207.75:421.173:/src/app/pages/MRRecordsPage.tsx:144:21:6816:43:e:Search::::::EBwp"
     >
       <circle cx="11" cy="11" r="8"></circle>
@@ -870,10 +870,10 @@ export const PuzzleIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-puzzle w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-puzzle w-${width / 4} h-${height / 4} ${color}`}
       data-fg-bazh252="207.75:421.173:/src/app/pages/MRRecordsPage.tsx:344:17:16119:43:e:Puzzle::::::CgiX"
     >
       <path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"></path>
@@ -893,10 +893,10 @@ export const GraphImproveIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-trending-up w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-trending-up w-${width / 4} h-${
         height / 4
       } ${color}`}
       data-fg-mof81="227.47:349.3691:/src/app/pages/AboutUsPage.tsx:131:17:7190:47:e:TrendingUp::::::D9DP"
@@ -919,10 +919,10 @@ export const AwardIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-award w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-award w-${width / 4} h-${height / 4} ${color}`}
       data-fg-mof74="227.47:349.3691:/src/app/pages/AboutUsPage.tsx:121:17:6651:42:e:Award::::::B5os"
     >
       <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
@@ -943,10 +943,10 @@ export const CalendarIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-calendar  w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-calendar  w-${width / 4} h-${height / 4} ${color}`}
       data-fg-b5np79="257.21:279.602:/src/app/pages/WebinarsPage.tsx:219:29:10147:45:e:Calendar::::::hMX"
     >
       <path d="M8 2v4"></path>
@@ -969,10 +969,10 @@ export const VideoRecorderIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-video  w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-video  w-${width / 4} h-${height / 4} ${color}`}
       data-fg-b5np87="257.21:279.602:/src/app/pages/WebinarsPage.tsx:227:29:10676:42:e:Video::::::B0Rw"
     >
       <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path>
@@ -993,10 +993,10 @@ export const VideoPlayIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-play inline-block mr-2 w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-play inline-block mr-2 w-${width / 4} h-${
         height / 4
       } ${color}`}
       data-fg-b5np43="257.21:279.602:/src/app/pages/WebinarsPage.tsx:157:15:7475:46:e:Play::::::BeLf"
@@ -1018,10 +1018,10 @@ export const EyeIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-eye w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-eye w-${width / 4} h-${height / 4} ${color}`}
       data-fg-cdwq71="257.33:488.1299:/src/app/pages/VideosPage.tsx:164:19:7630:40:e:Eye::::::B3yc"
     >
       <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path>
@@ -1042,10 +1042,10 @@ export const LikeIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-thumbs-up w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-thumbs-up w-${width / 4} h-${height / 4} ${color}`}
       data-fg-cdwq76="257.33:488.1299:/src/app/pages/VideosPage.tsx:168:19:7861:45:e:ThumbsUp::::::DWM1"
     >
       <path d="M7 10v12"></path>
@@ -1066,10 +1066,10 @@ export const LocationIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-map-pin w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-map-pin w-${width / 4} h-${height / 4} ${color}`}
       data-fg-c8cu57="207.68:207.7559:/src/app/pages/ContactPage.tsx:135:17:6470:43:e:MapPin::::::Dxj4"
     >
       <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
@@ -1090,10 +1090,10 @@ export const PhoneIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-phone w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-phone w-${width / 4} h-${height / 4} ${color}`}
       data-fg-c8cu63="207.68:207.7559:/src/app/pages/ContactPage.tsx:145:17:6901:42:e:Phone::::::DqtT"
     >
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -1113,10 +1113,10 @@ export const MailIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-mail w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-mail w-${width / 4} h-${height / 4} ${color}`}
       data-fg-c8cu69="207.68:207.7559:/src/app/pages/ContactPage.tsx:155:17:7310:41:e:Mail::::::BEPS"
     >
       <rect width="20" height="16" x="2" y="4" rx="2"></rect>
@@ -1137,10 +1137,10 @@ export const WarningIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-circle-alert w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-circle-alert w-${width / 4} h-${
         height / 4
       } ${color}`}
       data-fg-efax145="207.76:421.173:/src/app/pages/MRRequestsPage.tsx:212:19:10486:48:e:AlertCircle::::::soH"
@@ -1164,10 +1164,10 @@ export const FunnelIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-funnel w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-funnel w-${width / 4} h-${height / 4} ${color}`}
       data-fg-efax261="207.76:421.173:/src/app/pages/MRRequestsPage.tsx:359:17:18129:43:e:Filter::::::DXZr"
     >
       <path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"></path>
@@ -1187,10 +1187,10 @@ export const GlobeIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-globe w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-globe w-${width / 4} h-${
         height / 4
       } ${color} mt-0.5 shrink-0`}
       data-fg-cp6d102="257.45:273.15:/src/app/pages/EventsPage.tsx:274:29:12449:63:e:Globe::::::C2iE"
@@ -1214,10 +1214,10 @@ export const TagIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-tag w-${width / 4} h-${
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-tag w-${width / 4} h-${
         height / 4
       } ${color} mt-0.5 shrink-0`}
       data-fg-cp6d116="257.45:273.15:/src/app/pages/EventsPage.tsx:288:29:13383:61:e:Tag::::::B7W9"
@@ -1241,10 +1241,10 @@ export const AIIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-sparkles w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-sparkles w-${width / 4} h-${height / 4} ${color}`}
       data-fg-5n880="654.97:660.369:/src/app/pages/MRFormsPage.tsx:114:21:5402:45:e:Sparkles::::::CJOq"
     >
       <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
@@ -1268,10 +1268,10 @@ export const PaintHolderIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`lucide lucide-palette w-${width / 4} h-${height / 4} ${color}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-palette w-${width / 4} h-${height / 4} ${color}`}
       data-fg-5n890="654.97:660.369:/src/app/pages/MRFormsPage.tsx:129:21:6191:44:e:Palette::::::CMzc"
     >
       <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
