@@ -50,6 +50,7 @@ import {
   CalendarIcon,
   ClockIcon,
   DollarIcon,
+  EyeIcon,
   FactoryIcon,
   FileIcon,
   FileRightIcon,
@@ -64,6 +65,7 @@ import {
   HumanResourcesIcon,
   LegalIcon,
   LightingIcon,
+  LikeIcon,
   LockIcon,
   MagnifyingIcon,
   MessagerIcon,
@@ -3269,7 +3271,7 @@ export const dummyBlogsPosts = [
     author: 'Michael Chen',
     date: 'December 20, 2024',
     authorDateWrap: (
-      <div className="w-auto flex flex-wrap gap-2">
+      <div className="w-auto flex flex-wrap gap-2 mt-5">
         <span className="flex flex-row gap-2">
           <UserIcon width={16} height={16} /> <span> Michael Chen</span>
         </span>
@@ -3290,7 +3292,7 @@ export const dummyBlogsPosts = [
     author: 'Emily Parker',
     date: 'December 15, 2024',
     authorDateWrap: (
-      <div className="w-auto flex flex-wrap gap-2">
+      <div className="w-auto flex flex-wrap gap-2 mt-5">
         <span className="flex flex-row gap-2">
           <UserIcon width={16} height={16} /> <span> Emily Parker</span>
         </span>
@@ -3311,7 +3313,7 @@ export const dummyBlogsPosts = [
     author: 'David Martinez',
     date: 'December 5, 2024',
     authorDateWrap: (
-      <div className="w-auto flex flex-wrap gap-2">
+      <div className="w-auto flex flex-wrap gap-2 mt-5">
         <span className="flex flex-row gap-2">
           <UserIcon width={16} height={16} /> <span> David Martinez</span>
         </span>
@@ -3331,17 +3333,199 @@ export const dummyBlogsPosts = [
       'Quantifying the business value of investing in intelligent records management platforms.',
     author: 'John Anderson',
     date: 'November 20, 2024',
+    markdownText: `
+
+For CIOs and IT leaders, records management is no longer a compliance-only function—it is a foundational component of enterprise information architecture. As organizations scale digitally, legacy and manual records systems introduce operational inefficiencies, security vulnerabilities, and compliance risks that directly impact cost structures and business continuity.
+
+Modern **Records Management Systems (RMS)** deliver quantifiable ROI by aligning governance, automation, security, and scalability within a single, enterprise-grade platform.
+
+<br/>
+
+## 1. Operational Efficiency Through Automation
+
+Traditional records management relies heavily on manual processes for classification, indexing, and retrieval. These approaches do not scale and introduce inconsistencies across departments and geographies.
+
+### Modern RMS platforms leverage:
+
+* Automated metadata extraction and classification
+* Policy-driven retention and disposition
+* Centralized repositories with standardized governance
+* Workflow-based access and approvals
+
+**ROI Impact:**
+Automation reduces human intervention and error rates, driving **20–40% operational efficiency gains** in records handling and lifecycle management.
+
+<br/>
+
+## 2. Reduced Total Cost of Ownership (TCO)
+
+Legacy systems incur hidden costs in the form of infrastructure maintenance, physical storage, redundant repositories, and operational overhead. Fragmented systems also increase integration and support complexity.
+
+### Modern RMS solutions:
+
+* Consolidate multiple repositories into a unified architecture
+* Minimize dependence on physical storage and legacy platforms
+* Enable predictable cost models through digital scalability
+* Reduce long-term maintenance and operational overhead
+
+**ROI Impact:**
+Lower TCO and improved cost predictability across the records lifecycle.
+
+<br/>
+
+## 3. Compliance-by-Design Architecture
+
+As regulatory requirements evolve across jurisdictions, manual compliance mechanisms become increasingly fragile and audit-intensive.
+
+### Enterprise-grade RMS platforms embed compliance through:
+
+* Automated retention schedules and legal holds
+* Immutable audit trails and version control
+* Role-based access control (RBAC)
+* Policy enforcement across departments and geographies
+
+**ROI Impact:**
+Reduced audit effort, lower compliance risk, and significant avoidance of regulatory penalties.
+
+<br/>
+
+## 4. Security and Risk Mitigation at Scale
+
+Records often represent an organization’s most sensitive data assets. Legacy repositories lack the visibility, controls, and intelligence required to defend against modern threats.
+
+### Modern RMS platforms provide:
+
+* Encryption at rest and in transit
+* Fine-grained access controls and activity monitoring
+* Secure backups and disaster recovery
+* Centralized governance over sensitive data
+
+**ROI Impact:**
+Lower likelihood and impact of data breaches, improved resilience, and stronger enterprise risk posture.
+
+<br/>
+
+## How MapleRecord’s AI-Enabled Capabilities Accelerate ROI
+MapleRecord extends the value of traditional records management by embedding AI-driven intelligence across the entire records lifecycle—transforming records from static repositories into actively governed, high-value enterprise assets.
+
+<br/>
+
+## Intelligent Classification and Metadata Enrichment
+
+MapleRecord uses AI models to automatically analyze content, context, and document structure to:
+
+* Classify records accurately without manual tagging
+* Apply consistent metadata across large record volumes
+* Reduce misclassification and human error
+
+**ROI Impact:**
+Significant reduction in manual effort and faster onboarding of new records at scale.
+
+<br/>
+
+## Automated Retention and Policy Enforcement
+
+AI continuously evaluates records against defined policies to:
+
+* Apply the correct retention schedules
+* Trigger alerts for upcoming disposition or legal holds
+* Ensure records are retained or disposed of in line with regulatory requirements
+
+**ROI Impact:**
+Lower compliance overhead and reduced risk of retention violations.
+
+<br/>
+
+## AI-Powered Search and Discovery
+
+MapleRecord enables advanced discovery through:
+
+* Context-aware and semantic search
+* Faster retrieval of relevant records across repositories
+* Reduced dependency on exact keywords or folder structures
+
+**ROI Impact:**
+Accelerated access to information, improved employee productivity, and faster decision-making.
+
+<br/>
+
+## Predictive Risk and Compliance Insights
+
+Using usage patterns and access behavior, MapleRecord can:
+
+* Identify anomalous access or policy deviations
+* Highlight records at higher compliance or security risk
+* Provide visibility into governance gaps before issues arise
+
+**ROI Impact:**
+Proactive risk mitigation and reduced exposure to compliance failures.
+
+<br/>
+
+## Scalable AI Architecture for Future Growth
+
+MapleRecord’s AI capabilities are designed to scale with the organization:
+
+* Supports high-volume ingestion across structured and unstructured data
+* Adapts to evolving regulations and business rules
+* Integrates seamlessly with enterprise systems via APIs
+
+**ROI Impact:**
+Future-proof records infrastructure that avoids costly re-platforming initiatives.
+
+<br/>
+
+## Improved Data Governance and Executive Visibility
+
+For CIOs, governance maturity is a critical KPI. MapleRecord provides:
+
+* Real-time visibility into record lifecycles
+* Usage analytics and access insights
+* Support for audits, reporting, and executive oversight
+* Alignment with enterprise data governance frameworks
+
+**ROI Impact:**
+Stronger governance posture and informed leadership decisions.
+
+<br/>
+
+## Measuring ROI Beyond Cost Reduction
+
+While direct cost savings are important, the strategic ROI of modern records management—and MapleRecord in particular—is realized through:
+
+* Reduced enterprise risk
+* Compliance assurance at scale
+* Operational resilience
+* IT simplification
+* Long-term architectural alignment
+
+<br/>
+
+## Conclusion
+
+Modern Records Management Systems deliver measurable ROI by replacing fragmented, manual processes with automated, secure, and scalable governance platforms. MapleRecord enhances this value further by embedding AI-driven intelligence across classification, compliance, discovery, and risk management.
+
+For CIOs and IT leaders, **MapleRecord is not simply a records repository—it is a strategic information governance platform** that delivers sustained ROI, reduces risk, and supports long-term digital transformation.
+
+<br/>
+
+If you want, I can also:
+
+* Optimize this for a **whitepaper**, **website page**, or **sales deck**
+* Shorten it into an **executive summary**
+* Add **metrics, diagrams, or CTA language** for marketing use
+`,
     authorDateWrap: (
-      <div className="w-auto flex flex-wrap gap-2">
+      <div className="w-auto flex flex-wrap gap-2 mt-5">
         <span className="flex flex-row gap-2">
           <UserIcon width={16} height={16} /> <span> John Anderson</span>
         </span>
         <span className="flex flex-row gap-2">
-          <CalendarIcon width={16} height={16} /> <span>December 20, 2024</span>
+          <CalendarIcon width={16} height={16} /> <span>November 20, 2024</span>
         </span>
       </div>
     ),
-    href: '/blogs/roi-modern-records-management',
+    href: '/blog/roi-modern-records-management',
     image: BlogFourImage,
   },
 ];
@@ -3656,12 +3840,27 @@ export const videoCardContent = [
   {
     id: '5-key-compliance-requirements',
     category: 'Product Demos',
-    title: 'AI-Powered Document Classification Demo',
+    label: 'AI-Powered Document Classification Demo',
     description:
       "See how MapleRecord's intelligent classification automatically organizes thousands of documents.",
     likes: '398',
     views: '6.7K',
     date: 'December 28, 2024',
+    authorDateWrap: (
+      <div className="w-full flex flex-wrap justify-between mt-4  border-t border-stone-300 pt-2">
+        <div className="flex flex-row gap-2">
+          <span className="flex flex-row gap-1 items-center">
+            <EyeIcon width={16} height={16} />{' '}
+            <span className="text-sm"> 6.7K</span>
+          </span>
+          <span className="flex flex-row gap-1 items-center">
+            <LikeIcon width={16} height={16} />{' '}
+            <span className="text-sm">398</span>
+          </span>
+        </div>
+        <div className="font-body text-sm text-stone700">December 28, 2024</div>
+      </div>
+    ),
     // href: '/blogs/5-key-compliance-requirements',
     image: BlogAIImage,
     readMore: false,
@@ -3669,26 +3868,56 @@ export const videoCardContent = [
   {
     id: 'digital-record-retention-best-practices',
     category: 'Product Demos',
-    title: 'MR Workflows: Complete Feature Walkthrough',
+    label: 'MR Workflows: Complete Feature Walkthrough',
     description:
       'Detailed demonstration of all workflow features and capabilities.',
     likes: '398',
     views: '6.7K',
-    date: 'December 08, 2024',
-    href: '/blogs/digital-record-retention-best-practices',
+    date: 'December 08, 2025',
+    authorDateWrap: (
+      <div className="w-full flex flex-wrap justify-between mt-4 border-t border-stone-300 pt-2">
+        <div className="flex flex-row gap-2">
+          <span className="flex flex-row gap-1 items-center">
+            <EyeIcon width={16} height={16} />{' '}
+            <span className="text-sm"> 3.9K</span>
+          </span>
+          <span className="flex flex-row gap-1 items-center">
+            <LikeIcon width={16} height={16} />{' '}
+            <span className="text-sm">245</span>
+          </span>
+        </div>
+        <div className="font-body text-sm text-stone700">December 08, 2025</div>
+      </div>
+    ),
+    // href: '/blogs/digital-record-retention-best-practices',
     image: VideoImage,
     readMore: false,
   },
   {
     id: 'automating-workflows-guide',
     category: 'Product Demos',
-    title: 'MR Requests: Streamline Record Retrieval',
+    label: 'MR Requests: Streamline Record Retrieval',
     description:
       'Complete overview of the MR Requests module and its powerful features.',
     likes: '398',
     views: '6.7K',
     date: 'November 12, 2024',
-    href: '/blogs/automating-workflows-guide',
+    authorDateWrap: (
+      <div className="w-full flex flex-wrap justify-between mt-4  border-t border-stone-300 pt-2">
+        <div className="flex flex-row gap-2">
+          <span className="flex flex-row gap-1 items-center">
+            <EyeIcon width={16} height={16} />{' '}
+            <span className="text-sm"> 3.5K</span>
+          </span>
+          <span className="flex flex-row gap-1 items-center">
+            <LikeIcon width={16} height={16} />{' '}
+            <span className="text-sm">223</span>
+          </span>
+        </div>
+        <div className="font-body text-sm text-stone700">November 12, 2025</div>
+      </div>
+    ),
+    // href: '/blogs/automating-workflows-guide',
     image: BlogTwoImage,
     readMore: false,
   },

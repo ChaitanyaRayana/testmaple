@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useRouter } from 'next/navigation';
 
 function BlogCard({ mapData = {} }) {
   const {
@@ -27,15 +28,24 @@ function BlogCard({ mapData = {} }) {
     });
   }, []);
 
+  const router = useRouter();
+
   return (
-    <article className="bg-white rounded-4xl overflow-hidden shadow-sm border flex flex-col h-full">
+    <article
+      onClick={() => {
+        if (href) {
+          router.push(href);
+        }
+      }}
+      className="bg-white rounded-4xl overflow-hidden shadow-sm border flex flex-col h-full"
+    >
       {/* Image cover */}
       <Link
         // data-aos="fade-down"
         // data-aos-duration="800"
         key={label}
         href={href}
-        className="block w-full h-48"
+        className="block w-full cursor-pointer h-48"
       >
         <Image
           src={image}
@@ -67,7 +77,7 @@ function BlogCard({ mapData = {} }) {
             // data-aos-duration="800"
             href={href}
             key={label}
-            className="text-gray-900 hover:underline"
+            className="text-gray-900 cursor-pointer hover:underline"
           >
             <h3 className="card-title text-xl font-heading font-extrabold leading-snug">
               {label}
@@ -85,11 +95,11 @@ function BlogCard({ mapData = {} }) {
           </p>
 
           {/* Author / date and CTA */}
-          <div className=" flex flex-col items-start gap-3 justify-between">
+          <div className="w-full flex flex-col items-start gap-3 justify-between">
             <div
               // data-aos="fade-left"
               // data-aos-duration="1200"
-              className="flex items-center gap-4 text-sm text-gray-500"
+              className="w-full flex items-center gap-4 text-sm text-gray-500"
             >
               {authorDateWrap
                 ? authorDateWrap
@@ -137,7 +147,7 @@ function BlogCard({ mapData = {} }) {
             {(readMore || buttonText) && (
               <Link
                 href={href}
-                className={`text-[#226fb7] font-medium inline-flex items-center gap-2 ${
+                className={`text-[#226fb7] font-medium cursor-pointer inline-flex items-center gap-2 ${
                   buttonText
                     ? 'w-full bg-white border p-1 justify-center border-stone-400 rounded-xl'
                     : ''
