@@ -10,7 +10,7 @@ import Fotter from '../common/Fotter';
 import ChipText from '../common/ChipText';
 import ZigZagHomeSection from '../common/ZigZagHomeSection';
 import Image from 'next/image';
-import heroSectionBgTwoImage from '@/public/assets/images/png/bgImages/bg1.png';
+import heroSectionBgTwoImage from '@/public/assets/images/png/bg-abstract.png';
 
 export default function SolutionPageClient({ contentToDisplay, pathName }) {
   useEffect(() => {

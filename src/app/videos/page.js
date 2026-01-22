@@ -144,7 +144,9 @@ function page({ headingStart = false }) {
     label: 'Ready to See MapleRecord in Action?',
     description:
       'Schedule a personalized demo with our team and discover how MapleRecord can transform your records management.',
-    buttonsText: ['Request a Demo'],
+    buttonsText: [
+      { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+    ],
   };
 
   return (
@@ -254,7 +256,7 @@ function page({ headingStart = false }) {
                 <div
                   // data-aos="fade-down"
                   // data-aos-duration="1200"
-                  className=" flex flex-wrap justify-center overflow-x-auto w-max mx-auto rounded-3xl gap-4"
+                  className=" flex flex-wrap justify-start overflow-x-auto w-full mx-auto gap-4"
                 >
                   {topicsText?.map((item, i) => (
                     <Button

@@ -8,7 +8,7 @@ import CenterTextCardsSection from '../common/CenterTextCardsSection';
 import ScheduleBanner from '../common/ScheduleBanner';
 import Fotter from '../common/Fotter';
 import Image from 'next/image';
-import heroSectionBgOneImage from '@/public/assets/images/png/bgImages/bg1.png';
+import heroSectionBgOneImage from '@/public/assets/images/png/bg-abstract.png';
 
 export default function PlatformPageClient({ contentToDisplay }) {
   useEffect(() => {
@@ -62,7 +62,7 @@ export default function PlatformPageClient({ contentToDisplay }) {
               mustHaveBottomPadding={''}
               mustHaveLeftRightPadding={''}
               heroSection={true}
-              zigZagClassName="flex g:flex-row max-lg:flex-col  w-full justify-between gap-6  p-8"
+              zigZagClassName="flex lg:flex-row max-lg:flex-col  w-full justify-between gap-6  p-8"
             />
           </section>
         </VerticalBorderPattern>

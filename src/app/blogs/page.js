@@ -74,7 +74,9 @@ function page({ headingStart = false }) {
     chipText: 'Technology',
     description:
       'Discover how artificial intelligence is transforming the way organizations manage, classify, and retrieve critical records in 2024 and beyond.',
-    buttonsText: ['Request a Demo'],
+    buttonsText: [
+      { label: 'Request a Demo', href: '/contact-us#schedule-demo' },
+    ],
     bottomText: (
       <div className="w-auto flex flex-wrap gap-2">
         <span className="flex flex-row gap-1">
