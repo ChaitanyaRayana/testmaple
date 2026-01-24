@@ -93,7 +93,7 @@ function Cards({
               data-aos-duration={
                 hasCardWithAnimation ? '' : businessSection ? '200' : ''
               }
-              className="w-12 h-12 text-center text-[#226fb7] flex justify-center items-center"
+              className="w-12 h-12 text-center text-primaryTextColor flex justify-center items-center"
             >
               {content?.iconText}
             </div>

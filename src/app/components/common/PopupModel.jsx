@@ -32,7 +32,7 @@ export default function PopupModal({
         {icon && (
           <div className="mb-4 flex justify-center">
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#d2e6ed]">
-              <Icon color={'text-[#226fb7]'} />
+              <Icon color={'text-primaryTextColor'} />
             </div>
           </div>
         )}

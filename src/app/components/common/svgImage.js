@@ -280,7 +280,7 @@ export const CircleThickIcon = ({
       strokeLinejoin="round"
       className={`lucide lucide-circle-check w-${width / 4} h-${
         height / 4
-      } text-[#226fb7] shrink-0`}
+      } text-primaryTextColor shrink-0`}
       data-fg-cbux30="207.17:369.5204:/src/app/components/ProductShowcase.tsx:152:21:5943:68:e:CheckCircle2::::::DMDP"
     >
       <circle cx="12" cy="12" r="10"></circle>
@@ -524,7 +524,7 @@ export const SheldIcon = ({
 export const SheldCardIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -548,7 +548,7 @@ export const SheldCardIcon = ({
 export const FinanceIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -617,7 +617,7 @@ export const BrainIcon = ({ width = 24, height = 24 }) => {
       strokeLinejoin="round"
       className={`lucide lucide-brain w-${width / 4} h-${
         height / 4
-      } text-[#226fb7]`}
+      } text-primaryTextColor`}
       data-fg-dvy214="207.8:207.2719:/src/app/components/Features.tsx:61:19:2387:41:e:Icon"
     >
       <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path>
@@ -635,7 +635,7 @@ export const BrainIcon = ({ width = 24, height = 24 }) => {
 export const LockIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -668,7 +668,7 @@ export const LightingIcon = ({ width = 24, height = 24 }) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={`lucide lucide-zap w-${width / 4} h-${height / 4} text-[#226fb7]`}
+      className={`lucide lucide-zap w-${width / 4} h-${height / 4} text-primaryTextColor`}
       data-fg-dvy214="207.8:207.2719:/src/app/components/Features.tsx:61:19:2387:41:e:Icon"
     >
       <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
@@ -678,7 +678,7 @@ export const LightingIcon = ({ width = 24, height = 24 }) => {
 export const UnlimitedIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -703,7 +703,7 @@ export const UnlimitedIcon = ({
 export const BarChatIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -758,7 +758,7 @@ export const CircleQuestionMarkIcon = ({
 export const VArrowIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -810,7 +810,7 @@ export const FolderIcon = ({
 export const ClockIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -835,7 +835,7 @@ export const ClockIcon = ({
 export const MagnifyingIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -860,7 +860,7 @@ export const MagnifyingIcon = ({
 export const PuzzleIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -883,7 +883,7 @@ export const PuzzleIcon = ({
 export const GraphImproveIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -909,7 +909,7 @@ export const GraphImproveIcon = ({
 export const AwardIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -983,7 +983,7 @@ export const VideoRecorderIcon = ({
 export const VideoPlayIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -1008,7 +1008,7 @@ export const VideoPlayIcon = ({
 export const EyeIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -1032,7 +1032,7 @@ export const EyeIcon = ({
 export const LikeIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -1056,7 +1056,7 @@ export const LikeIcon = ({
 export const LocationIcon = ({
   width = 28,
   height = 28,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -1080,7 +1080,7 @@ export const LocationIcon = ({
 export const PhoneIcon = ({
   width = 28,
   height = 28,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -1103,7 +1103,7 @@ export const PhoneIcon = ({
 export const MailIcon = ({
   width = 28,
   height = 28,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -1127,7 +1127,7 @@ export const MailIcon = ({
 export const WarningIcon = ({
   width = 28,
   height = 28,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -1154,7 +1154,7 @@ export const WarningIcon = ({
 export const FunnelIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -1177,7 +1177,7 @@ export const FunnelIcon = ({
 export const GlobeIcon = ({
   width = 20,
   height = 20,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -1231,7 +1231,7 @@ export const TagIcon = ({
 export const AIIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
@@ -1258,7 +1258,7 @@ export const AIIcon = ({
 export const PaintHolderIcon = ({
   width = 24,
   height = 24,
-  color = 'text-[#226fb7]',
+  color = 'text-primaryTextColor',
 }) => {
   return (
     <svg
