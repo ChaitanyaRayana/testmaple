@@ -331,7 +331,7 @@ function ZigZagContent({
               alt={toSentenceCase(mapData?.label)}
               width={500}
               height={300}
-              className={`${heroSection ? 'lg:mt-15 lg:h-140 w-full object-fill  h-max' : mapData?.label === 'How MR Workflows Works' ? 'lg:min-h-130 max-md:h-120 w-fit max-md:object-contain items-start lg:object-top' : hasCardWithAnimation ? 'w-fit max-md:object-contain items-start lg:object-top' : 'max-md:h-120 max-md:justify-start object-contain'} rounded-xl max-h-full w-auto`}
+              className={`${heroSection ? 'lg:h-140 w-full object-fill  h-max' : mapData?.label === 'How MR Workflows Works' ? 'lg:min-h-130 max-md:h-120 w-fit max-md:object-contain items-start lg:object-top' : hasCardWithAnimation ? 'w-fit max-md:object-contain items-start lg:object-top' : 'max-md:h-120 max-md:justify-start object-contain'} rounded-xl max-h-full w-auto`}
             />
             {/* </div> */}
           </div>

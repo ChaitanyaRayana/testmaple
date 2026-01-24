@@ -92,7 +92,7 @@ export const neverMissDeadLine = [
       'Role-based access',
     ],
     image: MRRecordImage,
-    icon: <FileIcon width={16} height={16} color="text-[#226fb7]" />,
+    icon: <FileIcon width={16} height={16} color="text-primaryTextColor" />,
     href: '/platform/mr-records',
   },
   {
@@ -101,7 +101,7 @@ export const neverMissDeadLine = [
       'Streamlined system for managing public and internal information requests.',
     featureHighlight: ['Auto intake', 'Secure redaction', 'Public portal'],
     image: MRRequestImage,
-    icon: <MessagerIcon width={16} height={16} color="text-[#226fb7]" />,
+    icon: <MessagerIcon width={16} height={16} color="text-primaryTextColor" />,
     href: '/platform/mr-request',
   },
   {
@@ -113,7 +113,7 @@ export const neverMissDeadLine = [
       'Live monitoring',
     ],
     image: MRWorkFlowImage,
-    icon: <WorkflowIcon width={16} height={16} color="text-[#226fb7]" />,
+    icon: <WorkflowIcon width={16} height={16} color="text-primaryTextColor" />,
     href: '/platform/mr-workflows',
   },
   {
@@ -126,7 +126,9 @@ export const neverMissDeadLine = [
       'Direct record integration',
     ],
     image: MRFormBuilderImage,
-    icon: <FileRightIcon width={16} height={16} color="text-[#226fb7]" />,
+    icon: (
+      <FileRightIcon width={16} height={16} color="text-primaryTextColor" />
+    ),
     href: '/platform/mr-forms',
   },
 ];

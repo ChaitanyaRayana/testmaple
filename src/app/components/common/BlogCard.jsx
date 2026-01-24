@@ -65,7 +65,7 @@ function BlogCard({ mapData = {} }) {
             key={label}
             className="mb-4"
           >
-            <span className="inline-block bg-[#DFEDFA] text-[#226fb7] px-3 py-1 rounded-full text-[12px]">
+            <span className="inline-block bg-[#DFEDFA] text-primaryTextColor px-3 py-1 rounded-full text-[12px]">
               {category || location}
             </span>
           </div>
@@ -147,7 +147,7 @@ function BlogCard({ mapData = {} }) {
             {(readMore || buttonText) && (
               <Link
                 href={href}
-                className={`text-[#226fb7] font-medium cursor-pointer inline-flex items-center gap-2 ${
+                className={`text-primaryTextColor font-medium cursor-pointer inline-flex items-center gap-2 ${
                   buttonText
                     ? 'w-full bg-white border p-1 justify-center border-stone-400 rounded-xl'
                     : ''

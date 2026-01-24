@@ -31,7 +31,7 @@ export default function page() {
       'MapleRecord introduces advanced AI classification technology that automatically categorizes documents with 99.9% accuracy, reducing manual processing time by up to 80%.',
     primaryCta: { text: 'Read Full Release', href: '#' },
     secondaryCta: { text: 'Download PDF', href: '#' },
-    icon: <FileIcon color="text-[#226fb7]" />,
+    icon: <FileIcon color="text-primaryTextColor" />,
   };
 
   const scheduleBannerData = {
