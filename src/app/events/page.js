@@ -15,6 +15,8 @@ import { eventsContent } from '../constants/constants';
 import { toSentenceCase } from '../utils/utils';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import toast from 'react-hot-toast';
+import { supabase } from '../../lib/supabase/client';
 
 export default function page() {
   const statContent = [
@@ -33,7 +35,7 @@ export default function page() {
   const [isSubmitting, setIsSubmitting] = useState();
 
   const [isSuccessfulEventSubmit, setIsSuccessfulEventSubmit] = useState();
-  const [isOpenWebinar, setIsOpenWebinar] = useState('');
+  const [isOpenEvent, setIsOpenEvent] = useState('');
   const [formData, setFormData] = useState({
     fullName: '',
     businessEmail: '',
@@ -41,31 +43,8 @@ export default function page() {
     companyName: '',
   });
 
-  const handleEventSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Add your form submission logic here
-    console.log('Form submitted:', email);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsOpenWebinar(false);
-      setIsSuccessfulEventSubmit(true);
-
-      // Reset form
-      setFormData({
-        fullName: '',
-        businessEmail: '',
-        workPhone: '',
-        companyName: '',
-      });
-    }, 1000);
-  };
-
   useEffect(() => {
-    if (isOpenWebinar) {
+    if (isOpenEvent) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
@@ -75,7 +54,7 @@ export default function page() {
     return () => {
       document.body.style.overflow = '';
     };
-  }, [isOpenWebinar]);
+  }, [isOpenEvent]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -93,6 +72,62 @@ export default function page() {
     });
   }, []);
 
+  console.log({ isOpenEvent });
+
+  const handleEventSubmit = async () => {
+    if (isSuccessfulEventSubmit) {
+      setIsSuccessfulEventSubmit(false);
+      return;
+    }
+    setIsSubmitting(true);
+    toast.loading('Please wait');
+
+    const full_name = formData?.fullName;
+    const email = formData?.businessEmail;
+    const company_name = formData?.companyName;
+    const phone_number = formData?.workPhone;
+    const event_name = isOpenEvent?.label;
+
+    const tableName = process.env.NEXT_PUBLIC_WEBINARTABLENAME;
+
+    const payload = {
+      full_name,
+      email,
+      company_name,
+      phone_number,
+      event_name,
+    };
+    const resp = await supabase.from(tableName).insert([
+      {
+        ...payload,
+        form_type: 'event',
+      },
+    ]);
+
+    if (resp?.status === 201) {
+      setIsSubmitting(false);
+      setIsOpenEvent(false);
+      setIsSuccessfulEventSubmit(true);
+      toast.dismiss();
+
+      // Reset form
+      setFormData({
+        fullName: '',
+        businessEmail: '',
+        workPhone: '',
+        companyName: '',
+      });
+    }
+
+    if (resp?.error) {
+      toast.error('Failed to register! please try again in sometime');
+      setIsSubmitting(false);
+      // setIsOpenEvent(false);
+      toast.dismiss();
+      throw new Error(error.message);
+    }
+  };
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
       <Navbar />
@@ -102,7 +137,7 @@ export default function page() {
         <VerticalBorderPattern
           gradientName={'backgroundGlow backgroundGradient'}
         >
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 pt-30 pb-15 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center max-xs:px-5 xs:px-10 pt-30 pb-15 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4  justify-center
               `}
@@ -153,7 +188,7 @@ export default function page() {
         {/* Events list */}
 
         <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 py-15 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-centermax-xs:px-5 xs:px-10 py-15 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify start`}
             >
@@ -178,7 +213,7 @@ export default function page() {
                 <FeaturedWebinar
                   mapData={item}
                   key={i}
-                  setIsOpenWebinar={setIsOpenWebinar}
+                  setIsOpenEvent={setIsOpenEvent}
                 />
               ))}
             </div>
@@ -205,15 +240,16 @@ export default function page() {
       <Fotter />
 
       <PopupModal
-        isOpen={isOpenWebinar || isSuccessfulEventSubmit}
+        isOpen={isOpenEvent || isSuccessfulEventSubmit}
         onClose={() => {
-          setIsOpenWebinar(false);
+          setIsOpenEvent(false);
           setIsSubmitting(false);
+          setIsSuccessfulEventSubmit(false);
         }}
         title={
           isSuccessfulEventSubmit
             ? 'Thank you!'
-            : `Register for ${toSentenceCase(isOpenWebinar?.label)} event.`
+            : `Register for ${toSentenceCase(isOpenEvent?.label)} event.`
         }
         description={
           isSuccessfulEventSubmit
@@ -275,6 +311,7 @@ export default function page() {
               type="submit"
               disabled={isSubmitting}
               padding="w-full rounded-lg"
+              onClickButton={handleEventSubmit}
             >
               {isSubmitting
                 ? 'Submitting...'

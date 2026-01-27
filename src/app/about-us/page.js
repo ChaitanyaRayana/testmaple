@@ -35,7 +35,7 @@ export default function page() {
       <main className="flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
         <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
           <section className="flex w-full overflow-hidden  max-w-7xl pt-30 pb-15  flex-row items-center min-h-screen text-center">
-            <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-12">
+            <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center max-xs:px-5 xs:px-10 gap-12">
               <div className="flex flex-col h-full items-center lg:w-full  justify-center gap-3 ">
                 <div className="flex justify-center w-full">
                   <ChipText heroSection={true} text={'Company'} />
@@ -84,7 +84,7 @@ export default function page() {
 
         {/* Section  Three*/}
         <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 py-15 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center max-xs:px-5 xs:px-10 py-15 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >

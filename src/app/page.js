@@ -71,10 +71,10 @@ export default function Home() {
             height={600}
             data-aos="fade-left"
             data-aos-duration="800"
-            className="absolute z-0 max-w-300 mx-auto px-10 w-full h-full pb-1 rounded-2xl"
+            className="absolute z-0 max-w-300 left-0 max-xs:px-5 xs:max-xs:px-5 xs:px-10 w-full h-full pb-1 rounded-2xl"
           />
           <section className="flex w-full overflow-hidden mx-auto flex-row items-center min-h-screen text-center pt-30 pb-15 ">
-            <div className="grid lg:grid-cols-2 gap-12  w-full  max-w-300 mx-auto flex-row flex-1 h-full items-start justify-between px-10">
+            <div className="grid lg:grid-cols-2 gap-12  w-full  max-w-300 mx-auto flex-row flex-1 h-full items-start justify-between max-xs:px-5 xs:max-xs:px-5 xs:px-10">
               <div
                 data-aos="fade-up"
                 data-aos-duration="800"
@@ -105,7 +105,7 @@ export default function Home() {
               <div
                 data-aos="fade-down"
                 data-aos-duration="800"
-                className="w-full flex h-full  justify-center"
+                className="xs:w-full max-xs:w-auto max-xs:pr-10 flex xs:h-full  max-xs:justify-start xs:justify-center"
               >
                 <Image
                   src={homeRecordTwo}
@@ -114,7 +114,7 @@ export default function Home() {
                   height={600}
                   data-aos="fade-left"
                   data-aos-duration="800"
-                  className="lg:pt-15 object-top-right lg:h-140 w-full h-max  rounded-2xl"
+                  className="lg:pt-15 object-top-right lg:h-140 xs:w-full max-xs:w-80  h-max  rounded-2xl"
                 />
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function Home() {
         {/* Never miss a deadline. */}
         <VerticalBorderPattern gradientName="backgroundGradientAnimation">
           <section className="flex w-full overflow-hidden  max-w-7xl  flex-row items-center min-h-screen text-center pt-15">
-            <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
+            <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center max-xs:px-5 xs:px-10 gap-8">
               <div className="flex flex-col h-full items-start lg:w-full justify-center gap-8 ">
                 <div
                   // data-aos="fade-up"
@@ -269,7 +269,7 @@ export default function Home() {
         {/* How we help. */}
         <VerticalBorderPattern gradientName="backgroundGradient">
           <section className="flex w-full overflow-hidden  max-w-7xl  flex-row items-center min-h-screen text-center py-15">
-            <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
+            <div className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center max-xs:px-5 xs:px-10 gap-8">
               <div className="flex flex-col h-full items-start lg:w-full justify-center gap-8 ">
                 <div
                   // data-aos="fade-up"
@@ -363,7 +363,7 @@ export default function Home() {
                       ?.filter((item, i) => i === selectedHelpMeBtn)
                       ?.map((item, index) => (
                         <div
-                          className="w-full overflow-hidden max-md:h-120 max-md:justify-start flex justify-center"
+                          className="w-full overflow-hidden max-xs:h-80 max-md:h-120 max-md:justify-start flex justify-center"
                           key={index}
                           // data-aos="fade-down"
                           // data-aos-duration="800"
@@ -391,7 +391,7 @@ export default function Home() {
               mapData={homeZipZapContent}
               mustHaveBottomPadding=""
               mustHaveLeftRightPadding=""
-              padding={{ top: '', around: 'px-10 ' }}
+              padding={{ top: '', around: 'max-xs:px-5 xs:px-10 ' }}
             />
           </section>
         </VerticalBorderPattern>
@@ -400,7 +400,7 @@ export default function Home() {
         <VerticalBorderPattern gradientName="backgroundGradientAnimation">
           <CenterTextCardsSection
             mapData={powerfulCardSectionData}
-            mustHaveLeftRightPadding="px-10 pt-15"
+            mustHaveLeftRightPadding="max-xs:px-5 xs:px-10 pt-15"
             mustHaveBottomPadding="pb-15"
           />
         </VerticalBorderPattern>

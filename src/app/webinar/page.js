@@ -15,6 +15,9 @@ import { webinarsContent } from '../constants/constants';
 import { toSentenceCase } from '../utils/utils';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { submitWebinarForm } from '../actions/webinarFormAction';
+import { supabase } from '../../lib/supabase/client';
+import toast from 'react-hot-toast';
 
 function page({ headingStart = false }) {
   const statContent = [
@@ -45,23 +48,6 @@ function page({ headingStart = false }) {
     companyName: '',
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Add your form submission logic here
-    console.log('Form submitted:', email);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsOpen(false);
-      setIsSuccessful(true);
-      // Reset form
-      setEmail('');
-    }, 1000);
-  };
-
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -75,31 +61,8 @@ function page({ headingStart = false }) {
     };
   }, [isOpen]);
 
-  const handleEventSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Add your form submission logic here
-    console.log('Form submitted:', email);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsOpenWebinar(false);
-      setIsSuccessfulEventSubmit(true);
-
-      // Reset form
-      setFormData({
-        fullName: '',
-        businessEmail: '',
-        workPhone: '',
-        companyName: '',
-      });
-    }, 1000);
-  };
-
   useEffect(() => {
-    if (isOpenWebinar) {
+    if (isOpenWebinar || isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
@@ -127,6 +90,96 @@ function page({ headingStart = false }) {
     });
   }, []);
 
+  const handleWebinarSubmit = async () => {
+    if (isSuccessfulEventSubmit) {
+      setIsSuccessfulEventSubmit(false);
+      return;
+    }
+    setIsSubmitting(true);
+    toast.loading('Please wait');
+
+    const full_name = formData?.fullName;
+    const email = formData?.businessEmail;
+    const company_name = formData?.companyName;
+    const phone_number = formData?.workPhone;
+    const webinar_name = isOpenWebinar?.label;
+
+    const tableName = process.env.NEXT_PUBLIC_WEBINARTABLENAME;
+
+    const payload = {
+      // user_id: (await supabase.auth.getUser()).data.user?.id,
+      full_name,
+      email,
+      company_name,
+      phone_number,
+      webinar_name,
+    };
+    const resp = await supabase.from(tableName).insert([
+      {
+        ...payload,
+        form_type: 'webinar',
+      },
+    ]);
+
+    if (resp?.status === 201) {
+      setIsSubmitting(false);
+      setIsOpenWebinar(false);
+      setIsSuccessfulEventSubmit(true);
+      toast.dismiss();
+
+      // Reset form
+      setFormData({
+        fullName: '',
+        businessEmail: '',
+        workPhone: '',
+        companyName: '',
+      });
+    }
+
+    console.log({ resp });
+
+    if (resp?.error) {
+      toast.error('Failed to register! please try again in sometime');
+      setIsSubmitting(false);
+      // setIsOpenWebinar(false);
+      toast.dismiss();
+      throw new Error(error.message);
+    }
+  };
+
+  const handleSubscription = async (e) => {
+    toast.loading('Please wait');
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const tableName = process.env.NEXT_PUBLIC_SUBSCRIPTIONTABLENAME;
+
+    const resp = await supabase.from(tableName).insert([
+      {
+        email,
+        subscription_type: 'webinar',
+      },
+    ]);
+
+    // Simulate API call
+    if (resp?.status === 201) {
+      toast.dismiss();
+      setIsSubmitting(false);
+      setIsOpen(false);
+      setIsSuccessful(true);
+      // Reset form
+      setEmail('');
+    }
+
+    if (resp?.error) {
+      toast.error('Failed to register! please try again in sometime');
+      setIsSubmitting(false);
+      // setIsOpenEvent(false);
+      toast.dismiss();
+      throw new Error(error.message);
+    }
+  };
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
       <Navbar />
@@ -134,7 +187,7 @@ function page({ headingStart = false }) {
       <main className="flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
         {/* Section one */}
         <VerticalBorderPattern gradientName={'backgroundGlow'}>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 pt-30 pb-15 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center max-xs:px-5 xs:px-10 pt-30 pb-15 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 ${
                 headingStart ? 'justify-start' : 'justify-center'
@@ -203,7 +256,7 @@ function page({ headingStart = false }) {
         {/* Webinar list */}
 
         <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 py-15 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center max-xs:px-5 xs:px-10 py-15 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify start`}
             >
@@ -237,7 +290,7 @@ function page({ headingStart = false }) {
 
         {/* Never Miss a Webinar */}
         <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
-          <div className="flex flex-col gap-8 max-w-300 mx-auto px-10 py-15">
+          <div className="flex flex-col gap-8 max-w-300 mx-auto max-xs:px-5 xs:px-10 py-15">
             <div className="flex flex-col w-full h-full items-center lg:w-full justify-center gap-4 ">
               <div
                 // data-aos="fade-up"
@@ -273,6 +326,7 @@ function page({ headingStart = false }) {
           onClose={() => {
             setIsOpen(false);
             setIsSubmitting(false);
+            setIsSuccessfulEventSubmit(false);
           }}
           title={isSuccessful ? 'Thank you!' : 'Subscribe to Our Newsletter'}
           description={
@@ -282,7 +336,10 @@ function page({ headingStart = false }) {
           }
           icon={isSuccessful ? 'CircleThickIcon' : 'MailIcon'}
           ppoupContent={
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form
+              onSubmit={handleSubscription}
+              className="space-y-4 my-auto h-full"
+            >
               {/* First Name & Last Name */}
               {!isSuccessful && (
                 <Input
@@ -323,6 +380,7 @@ function page({ headingStart = false }) {
           onClose={() => {
             setIsOpenWebinar(false);
             setIsSubmitting(false);
+            setIsSuccessfulEventSubmit(false);
           }}
           title={
             isSuccessfulEventSubmit
@@ -336,7 +394,7 @@ function page({ headingStart = false }) {
           }
           icon={isSuccessfulEventSubmit ? 'CircleThickIcon' : 'CalendarIcon'}
           ppoupContent={
-            <form onSubmit={handleEventSubmit} className="space-y-4 ">
+            <form onSubmit={handleWebinarSubmit} className="space-y-4 ">
               {/* First Name & Last Name */}
               {!isSuccessfulEventSubmit && (
                 <div className="space-y-4 ">
@@ -389,6 +447,7 @@ function page({ headingStart = false }) {
                 type="submit"
                 disabled={isSubmitting}
                 padding="w-full rounded-lg"
+                onClickButton={handleWebinarSubmit}
               >
                 {isSubmitting
                   ? 'Submitting...'

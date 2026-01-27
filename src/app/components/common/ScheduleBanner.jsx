@@ -13,7 +13,7 @@ function ScheduleBanner({ content }) {
     });
   }, []);
   return (
-    <div className="flex flex-col w-full max-w-7xl bg-stone900 px-20">
+    <div className="flex flex-col w-full max-w-7xl bg-stone900 xs:px-20">
       <div className="flex flex-col gap-8 max-w-300 mx-auto p-10">
         <div className="flex flex-col h-full items-start lg:w-full justify-center gap-4 ">
           <div

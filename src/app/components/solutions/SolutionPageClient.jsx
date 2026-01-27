@@ -59,7 +59,7 @@ export default function SolutionPageClient({ contentToDisplay, pathName }) {
             data-aos-duration="800"
             className="absolute z-0  max-w-7xl mx-auto w-full h-full px-2 pb-1 "
           />
-          <section className="flex  max-w-300 mx-auto px-10 pt-30 pb-15  flex-row gap-10">
+          <section className="flex  max-w-300 mx-auto max-xs:px-5 xs:px-10 pt-30 pb-15  flex-row gap-10">
             <ZigZagContent
               mapData={contentToDisplay?.sectionOne}
               mustHaveBottomPadding={''}
@@ -111,7 +111,7 @@ export default function SolutionPageClient({ contentToDisplay, pathName }) {
                       : 'max-lg:h-max lg:h-120'
                   }`}
                 >
-                  <div className="flex flex-col gap-5 px-10">
+                  <div className="flex flex-col gap-5 max-xs:px-5 xs:px-10">
                     {contentToDisplay?.sectionThree?.chipText && (
                       <ChipText
                         styling="w-fit"

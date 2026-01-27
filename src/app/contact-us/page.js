@@ -66,7 +66,7 @@ export default function page() {
         <VerticalBorderPattern gradientName={'backgroundGlow'}>
           <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center  pb-15 pt-30 gap-8">
             <div
-              className={`flex flex-col h-full items-start lg:w-full  px-10 gap-4 justify-center`}
+              className={`flex flex-col h-full items-start lg:w-full max-xs:px-5 xs:px-10 gap-4 justify-center`}
             >
               <div
                 data-aos="fade-up"
@@ -89,7 +89,7 @@ export default function page() {
         <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
           <section
             id="schedule-demo"
-            className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 py-15 gap-8"
+            className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center max-xs:px-5 xs:px-10 py-15 gap-8"
           >
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
@@ -107,7 +107,7 @@ export default function page() {
         </VerticalBorderPattern>
         {/* Cards */}
         <VerticalBorderPattern gradientName={'backgroundGradient'}>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 py-15 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center max-xs:px-5 xs:px-10 py-15 gap-8">
             <div className="flex max-md:flex-wrap lg:flex-row gap-6 w-full h-full pb-20">
               {contactDetails?.map((item, i) => (
                 <Cards

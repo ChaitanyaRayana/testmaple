@@ -16,7 +16,7 @@ function FAQSection() {
   }
   return (
     <div className="w-full max-w-7xl pt-15 pb-30">
-      <div className="flex max-w-300 mx-auto flex-col gap-8 px-10">
+      <div className="flex max-w-300 mx-auto flex-col gap-8 max-xs:px-5 xs:px-10">
         <div className="flex flex-col h-full items-start lg:w-full justify-center gap-2 ">
           <div className="flex justify-center w-full">
             <ChipText

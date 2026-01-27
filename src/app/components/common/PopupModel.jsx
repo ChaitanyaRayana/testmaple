@@ -19,7 +19,7 @@ export default function PopupModal({
       <div className="absolute inset-0 bg-black/50 " onClick={onClose} />
 
       {/* Modal */}
-      <div className="relative z-10 w-full max-w-110 my-40  overflow-y-auto max-lg:h-120 rounded-2xl bg-white p-8 shadow-xl">
+      <div className="relative z-10 w-full max-w-110 mt-auto mb-auto  overflow-y-auto rounded-2xl bg-white p-8 shadow-xl">
         {/* Close Button */}
         <button
           onClick={onClose}

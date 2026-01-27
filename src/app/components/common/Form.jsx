@@ -6,6 +6,8 @@ import Input from './Input';
 import Button from './Button';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import toast from 'react-hot-toast';
+import { supabase } from '../../../lib/supabase/client';
 
 function ContactFormWithMap() {
   const [formData, setFormData] = useState({
@@ -35,17 +37,37 @@ function ContactFormWithMap() {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubscription = async (e) => {
+    toast.loading('Please wait');
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Add your form submission logic here
-    console.log('Form submitted:', formData);
+    const tableName = process.env.NEXT_PUBLIC_MAPLECONTACTUS;
+
+    const payload = {
+      first_name: formData?.firstName,
+      last_name: formData?.lastName,
+      email: formData?.businessEmail,
+      phone_number: formData?.workPhone,
+      company_name: formData?.companyName,
+      industry_name: formData?.industry,
+      description: formData?.message,
+    };
+
+    const resp = await supabase.from(tableName).insert([
+      {
+        ...payload,
+      },
+    ]);
 
     // Simulate API call
-    setTimeout(() => {
+    if (resp?.status === 201) {
+      toast.dismiss();
       setIsSubmitting(false);
-      alert('Form submitted successfully!');
+      toast.success(
+        'Thanks for reaching out! We’ve received your message and will get back to you soon.'
+      );
+
       // Reset form
       setFormData({
         firstName: '',
@@ -56,7 +78,15 @@ function ContactFormWithMap() {
         industry: '',
         message: '',
       });
-    }, 1000);
+    }
+
+    if (resp?.error) {
+      toast.error('Failed to register! please try again in sometime');
+      setIsSubmitting(false);
+      // setIsOpenEvent(false);
+      toast.dismiss();
+      throw new Error(error.message);
+    }
   };
 
   return (
@@ -87,7 +117,7 @@ function ContactFormWithMap() {
             data-aos-duration="800"
             className="bg-white rounded-2xl shadow-lg p-8 lg:p-10"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubscription} className="space-y-6">
               {/* First Name & Last Name */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
