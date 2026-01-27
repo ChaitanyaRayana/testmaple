@@ -82,7 +82,6 @@ function ZigZagContent({
       },
     },
   };
-  console.log({ mapData });
 
   return (
     <div
@@ -323,7 +322,7 @@ function ZigZagContent({
             data-aos={heroSection ? 'fade-down' : ''}
             data-aos-duration={heroSection ? '800' : ''}
             key={mapData?.image}
-            className={`w-full flex justify-center  ${hasCardWithAnimation ? '  items-start  sticky top-12 overflow-hidden' : 'h-full max-h-120 items-center'}`}
+            className={`w-full flex justify-center  ${hasCardWithAnimation ? '  items-start  sticky top-12 overflow-hidden' : 'h-full max-xs:h-90 max-h-120 items-center'}`}
           >
             {/* <div className="w-full  flex justify-center items-center p-4"> */}
             <Image

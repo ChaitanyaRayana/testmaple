@@ -2,8 +2,7 @@ import { Geist, DM_Sans } from 'next/font/google';
 import './globals.css';
 import { Suspense } from 'react';
 import CircularLoading from './components/common/loader/Loader';
-import Navbar from './components/Navbar';
-import Fotter from './components/common/Fotter';
+import { Toaster } from 'react-hot-toast';
 
 const geist = Geist({
   subsets: ['latin'],
@@ -31,6 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geist.variable} ${dmSans.variable} antialiased`}>
+        <Toaster position="top-center" />
         <Suspense fallback={<CircularLoading />}>
           {/* <div className=" p-[0_12px_12px] bg-white"> */}
           {children}

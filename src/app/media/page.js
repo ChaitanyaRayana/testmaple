@@ -57,7 +57,7 @@ export default function page() {
         <VerticalBorderPattern
           gradientName={'backgroundGlow backgroundGradient'}
         >
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 pt-30 pb-15 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-centermax-xs:px-5 xs:px-10 pt-30 pb-15 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 justify-center`}
             >
@@ -97,7 +97,7 @@ export default function page() {
 
         {/* Section two */}
         <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
-          <section className="flex  max-w-300 mx-auto px-10 py-15 w-full  flex-row gap-10">
+          <section className="flex  max-w-300 mx-auto max-xs:px-5 xs:px-10 py-15 w-full  flex-row gap-10">
             <div className="flex flex-col w-full gap-4">
               <div className="text-start">
                 <h2
@@ -124,7 +124,7 @@ export default function page() {
 
         {/* News Coverage  */}
         <VerticalBorderPattern gradientName={' backgroundGradient'}>
-          <section className="flex  max-w-300 mx-auto px-10 py-15   flex-row gap-10">
+          <section className="flex  max-w-300 mx-auto max-xs:px-5 xs:px-10 py-15   flex-row gap-10">
             <div className="flex flex-col gap-4">
               <div
                 data-aos="fade-up"

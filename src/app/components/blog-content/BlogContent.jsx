@@ -84,7 +84,7 @@ export default function BlogContent({ contentToDisplay }) {
           gradientName="backgroundGradientAnimation"
         >
           <section className=" max-w-300 w-full h-full gap-12 pb-15 lg:px-30 max-md:px-20">
-            {/* <p className="text-[#1f2937] text-base font-body font-normal leading-7 px-10 mt-6"> */}
+            {/* <p className="text-[#1f2937] text-base font-body font-normal leading-7 max-xs:px-5 xs:px-10 mt-6"> */}
             <ReactMarkdown
               children={contentToDisplay?.markdownText}
               remarkPlugins={[remarkGfm, remarkHtml]}
@@ -137,7 +137,7 @@ export default function BlogContent({ contentToDisplay }) {
 
         <section className="flex w-full overflow-hidden  max-w-7xl mx-auto  flex-row gap-10 items-start justify-center min-h-screen">
           <VerticalBorderPattern gradientName={'backgroundGlow'}>
-            <section className="flex  max-w-300 mx-auto py-15 px-10   flex-row gap-10">
+            <section className="flex  max-w-300 mx-auto py-15 max-xs:px-5 xs:px-10   flex-row gap-10">
               <div className="flex flex-col gap-4">
                 <div className="font-heading text-3xl text-black text-start">
                   Latest Articles

@@ -20,6 +20,8 @@ import BlogAIImage from '../../../public/assets/images/png/BlogAIImage.png';
 import PopupModal from '../components/common/PopupModel';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { supabase } from '../../lib/supabase/client';
+import toast from 'react-hot-toast';
 
 function page({ headingStart = false }) {
   const topicsText = [
@@ -38,23 +40,6 @@ function page({ headingStart = false }) {
   const [isSubmitting, setIsSubmitting] = useState();
   const [email, setEmail] = useState('');
   const [isSuccessful, setIsSuccessful] = useState();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Add your form submission logic here
-    console.log('Form submitted:', email);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsOpen(false);
-      setIsSuccessful(true);
-      // Reset form
-      setEmail('');
-    }, 1000);
-  };
 
   useEffect(() => {
     if (isOpen) {
@@ -105,6 +90,39 @@ function page({ headingStart = false }) {
     });
   }, []);
 
+  const handleSubscription = async (e) => {
+    toast.loading('Please wait');
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const tableName = process.env.NEXT_PUBLIC_SUBSCRIPTIONTABLENAME;
+
+    const resp = await supabase.from(tableName).insert([
+      {
+        email,
+        subscription_type: 'blogs',
+      },
+    ]);
+
+    // Simulate API call
+    if (resp?.status === 201) {
+      toast.dismiss();
+      setIsSubmitting(false);
+      setIsOpen(false);
+      setIsSuccessful(true);
+      // Reset form
+      setEmail('');
+    }
+
+    if (resp?.error) {
+      toast.error('Failed to register! please try again in sometime');
+      setIsSubmitting(false);
+      // setIsOpenEvent(false);
+      toast.dismiss();
+      throw new Error(error.message);
+    }
+  };
+
   return (
     <div className={`flex min-h-screen w-full flex-col bg-white `}>
       <Navbar />
@@ -112,7 +130,7 @@ function page({ headingStart = false }) {
       {/* Top Section */}
       <main className="flex w-full relative z-1 max-w-7xl mx-auto  flex-col items-center bg-white">
         <VerticalBorderPattern gradientName="backgroundGlow">
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center pt-30 pb-15 px-10 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center pt-30 pb-15 max-xs:px-5 xs:px-10 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 ${
                 headingStart ? 'justify-start' : 'justify-center'
@@ -175,7 +193,7 @@ function page({ headingStart = false }) {
 
         <section className="flex w-full overflow-hidden  max-w-7xl mx-auto  flex-row gap-10 items-start justify-center min-h-screen text-center">
           <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
-            <div className="flex  max-w-300 mx-auto pt-15 px-10 flex-row gap-10">
+            <div className="flex  max-w-300 mx-auto pt-15 max-xs:px-5 xs:px-10 flex-row gap-10">
               <div className="flex flex-col gap-4">
                 <div className="font-heading text-3xl text-black text-start">
                   Featured Article
@@ -194,7 +212,7 @@ function page({ headingStart = false }) {
         {/* Blogs list */}
         <section className="flex w-full overflow-hidden  max-w-7xl mx-auto  flex-row gap-10 items-start justify-center min-h-screen">
           <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
-            <section className="flex  max-w-300 mx-auto py-15 px-10   flex-row gap-10">
+            <section className="flex  max-w-300 mx-auto py-15 max-xs:px-5 xs:px-10   flex-row gap-10">
               <div className="flex flex-col gap-4">
                 <div className="font-heading text-3xl text-black text-start">
                   Latest Articles
@@ -211,7 +229,7 @@ function page({ headingStart = false }) {
 
         {/* Stay Updated */}
         <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
-          <div className="flex flex-col gap-8 max-w-300 mx-auto py-15 px-10">
+          <div className="flex flex-col gap-8 max-w-300 mx-auto py-15 max-xs:px-5 xs:px-10">
             <div className="flex flex-col w-full h-full items-center lg:w-full justify-center gap-4 ">
               <div className=" font-heading  text-black text-3xl w-full   font-bold text-center">
                 Stay Updated
@@ -244,7 +262,7 @@ function page({ headingStart = false }) {
           }
           icon={isSuccessful ? 'CircleThickIcon' : 'MailIcon'}
           ppoupContent={
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubscription} className="space-y-4">
               {/* First Name & Last Name */}
               {!isSuccessful && (
                 <Input
@@ -263,6 +281,7 @@ function page({ headingStart = false }) {
                 type="submit"
                 disabled={isSubmitting}
                 padding="w-full rounded-lg"
+                onClickButton={handleSubscription}
               >
                 {isSubmitting
                   ? 'Submitting...'

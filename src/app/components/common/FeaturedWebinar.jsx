@@ -6,12 +6,13 @@ import { toSentenceCase } from '../../utils/utils';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { data } from 'autoprefixer';
 
 export default function FeaturedWebinar({
   mapData,
   setIsOpenWebinar = () => {},
+  setIsOpenEvent = () => {},
 }) {
-  console.log({ mapData });
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -44,7 +45,7 @@ export default function FeaturedWebinar({
             >
               <Image
                 src={mapData?.image}
-                alt={mapData?.title}
+                alt={mapData?.label}
                 width={800}
                 height={600}
                 className="w-full h-full object-cover rounded-xl"
@@ -217,7 +218,10 @@ export default function FeaturedWebinar({
                 <Button
                   padding={'px-1 py-1 rounded-lg'}
                   arrowIcon={true}
-                  onClickButton={() => setIsOpenWebinar(mapData)}
+                  onClickButton={() => {
+                    setIsOpenWebinar(mapData);
+                    setIsOpenEvent(mapData);
+                  }}
                 >
                   {mapData?.button?.label}
                 </Button>

@@ -24,11 +24,13 @@ function Button({
   return (
     <button
       onClick={(e) => {
-        if (childrenName) {
+        if (childrenName && !type) {
+          e.preventDefault();
+
           router.push('/contact-us#schedule-demo');
           return;
         }
-        onClickButton && onClickButton(e);
+        !type && onClickButton && onClickButton(e);
       }}
       type={type}
       disabled={disabled}

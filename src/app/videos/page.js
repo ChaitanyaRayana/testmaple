@@ -24,6 +24,8 @@ import Fotter from '../components/common/Fotter';
 import PopupModal from '../components/common/PopupModel';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { supabase } from '../../lib/supabase/client';
+import toast from 'react-hot-toast';
 
 function page({ headingStart = false }) {
   const statContent = [
@@ -103,23 +105,6 @@ function page({ headingStart = false }) {
   const [email, setEmail] = useState('');
   const [isSuccessful, setIsSuccessful] = useState();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Add your form submission logic here
-    console.log('Form submitted:', email);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsOpen(false);
-      setIsSuccessful(true);
-      // Reset form
-      setEmail('');
-    }, 1000);
-  };
-
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -149,6 +134,39 @@ function page({ headingStart = false }) {
     ],
   };
 
+  const handleSubscription = async (e) => {
+    toast.loading('Please wait');
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const tableName = process.env.NEXT_PUBLIC_SUBSCRIPTIONTABLENAME;
+
+    const resp = await supabase.from(tableName).insert([
+      {
+        email,
+        subscription_type: 'videos',
+      },
+    ]);
+
+    // Simulate API call
+    if (resp?.status === 201) {
+      toast.dismiss();
+      setIsSubmitting(false);
+      setIsOpen(false);
+      setIsSuccessful(true);
+      // Reset form
+      setEmail('');
+    }
+
+    if (resp?.error) {
+      toast.error('Failed to register! please try again in sometime');
+      setIsSubmitting(false);
+      // setIsOpenEvent(false);
+      toast.dismiss();
+      throw new Error(error.message);
+    }
+  };
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
       <Navbar />
@@ -156,7 +174,7 @@ function page({ headingStart = false }) {
       {/* Top Section */}
       <main className="flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
         <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
-          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center pt-30 px-10 pb-15 gap-8">
+          <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center pt-30 max-xs:px-5 xs:px-10 pb-15 gap-8">
             <div
               className={`flex flex-col h-full items-start lg:w-full  gap-4 ${
                 headingStart ? 'justify-start' : 'justify-center'
@@ -217,7 +235,7 @@ function page({ headingStart = false }) {
         </VerticalBorderPattern>
 
         <VerticalBorderPattern gradientName={'backgroundGradientTwo'}>
-          <div className="flex  max-w-300 mx-auto px-10 py-15 flex-row gap-10">
+          <div className="flex  max-w-300 mx-auto max-xs:px-5 xs:px-10 py-15 flex-row gap-10">
             <div
               // data-aos="fade-up"
               // data-aos-duration="200"
@@ -244,7 +262,7 @@ function page({ headingStart = false }) {
         {/* Videos list */}
         <VerticalBorderPattern gradientName={'backgroundGradientAnimation'}>
           <section className="flex w-full overflow-hidden  max-w-7xl mx-auto py-15 flex-col gap-10 items-start justify-center min-h-screen">
-            <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center px-10 gap-8">
+            <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center max-xs:px-5 xs:px-10 gap-8">
               <div className="flex flex-col gap-4">
                 <div
                   // data-aos="fade-up"
@@ -274,7 +292,7 @@ function page({ headingStart = false }) {
                 </div>
               </div>
             </section>
-            <section className="flex  max-w-300 mx-auto px-10 flex-row gap-10">
+            <section className="flex  max-w-300 mx-auto max-xs:px-5 xs:px-10 flex-row gap-10">
               <div className="flex flex-col gap-4">
                 <div className="text-start">
                   <h2
@@ -361,7 +379,7 @@ function page({ headingStart = false }) {
           }
           icon={isSuccessful ? 'CircleThickIcon' : 'MailIcon'}
           ppoupContent={
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubscription} className="space-y-4">
               {/* First Name & Last Name */}
               {!isSuccessful && (
                 <Input
@@ -380,6 +398,7 @@ function page({ headingStart = false }) {
                 type="submit"
                 disabled={isSubmitting}
                 padding="w-full rounded-lg"
+                onClickButton={handleSubscription}
               >
                 {isSubmitting
                   ? 'Submitting...'
