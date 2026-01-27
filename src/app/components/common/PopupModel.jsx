@@ -1,6 +1,7 @@
 'use client';
 
 import { ICONS } from './icons/AllIcons';
+import { createPortal } from 'react-dom';
 
 export default function PopupModal({
   isOpen,
@@ -13,13 +14,12 @@ export default function PopupModal({
   if (!isOpen) return null;
   const Icon = icon ? ICONS?.[icon] : '';
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+  return createPortal(
+    <div className="fixed inset-0 z-99 flex items-center justify-center">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 " onClick={onClose} />
-
       {/* Modal */}
-      <div className="relative z-10 w-full max-w-110 mt-auto mb-auto  overflow-y-auto rounded-2xl bg-white p-8 shadow-xl">
+      <div className="relative z-100 w-full max-w-110 mt-auto mb-auto  overflow-y-auto rounded-2xl bg-white p-8 shadow-xl">
         {/* Close Button */}
         <button
           onClick={onClose}

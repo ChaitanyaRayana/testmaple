@@ -90,7 +90,8 @@ function page({ headingStart = false }) {
     });
   }, []);
 
-  const handleWebinarSubmit = async () => {
+  const handleWebinarSubmit = async (e) => {
+    e.preventDefault();
     if (isSuccessfulEventSubmit) {
       setIsSuccessfulEventSubmit(false);
       return;
@@ -338,7 +339,7 @@ function page({ headingStart = false }) {
           ppoupContent={
             <form
               onSubmit={handleSubscription}
-              className="space-y-4 my-auto h-full"
+              className="space-y-4 my-auto z-100 h-full"
             >
               {/* First Name & Last Name */}
               {!isSuccessful && (

@@ -74,7 +74,8 @@ export default function page() {
 
   console.log({ isOpenEvent });
 
-  const handleEventSubmit = async () => {
+  const handleEventSubmit = async (e) => {
+    e.preventDefault();
     if (isSuccessfulEventSubmit) {
       setIsSuccessfulEventSubmit(false);
       return;
@@ -261,7 +262,7 @@ export default function page() {
           <form onSubmit={handleEventSubmit} className="space-y-4 ">
             {/* First Name & Last Name */}
             {!isSuccessfulEventSubmit && (
-              <div className="space-y-4 ">
+              <div className="space-y-4 z-100">
                 <Input
                   type="text"
                   name="fullName"
