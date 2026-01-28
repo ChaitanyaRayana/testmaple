@@ -70,7 +70,7 @@ function BlogCard({ mapData = {} }) {
             </span>
           </div>
         )}
-        <div className="flex flex-col h-full gap-2 justify-between">
+        <div className="flex flex-col h-full gap-2 justify-start">
           {/* Title */}
           <Link
             // data-aos="fade-up"
@@ -86,10 +86,10 @@ function BlogCard({ mapData = {} }) {
 
           {/* Excerpt */}
           <p
-            key={label}
+            key={description}
             // data-aos="fade-up"
             // data-aos-duration="1200"
-            className=" text-gray-600 font-body fon leading-relaxed card-desc"
+            className=" text-gray-600 font-body h-full font-leading-relaxed card-desc"
           >
             {description}
           </p>

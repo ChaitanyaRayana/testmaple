@@ -49,7 +49,10 @@ export function toSentenceCase(text) {
 
   // 🚫 Skip if text starts with numbering like "1.", "2)", "3 -", etc.
   const startsWithNumbering = /^\s*\d+\s*[\.\)\-:]/.test(text);
+  const textWithFullStop = /[.!?]$/?.test(text);
+
   if (startsWithNumbering) return text;
+  if (textWithFullStop) return text;
 
   // 🚫 Skip if text contains an email address
   const containsEmail = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/.test(
@@ -94,6 +97,7 @@ export function toSentenceCase(text) {
     'User Experience',
     'Content Management System',
     'Multi-Department',
+    'Enterprise-grade',
   ];
 
   const SPECIAL_WORDS = new Set([

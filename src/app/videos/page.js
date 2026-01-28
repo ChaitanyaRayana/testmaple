@@ -135,8 +135,12 @@ function page({ headingStart = false }) {
   };
 
   const handleSubscription = async (e) => {
-    toast.loading('Please wait');
     e.preventDefault();
+    if (isSuccessful) {
+      setIsSuccessful(false);
+      return;
+    }
+    toast.loading('Please wait');
     setIsSubmitting(true);
 
     const tableName = process.env.NEXT_PUBLIC_SUBSCRIPTIONTABLENAME;

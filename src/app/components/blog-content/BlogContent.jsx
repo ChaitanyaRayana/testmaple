@@ -29,7 +29,7 @@ export default function BlogContent({ contentToDisplay }) {
           gradientName="backgroundGlow"
         >
           {/* Hero Section */}
-          <section className="flex flex-col max-w-300 w-full h-full gap-12 pt-30 pb-15 lg:px-30 max-md:px-20 lg:flex-row lg:items-center lg:justify-between">
+          <section className="flex flex-col max-w-300 w-full h-full gap-12 pt-30 pb-15 lg:px-30 max-lg:px-20 lg:flex-row lg:items-center lg:justify-between">
             {/* Left Content */}
             <div className="w-full">
               {/* Breadcrumb */}
@@ -83,7 +83,7 @@ export default function BlogContent({ contentToDisplay }) {
           maxArraryLines={100}
           gradientName="backgroundGradientAnimation"
         >
-          <section className=" max-w-300 w-full h-full gap-12 pb-15 lg:px-30 max-md:px-20">
+          <section className=" max-w-300 w-full h-full gap-12 pb-15 lg:px-30 max-lg:px-20">
             {/* <p className="text-[#1f2937] text-base font-body font-normal leading-7 max-xs:px-5 xs:px-10 mt-6"> */}
             <ReactMarkdown
               children={contentToDisplay?.markdownText}
@@ -130,6 +130,30 @@ export default function BlogContent({ contentToDisplay }) {
             >
               {contentToDisplay?.markdownText}
             </ReactMarkdown>
+
+            {/* Author Details */}
+            <div className="rounded-2xl p-0.5 animate-border">
+              <div className="w-full  h-full flex flex-row gap-8 items-center border bg-white p-4 rounded-2xl">
+                <div className="w-40 h-16 flex items-center">
+                  <Image
+                    src={contentToDisplay?.authorDetails?.profile}
+                    alt={contentToDisplay?.authorDetails?.name}
+                    width={64}
+                    height={64}
+                    className="rounded-full object-cover"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <p className="text-[20px] font-bold font-heading text-black">
+                    {contentToDisplay?.authorDetails?.name}
+                  </p>
+                  <p className="text-[16px] font-heading text-black">
+                    {contentToDisplay?.authorDetails?.description}
+                  </p>
+                </div>
+              </div>
+            </div>
 
             {/* </p> */}
           </section>

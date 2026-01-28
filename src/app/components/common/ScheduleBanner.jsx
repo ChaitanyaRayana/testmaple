@@ -4,6 +4,7 @@ import { toSentenceCase } from '../../utils/utils';
 import Button from './Button';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useRouter } from 'next/navigation';
 
 function ScheduleBanner({ content }) {
   useEffect(() => {
@@ -12,6 +13,9 @@ function ScheduleBanner({ content }) {
       once: true,
     });
   }, []);
+
+  const router = useRouter();
+
   return (
     <div className="flex flex-col w-full max-w-7xl bg-stone900 xs:px-20">
       <div className="flex flex-col gap-8 max-w-300 mx-auto p-10">
@@ -44,14 +48,16 @@ function ScheduleBanner({ content }) {
           >
             {content?.buttonsText ? (
               <div className="flex flex-row gap-3 w-full justify-center items-center">
-                {content?.buttonsText?.map((item) => (
+                {content?.buttonsText?.map((item, i) => (
                   <Button
-                    key={item}
+                    key={i}
                     arrowIcon={
-                      item === 'Contact Us' || item === 'Contact Our Team'
+                      typeof item === 'string' &&
+                      (item === 'Contact Us' || item === 'Contact Our Team')
                     }
+                    onClickButton={() => router.push(item?.href)}
                   >
-                    {item}
+                    {item?.label || item}
                   </Button>
                 ))}
               </div>

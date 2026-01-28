@@ -149,8 +149,12 @@ function page({ headingStart = false }) {
   };
 
   const handleSubscription = async (e) => {
-    toast.loading('Please wait');
     e.preventDefault();
+    if (isSuccessful) {
+      setIsSuccessful(false);
+      return;
+    }
+    toast.loading('Please wait');
     setIsSubmitting(true);
 
     const tableName = process.env.NEXT_PUBLIC_SUBSCRIPTIONTABLENAME;
@@ -185,7 +189,7 @@ function page({ headingStart = false }) {
     <div className="flex min-h-screen w-full flex-col bg-white">
       <Navbar />
 
-      <main className="flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
+      <main className=" isolate flex w-full relative z-1 max-w-7xl mx-auto flex-col items-center bg-white">
         {/* Section one */}
         <VerticalBorderPattern gradientName={'backgroundGlow'}>
           <section className="flex w-full  max-w-300 mx-auto flex-col h-full items-start justify-center max-xs:px-5 xs:px-10 pt-30 pb-15 gap-8">

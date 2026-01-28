@@ -150,7 +150,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="w-full h-max pb-15 flex flex-col gap-8 justify-start">
-                <div className=" flex flex-row gap-3 justify-center w-full">
+                <div className=" flex flex-row max-lg:flex-wrap gap-3 justify-center w-full">
                   {neverMissDeadLine?.map((item, i) => (
                     <Button
                       gradientColor={`${
@@ -208,7 +208,10 @@ export default function Home() {
 
                             {item?.featureHighlight?.map(
                               (hightLightItem, i) => (
-                                <div className="font-body flex gap-3 items-start text-stone700 text-[16px]">
+                                <div
+                                  key={i}
+                                  className="font-body flex gap-3 items-start text-stone700 text-[16px]"
+                                >
                                   <span className="mt-1">
                                     <CircleThickIcon
                                       width={16}
@@ -337,17 +340,22 @@ export default function Home() {
                             // data-aos-duration={(index + 1) * 400}
                             className="flex flex-col gap-3"
                           >
-                            {item?.featureHighlight?.map((hightLightItem) => (
-                              <span className="font-body flex flex-row gap-4 items-start text-stone700 text-start text-[16px]">
-                                <span className="mt-1">
-                                  <CircleThickIcon
-                                    width={16}
-                                    height={16}
-                                  />{' '}
-                                </span>{' '}
-                                <span>{hightLightItem}</span>
-                              </span>
-                            ))}
+                            {item?.featureHighlight?.map(
+                              (hightLightItem, i) => (
+                                <span
+                                  key={i}
+                                  className="font-body flex flex-row gap-4 items-start text-stone700 text-start text-[16px]"
+                                >
+                                  <span className="mt-1">
+                                    <CircleThickIcon
+                                      width={16}
+                                      height={16}
+                                    />{' '}
+                                  </span>{' '}
+                                  <span>{hightLightItem}</span>
+                                </span>
+                              )
+                            )}
                           </div>
                           <Button
                             // data-aos="fade-up"
@@ -363,7 +371,7 @@ export default function Home() {
                       ?.filter((item, i) => i === selectedHelpMeBtn)
                       ?.map((item, index) => (
                         <div
-                          className="w-full overflow-hidden max-xs:h-80 max-md:h-120 max-md:justify-start flex justify-center"
+                          className="w-full overflow-hidden max-xs:h-80 max-md:h-120 max-md:justify-start flex justify-end"
                           key={index}
                           // data-aos="fade-down"
                           // data-aos-duration="800"
@@ -373,7 +381,7 @@ export default function Home() {
                             alt={item?.label}
                             width={500}
                             height={10}
-                            className="object-contain"
+                            className="object-contain rounded-4xl"
                           />
                         </div>
                       ))}
