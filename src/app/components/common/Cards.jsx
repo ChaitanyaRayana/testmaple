@@ -162,7 +162,7 @@ function Cards({
             </div>
           ))}
         {content?.subdescrp && (
-          <p
+          <div
             data-aos={businessSection ? 'fade-up' : ''}
             data-aos-duration={businessSection ? '1000' : ''}
             className={`text-body w-full flex items-end justify-center text-base text-[#0f5291] font-semibold ${flexCss}`}
@@ -170,7 +170,7 @@ function Cards({
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>
               {content?.subdescrp}
             </ReactMarkdown>
-          </p>
+          </div>
         )}
       </div>
     </div>

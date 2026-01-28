@@ -91,8 +91,12 @@ function page({ headingStart = false }) {
   }, []);
 
   const handleSubscription = async (e) => {
-    toast.loading('Please wait');
     e.preventDefault();
+    if (isSuccessful) {
+      setIsSuccessful(false);
+      return;
+    }
+    toast.loading('Please wait');
     setIsSubmitting(true);
 
     const tableName = process.env.NEXT_PUBLIC_SUBSCRIPTIONTABLENAME;
@@ -218,9 +222,11 @@ function page({ headingStart = false }) {
                   Latest Articles
                 </div>
                 <div className="grid md:grid-cols-2 w-full lg:grid-cols-3 gap-8 ">
-                  {dummyBlogsPosts?.map((item, i) => (
-                    <BlogCard mapData={item} key={i} />
-                  ))}
+                  {dummyBlogsPosts
+                    ?.sort((a, b) => new Date(b?.date) - new Date(a?.date))
+                    ?.map((item, i) => (
+                      <BlogCard mapData={item} key={i} />
+                    ))}
                 </div>
               </div>
             </section>

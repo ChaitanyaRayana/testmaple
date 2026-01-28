@@ -26,13 +26,13 @@ import StateGovernImage from '@/public/assets/images/png/datagovernance.png';
 import RetentionPoliciesImage from '@/public/assets/images/png/Zerofriction.png';
 import SeamlessIntegration from '@/public/assets/images/png/SeamlessIntegration.png';
 import EnterprisegradesecurityImage from '@/public/assets/images/png/Enterprisegradesecurity.png';
-import FinanceImage from '@/public/assets/images/png/department/Finance.png';
-import CustomerServiceImage from '@/public/assets/images/png/department/CustomerService.png';
-import LegalImage from '@/public/assets/images/png/department/Legal.png';
-import OperationsImage from '@/public/assets/images/png/department/operations.png';
-import RDImage from '@/public/assets/images/png/department/R&D.png';
-import HealthcareImage from '@/public/assets/images/png/department/Healthcare.png';
-import HumanResource from '@/public/assets/images/png/department/Humanresources.png';
+import FinanceImage from '@/public/assets/images/png/department/Finance2.png'; // latest image previous image is Finance.png in the same folder
+import CustomerServiceImage from '@/public/assets/images/png/department/CustomerSupport.png';
+import LegalImage from '@/public/assets/images/png/department/Legal2.png'; // latest image previous image is Legal.png in the same folder
+import OperationsImage from '@/public/assets/images/png/department/Operations2.png';
+import RDImage from '@/public/assets/images/png/department/RnD.png';
+import HealthcareImage from '@/public/assets/images/png/department/Healthcare2.png';
+import HumanResource from '@/public/assets/images/png/department/HR.png';
 import MRRecordIndustryImage from '@/public/assets/images/png/mrProducts/MRecords.png';
 import MRReqeustIndustryImage from '@/public/assets/images/png/mrProducts/MRequests.png';
 import MRWorkIndustryImage from '@/public/assets/images/png/mrProducts/Workflows.png';
@@ -40,6 +40,8 @@ import MRWorkFlowIndustryImage from '@/public/assets/images/png/mrProducts/MRWor
 import MRRecordWorkingImage from '@/public/assets/images/png/platform/MRRecordsFlow.png';
 import MRRequestWorkingImage from '@/public/assets/images/png/platform/Requestworking.png';
 import MRWorkflowWorkingImage from '@/public/assets/images/png/platform/workfolwworking.png';
+
+import DefaultProfileImage from '@/public/assets/images/png/defaultProfile.png';
 
 import {
   AwardIcon,
@@ -3264,77 +3266,85 @@ export const departmentalSolutions = {
 /* MapleRecord Blogs Resources Place */
 
 export const dummyBlogsPosts = [
-  {
-    id: '5-key-compliance-requirements',
-    category: 'Compliance',
-    label: '5 Key Compliance Requirements Every Organization Should Know',
-    description:
-      'Navigate the complex landscape of regulatory compliance with our comprehensive guide to essential requirements.',
-    author: 'Michael Chen',
-    date: 'December 20, 2024',
-    authorDateWrap: (
-      <div className="w-auto flex flex-wrap gap-2 mt-5">
-        <span className="flex flex-row gap-2">
-          <UserIcon width={16} height={16} /> <span> Michael Chen</span>
-        </span>
-        <span className="flex flex-row gap-2">
-          <CalendarIcon width={16} height={16} /> <span>December 20, 2024</span>
-        </span>
-      </div>
-    ),
-    href: '/blogs/5-key-compliance-requirements',
-    image: BlogOneImage,
-  },
-  {
-    id: 'digital-record-retention-best-practices',
-    category: 'Best Practices',
-    label: 'Best Practices for Digital Record Retention',
-    description:
-      'Learn how to implement effective retention policies that balance compliance, storage costs, and operational efficiency.',
-    author: 'Emily Parker',
-    date: 'December 15, 2024',
-    authorDateWrap: (
-      <div className="w-auto flex flex-wrap gap-2 mt-5">
-        <span className="flex flex-row gap-2">
-          <UserIcon width={16} height={16} /> <span> Emily Parker</span>
-        </span>
-        <span className="flex flex-row gap-2">
-          <CalendarIcon width={16} height={16} /> <span>December 15, 2024</span>
-        </span>
-      </div>
-    ),
-    href: '/blogs/digital-record-retention-best-practices',
-    image: BlogTwoImage,
-  },
-  {
-    id: 'automating-workflows-guide',
-    category: 'Automation',
-    label: 'Automating Workflows: A Step-by-Step Guide',
-    description:
-      'Transform manual processes into efficient automated workflows with our practical implementation roadmap.',
-    author: 'David Martinez',
-    date: 'December 5, 2024',
-    authorDateWrap: (
-      <div className="w-auto flex flex-wrap gap-2 mt-5">
-        <span className="flex flex-row gap-2">
-          <UserIcon width={16} height={16} /> <span> David Martinez</span>
-        </span>
-        <span className="flex flex-row gap-2">
-          <CalendarIcon width={16} height={16} /> <span>December 5, 2024</span>
-        </span>
-      </div>
-    ),
-    href: '/blogs/automating-workflows-guide',
-    image: BlogThreeImage,
-  },
+  // {
+  //   id: '5-key-compliance-requirements',
+  //   category: 'Compliance',
+  //   label: '5 Key Compliance Requirements Every Organization Should Know',
+  //   description:
+  //     'Navigate the complex landscape of regulatory compliance with our comprehensive guide to essential requirements.',
+  //   author: 'Michael Chen',
+  //   date: 'December 20, 2024',
+  //   authorDateWrap: (
+  //     <div className="w-auto flex flex-wrap gap-2 mt-5">
+  //       <span className="flex flex-row gap-2">
+  //         <UserIcon width={16} height={16} /> <span> Michael Chen</span>
+  //       </span>
+  //       <span className="flex flex-row gap-2">
+  //         <CalendarIcon width={16} height={16} /> <span>December 20, 2024</span>
+  //       </span>
+  //     </div>
+  //   ),
+  //   href: '/blogs/5-key-compliance-requirements',
+  //   image: BlogOneImage,
+  // },
+  // {
+  //   id: 'digital-record-retention-best-practices',
+  //   category: 'Best Practices',
+  //   label: 'Best Practices for Digital Record Retention',
+  //   description:
+  //     'Learn how to implement effective retention policies that balance compliance, storage costs, and operational efficiency.',
+  //   author: 'Emily Parker',
+  //   date: 'December 15, 2024',
+  //   authorDateWrap: (
+  //     <div className="w-auto flex flex-wrap gap-2 mt-5">
+  //       <span className="flex flex-row gap-2">
+  //         <UserIcon width={16} height={16} /> <span> Emily Parker</span>
+  //       </span>
+  //       <span className="flex flex-row gap-2">
+  //         <CalendarIcon width={16} height={16} /> <span>December 15, 2024</span>
+  //       </span>
+  //     </div>
+  //   ),
+  //   href: '/blogs/digital-record-retention-best-practices',
+  //   image: BlogTwoImage,
+
+  // },
+  // {
+  //   id: 'automating-workflows-guide',
+  //   category: 'Automation',
+  //   label: 'Automating Workflows: A Step-by-Step Guide',
+  //   description:
+  //     'Transform manual processes into efficient automated workflows with our practical implementation roadmap.',
+  //   author: 'David Martinez',
+  //   date: 'December 5, 2024',
+  //   authorDateWrap: (
+  //     <div className="w-auto flex flex-wrap gap-2 mt-5">
+  //       <span className="flex flex-row gap-2">
+  //         <UserIcon width={16} height={16} /> <span> David Martinez</span>
+  //       </span>
+  //       <span className="flex flex-row gap-2">
+  //         <CalendarIcon width={16} height={16} /> <span>December 5, 2024</span>
+  //       </span>
+  //     </div>
+  //   ),
+  //   href: '/blogs/automating-workflows-guide',
+  //   image: BlogThreeImage,
+  // },
+
   {
     id: 'roi-modern-records-management',
     category: 'Business Value',
     label: 'The ROI of Modern Records Management Systems',
     description:
       'Quantifying the business value of investing in intelligent records management platforms.',
-    author: 'John Anderson',
-    date: 'November 20, 2024',
+    author: 'Author',
+    date: 'November 20, 2025',
+    authorDetails: {
+      name: 'Author',
+      description:
+        'Author is a product marketing and growth professional with 10+ years of experience across IT, digital marketing, and AI-driven platforms. She focuses on translating complex technologies into clear, business-impact narratives.',
+      profile: DefaultProfileImage,
+    },
     markdownText: `
 
 For CIOs and IT leaders, records management is no longer a compliance-only function—it is a foundational component of enterprise information architecture. As organizations scale digitally, legacy and manual records systems introduce operational inefficiencies, security vulnerabilities, and compliance risks that directly impact cost structures and business continuity.
@@ -3510,18 +3520,12 @@ Modern Records Management Systems deliver measurable ROI by replacing fragmented
 For CIOs and IT leaders, **MapleRecord is not simply a records repository—it is a strategic information governance platform** that delivers sustained ROI, reduces risk, and supports long-term digital transformation.
 
 <br/>
-
-If you want, I can also:
-
-* Optimize this for a **whitepaper**, **website page**, or **sales deck**
-* Shorten it into an **executive summary**
-* Add **metrics, diagrams, or CTA language** for marketing use
 `,
     authorDateWrap: (
       <div className="w-auto flex flex-wrap gap-2 mt-5">
-        <span className="flex flex-row gap-2">
+        {/* <span className="flex flex-row gap-2">
           <UserIcon width={16} height={16} /> <span> John Anderson</span>
-        </span>
+        </span> */}
         <span className="flex flex-row gap-2">
           <CalendarIcon width={16} height={16} /> <span>November 20, 2024</span>
         </span>
@@ -3529,6 +3533,214 @@ If you want, I can also:
     ),
     href: '/blog/roi-modern-records-management',
     image: BlogFourImage,
+  },
+  {
+    id: 'modern-records-management-enterprise-intelligence',
+    category: 'Business Solution',
+    label:
+      'Modern Records Management: From Operational Overhead to Enterprise Intelligence',
+    description:
+      'For CIOs and technology leaders, records management is no longer a peripheral compliance function. It is a core component of enterprise architecture, impacting governance, risk, security, operational efficiency, and digital transformation outcomes.',
+    author: 'Author',
+    date: 'December 20, 2025',
+    authorDetails: {
+      name: 'Author',
+      description:
+        'Author is a product marketing and growth professional with 10+ years of experience across IT, digital marketing, and AI-driven platforms. She focuses on translating complex technologies into clear, business-impact narratives.',
+      profile: DefaultProfileImage,
+    },
+    // # Modern Records Management: From Operational Overhead to Enterprise Intelligence
+    markdownText: `
+
+
+For CIOs and technology leaders, records management is no longer a peripheral compliance function. It is a core component of enterprise architecture, impacting governance, risk, security, operational efficiency, and digital transformation outcomes.
+
+As organizations modernize their IT stacks, legacy records management systems increasingly become bottlenecks. Platforms like **MapleRecord** represent the next generation—where records management is policy-driven, automated, and intelligence-led.
+
+---
+
+## The Limitations of Legacy Records Systems
+
+Traditional records management solutions were designed for static environments. In today’s hybrid, multi-cloud, and API-driven enterprises, they introduce significant challenges:
+
+- Manual or rule-heavy classification that does not scale  
+- Fragmented repositories across business units  
+- Limited metadata intelligence and searchability  
+- Reactive compliance rather than continuous governance  
+- High dependency on human intervention  
+
+From a CIO perspective, these systems increase operational risk, cost, and technical debt.
+
+---
+
+## The Architecture Shift: Intelligent Records Management
+
+Modern records management must integrate seamlessly into the enterprise ecosystem—applications, workflows, identity systems, and analytics layers.
+
+**MapleRecord** is designed with this architecture-first mindset:
+
+- Automated classification and tagging driven by content intelligence  
+- Policy-based retention, legal holds, and disposition  
+- Role-based access control (RBAC) aligned with IAM systems  
+- Immutable audit trails for regulatory and internal governance  
+- API-ready design for integration with ERP, HRMS, CRM, and document systems  
+
+This approach enables continuous compliance rather than periodic remediation.
+
+---
+
+## Records as an Enterprise Intelligence Layer
+
+When records are centralized and structured, they become a data layer that supports decision-making, not just storage.
+
+CIOs gain:
+
+- Visibility into records lifecycle and access patterns  
+- Reduced risk exposure across regulated data  
+- Faster response to audits and investigations  
+- Operational metrics tied to document workflows  
+
+**MapleRecord** transforms records into a governed, searchable, and actionable enterprise asset.
+
+---
+
+## Conclusion
+
+For modern CIOs, records management must align with broader goals—security, scalability, automation, and insight. **MapleRecord** delivers a platform that reduces technical debt, strengthens governance, and enables records to function as part of the enterprise intelligence stack—not a standalone system.
+
+<br/>
+
+`,
+    authorDateWrap: (
+      <div className="w-auto flex flex-wrap gap-2 mt-5">
+        {/* <span className="flex flex-row gap-2">
+          <UserIcon width={16} height={16} /> <span> John Anderson</span>
+        </span> */}
+        <span className="flex flex-row gap-2">
+          <CalendarIcon width={16} height={16} /> <span>December 20, 2024</span>
+        </span>
+      </div>
+    ),
+    href: '/blog/modern-records-management-enterprise-intelligence',
+    image: BlogTwoImage,
+  },
+  {
+    id: 'modernizing-government-records-management-for-transparency',
+    category: 'Business Solution',
+    label:
+      'Modernizing Government Records Management for Transparency, Compliance, and Service Delivery',
+    description:
+      'Government agencies manage some of the most sensitive and high-volume records—citizen data, legal filings, financial documents, and regulatory correspondence. Managing these records efficiently is not optional; it is foundational to public trust, transparency, and accountability.',
+    author: 'Author',
+    date: 'December 22, 2025',
+    authorDetails: {
+      name: 'Author',
+      description:
+        'Author is a product marketing and growth professional with 10+ years of experience across IT, digital marketing, and AI-driven platforms. She focuses on translating complex technologies into clear, business-impact narratives.',
+      profile: DefaultProfileImage,
+    },
+    // # Modernizing Government Records Management for Transparency, Compliance, and Service Delivery
+    markdownText: `
+
+
+Government agencies manage some of the most sensitive and high-volume records—citizen data, legal filings, financial documents, and regulatory correspondence. Managing these records efficiently is not optional; it is foundational to public trust, transparency, and accountability.
+
+**MapleRecord’s** modern AI-driven records management platform is built to meet the unique operational, regulatory, and scale requirements of the public sector.
+
+---
+
+## 1. Supporting Transparency and Accountability
+
+Government organizations must respond to audits, public information requests, and regulatory reviews with accuracy and speed.
+
+**MapleRecord enables:**
+
+- Centralized records repositories  
+- Clear ownership and traceability  
+- Complete audit trails across the records lifecycle  
+- Faster access to information without manual searching  
+
+**Outcome:** Increased transparency and reduced compliance risk.
+
+---
+
+## 2. Faster Response to Legal and Information Requests
+
+Public sector teams frequently handle RTI, FOI, and legal discovery requests.
+
+**With MapleRecord:**
+
+- Records are automatically classified and indexed  
+- Sensitive data is protected through access controls  
+- Legal holds and redactions are managed centrally  
+- Response timelines are significantly reduced  
+
+**Outcome:** Timely responses that meet statutory obligations.
+
+---
+
+## 3. Secure Records Management Across Departments
+
+Government departments often operate in silos, leading to duplication and inconsistent record handling.
+
+**MapleRecord provides:**
+
+- Role-based access aligned with departmental responsibilities  
+- Standardized retention and disposal policies  
+- Secure inter-departmental collaboration  
+- Reduced reliance on paper-based or fragmented systems  
+
+**Outcome:** Consistent governance across the organization.
+
+---
+
+## 4. Improving Operational Efficiency
+
+Manual records handling slows down service delivery and increases administrative burden.
+
+**MapleRecord automates:**
+
+- Approval workflows  
+- Document routing  
+- Status tracking and reporting  
+
+**Outcome:** Faster processing, lower operational costs, and improved public service delivery.
+
+---
+
+## 5. Building Trust Through Compliance-by-Design
+
+Compliance is not a one-time activity for government—it is continuous.
+
+**MapleRecord supports:**
+
+- Regulatory compliance by default  
+- Immutable audit logs  
+- Long-term archival with policy enforcement  
+
+**Outcome:** Stronger governance frameworks and sustained public trust.
+
+---
+
+## Conclusion
+
+For government organizations, records management is inseparable from governance and citizen service delivery. **MapleRecord** provides a secure, scalable, and compliant platform that enables agencies to operate efficiently while maintaining the highest standards of accountability and transparency.
+
+<br/>
+
+`,
+    authorDateWrap: (
+      <div className="w-auto flex flex-wrap gap-2 mt-5">
+        {/* <span className="flex flex-row gap-2">
+          <UserIcon width={16} height={16} /> <span> John Anderson</span>
+        </span> */}
+        <span className="flex flex-row gap-2">
+          <CalendarIcon width={16} height={16} /> <span>December 22, 2024</span>
+        </span>
+      </div>
+    ),
+    href: '/blog/modernizing-government-records-management-for-transparency',
+    image: BlogOneImage,
   },
 ];
 
@@ -3608,7 +3820,7 @@ export const aboutUS = {
     cardSection: [
       {
         id: 'organizations',
-        value: '50+',
+        value: '5+',
         label: 'Organizations',
         description: 'Trust MapleRecord for their records management',
       },
@@ -3672,7 +3884,7 @@ export const aboutUS = {
         id: 'government',
         label: 'Government',
         description: 'Public sector document and records management',
-        icon: 'HumanResourceIcon',
+        icon: 'HumanResourcesIcon',
       },
     ],
   },

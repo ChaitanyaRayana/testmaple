@@ -28,7 +28,7 @@ function Fotter() {
   const router = useRouter();
 
   return (
-    <footer className="  flex max-h-max w-full max-w-7xl  mx-auto flex-col flex-wrap items-center justify-between  bg-white font-body h-full">
+    <footer className=" relative  flex z-0 max-h-max w-full max-w-7xl  mx-auto flex-col flex-wrap items-center justify-between  bg-white font-body h-full">
       <div className="flex  flex-row flex-wrap items-center w-full text-center pb-5">
         <VerticalBorderPattern>
           <div className="flex w-full max-w-300 mx-auto flex-row flex-wrap flex-1 h-full items-start justify-between max-xs:px-5 xs:px-10 gap-8">

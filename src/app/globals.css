@@ -279,3 +279,18 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #1e2939;
   }
 }
+
+@keyframes rotate-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.animate-border {
+  background: linear-gradient(90deg, #6366f1, #22c55e, #ec4899, #6366f1);
+  background-size: 300% 300%;
+  animation: rotate-border 4s linear infinite;
+}

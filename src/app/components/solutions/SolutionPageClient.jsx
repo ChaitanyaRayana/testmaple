@@ -10,7 +10,8 @@ import Fotter from '../common/Fotter';
 import ChipText from '../common/ChipText';
 import ZigZagHomeSection from '../common/ZigZagHomeSection';
 import Image from 'next/image';
-import heroSectionBgTwoImage from '@/public/assets/images/png/bg-abstract.png';
+// import heroSectionBgTwoImage from '@/public/assets/images/png/bg-abstract.png';
+import heroSectionBgTwoImage from '@/public/assets/images/png/bg-abstract3.png';
 
 export default function SolutionPageClient({ contentToDisplay, pathName }) {
   useEffect(() => {
@@ -82,7 +83,7 @@ export default function SolutionPageClient({ contentToDisplay, pathName }) {
         </VerticalBorderPattern>
 
         {/* Section  Three*/}
-        <VerticalBorderPattern>
+        <VerticalBorderPattern gradientName="backgroundGradient">
           <section className="flex  max-w-300 mx-auto flex-col pt-15 pb-15 gap-12">
             {[
               'finance-accounting',
@@ -136,7 +137,7 @@ export default function SolutionPageClient({ contentToDisplay, pathName }) {
           </section>
         </VerticalBorderPattern>
         {/* Section  Four*/}
-        <VerticalBorderPattern>
+        <VerticalBorderPattern gradientName="backgroundGradientAnimation">
           <section className="flex max-w-300 mx-auto pt-15   flex-row gap-10">
             <CenterTextCardsSection
               mapData={contentToDisplay?.sectionFour}
@@ -150,7 +151,7 @@ export default function SolutionPageClient({ contentToDisplay, pathName }) {
           </section>
         </VerticalBorderPattern>
         {/* Section  Five*/}
-        <VerticalBorderPattern>
+        <VerticalBorderPattern gradientName="backgroundGradientTwo">
           <section className="flex  max-w-300 mx-auto pt-15   flex-row gap-10">
             <CenterTextCardsSection
               mapData={contentToDisplay?.sectionFive}
@@ -164,7 +165,7 @@ export default function SolutionPageClient({ contentToDisplay, pathName }) {
         </VerticalBorderPattern>
 
         {/* Section  Six*/}
-        <VerticalBorderPattern>
+        <VerticalBorderPattern gradientName="backgroundGlow">
           <section className="flex  max-w-300 mx-auto pt-15   flex-row gap-10">
             <CenterTextCardsSection
               mapData={contentToDisplay?.sectionSix}
